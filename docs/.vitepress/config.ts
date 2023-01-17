@@ -7,7 +7,7 @@ import nav from './navigation/nav.json';
 
 const config: UserConfig = {
   lang: 'zh-CN',
-  title: 'xs-components-lib',
+  title: 'xs-utils',
   description: 'Just playing around.',
   head: [
     [

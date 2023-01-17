@@ -42,7 +42,7 @@
 //       "dom"
 //     ],
 //     "paths": {
-//       "@xs-components/*": [
+//       "@xs-utils/*": [
 //         "../packages/"
 //       ]
 //     }

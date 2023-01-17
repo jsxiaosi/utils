@@ -12,7 +12,7 @@ npm run release
 ```
 
 ::: warning
-打包组件后的package.json（dist/xs-components/package.json）是在打包完成后从packages目录复制到打包后的目录下，所以需要在打包之前先修改package.json中version
+打包组件后的package.json（dist/xs-utils/package.json）是在打包完成后从packages目录复制到打包后的目录下，所以需要在打包之前先修改package.json中version
 :::
 
 ## 发布组件
@@ -27,7 +27,7 @@ npm run login
 
 ```bash
 # 进入打包后组件目录
-cd dist/xs-components
+cd dist/xs-utils
 # 发布到npm
 npm publish
 ```

@@ -3,7 +3,7 @@ import { resolve } from 'path';
 export const projRoot = resolve(__dirname, '..', '..');
 
 // name
-export const PKG_NAME = 'xs-components';
+export const PKG_NAME = 'xs-utils';
 export const PKG_HUMP_NAME = 'XsComponents';
 
 // packages

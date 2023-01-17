@@ -8,7 +8,6 @@ importers:
       '@jsxiaosi/eslint-config-prettier': ^0.0.14
       '@jsxiaosi/eslint-config-vue': ^0.0.14
       '@types/node': ^18.11.17
-      '@types/prismjs': ^1.26.0
       '@vueuse/core': ^9.9.0
       consola: ^2.15.3
       conventional-changelog-cli: ^2.2.2
@@ -42,7 +41,6 @@ importers:
       '@jsxiaosi/eslint-config-prettier': 0.0.14_l5rdqc4k22455lce6ocqroldia
       '@jsxiaosi/eslint-config-vue': 0.0.14_lzzuuodtsqwxnvqeq4g4likcqa
       '@types/node': 18.11.17
-      '@types/prismjs': 1.26.0
       consola: 2.15.3
       conventional-changelog-cli: 2.2.2
       czg: 1.4.1
@@ -128,6 +126,7 @@ importers:
     specifiers:
       '@types/escape-html': ^1.0.2
       '@types/markdown-it-container': ^2.0.5
+      '@types/prismjs': ^1.26.0
       '@vue/tsconfig': ^0.1.3
       chalk: ^4.1.2
       escape-html: ^1.0.3
@@ -147,6 +146,7 @@ importers:
     devDependencies:
       '@types/escape-html': 1.0.2
       '@types/markdown-it-container': 2.0.5
+      '@types/prismjs': 1.26.0
       '@vue/tsconfig': 0.1.3
       chalk: 4.1.2
       escape-html: 1.0.3

@@ -3,8 +3,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import DefineOptions from 'unplugin-vue-macros/vite';
 
-console.log(`${path.resolve(__dirname, '../dist/xs-components/es')}/`);
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -25,8 +23,8 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@xs-components',
-        replacement: `${path.resolve(__dirname, '../dist/xs-components/es')}/`,
+        find: '@xs-utils',
+        replacement: `${path.resolve(__dirname, '../dist/xs-utils/es')}/`,
       },
       {
         find: '@packages',

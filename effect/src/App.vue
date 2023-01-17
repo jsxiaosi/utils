@@ -1,24 +1,28 @@
 <script setup lang="ts">
-  // import { IButton } from '@xs-components/index';
-  import { useDeveloper } from '@xs-components/hooks/useDeveloper';
-  import { developFn } from '@xs-components/utils/myDevelop';
+  // import { IButton } from '@xs-utils/index';
+  // import { useDeveloper } from '@xs-utils/hooks/useDeveloper';
+  // import { developFn } from '@xs-utils/utils/myDevelop';
 
-  const { num } = useDeveloper();
+  import { vWaterMark } from '@packages/index';
 
-  function add() {
-    developFn();
-    num.value = num.value + 1;
-  }
+  // const { num } = useDeveloper();
+
+  // const vWaterMark = waterMark;
+
+  // function add() {
+  //   developFn();
+  //   num.value = num.value + 1;
+  // }
 
   // This starter template is using Vue 3 <script setup> SFCs
   // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 </script>
 
 <template>
-  <div>
+  <div v-water-mark="'admin'">
     组件实例：
-    <i-button @click="add">按钮</i-button>
-    {{ num }}
+    <!-- <i-button @click="add">按钮</i-button>
+    {{ num }} -->
   </div>
 </template>
 

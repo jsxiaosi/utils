@@ -5,7 +5,7 @@ title: xs组件模板
 titleTemplate: Next Generation Frontend Tooling
 
 hero:
-  name: xs-components-lib
+  name: xs-utils
   text: 组件库模板
   tagline: 快速开发属于你自己的组件库、组件库文档
   image:

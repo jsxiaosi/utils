@@ -1,2 +1,2 @@
 export * from './install';
-export * from './myDevelop';
+export * from './waterMark';

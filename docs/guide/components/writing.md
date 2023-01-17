@@ -6,7 +6,7 @@
 
 ## 注册组件
 
-组件注册方法在utils中有install.ts 文件，如果你有更好的方式，可以自行编写。添加组件后需要再global.d.ts 添加组件引入，此处是为了让你的组件库添加volar支持，后期在使用组件的时候在tsconfig.json types添加xs-components/global就可以在你的编译器上代码提示
+组件注册方法在utils中有install.ts 文件，如果你有更好的方式，可以自行编写。添加组件后需要再global.d.ts 添加组件引入，此处是为了让你的组件库添加volar支持，后期在使用组件的时候在tsconfig.json types添加xs-utils/global就可以在你的编译器上代码提示
 
 ## 创建组件
 
@@ -39,7 +39,7 @@ PREFIX_NAME="I"
 ``` vue
 <script setup lang="ts">
   // 引用打包的目录
-  import { IButton } from '@xs-components/index';
+  import { IButton } from '@xs-utils/index';
   // 引用packages的目录
   import { IButton } from '@packages/index';
  </script>
@@ -51,12 +51,12 @@ PREFIX_NAME="I"
 # 打包组件库
 npm run build
 # 进入打包后目录
-cd dist/xs-components
+cd dist/xs-utils
 # 将当前目录链接到全局环境下的 node_modules 目录下
-pnpm link --global xs-components
+pnpm link --global xs-utils
 
 # 进入你的项目目录将全局环境下的 node_modules 目录中的指定的软件包，链接到当前工作目录下
-pnpm link --global xs-components
+pnpm link --global xs-utils
 ```
 
 ## 依赖第三方库

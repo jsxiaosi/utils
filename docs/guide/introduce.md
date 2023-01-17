@@ -1,6 +1,6 @@
 # 介绍
 
-xs-components是一款为组件开发场景而生的模板，使用了最新的`Vue3` `Vite` `TypeScript` `Rollup`等主流技术开发，开箱即用的组件开发解决方案，也可用于学习参考。
+xs-utils是一款为组件开发场景而生的模板，使用了最新的`Vue3` `Vite` `TypeScript` `Rollup`等主流技术开发，开箱即用的组件开发解决方案，也可用于学习参考。
 
 ## 特性
 

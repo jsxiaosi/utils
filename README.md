@@ -24,9 +24,9 @@
 - 获取项目代码（https or ssh）
 
 ```bash
-git clone https://github.com/jsxiaosi/xs-components-lib.git
+git clone https://github.com/jsxiaosi/xs-utils.git
 
-git clone git@github.com:jsxiaosi/xs-components-lib.git
+git clone git@github.com:jsxiaosi/xs-utils.git
 ```
 
 或者通过[`xs-cli`](https://github.com/jsxiaosi/xs-cli)快速创建

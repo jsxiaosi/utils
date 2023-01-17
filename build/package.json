@@ -1,5 +1,5 @@
 {
-  "name": "xs-components-build",
+  "name": "xs-utils-build",
   "private": true,
   "scripts": {
     "build": "gulp --require @esbuild-kit/cjs-loader -f ./gulpfile.ts"

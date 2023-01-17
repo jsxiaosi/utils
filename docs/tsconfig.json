@@ -15,7 +15,7 @@
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
     "lib": ["WebWorker"],
     "paths": {
-      "@xs-components/*": ["../packages/"],
+      "@xs-utils/*": ["../packages/"],
       "@/*": ["./.vitepress/"]
     }
   },
