@@ -1,16 +1,18 @@
 import type { Ref } from 'vue';
 import { onBeforeUnmount, shallowRef, ref, unref } from 'vue';
 import { createBase64, createWaterMarkDom } from '../../utils/waterMark';
+import type { WaterMarkOptions } from '../../utils/waterMark/types';
 
 export const useWaterMark = (
   appendEl: Ref<HTMLElement | undefined> = ref(document.body) as Ref<HTMLElement>,
+  options?: WaterMarkOptions,
 ) => {
   const watermarkEl = shallowRef<HTMLElement>();
 
   const updateWatermark = (text: string) => {
     const el = unref(watermarkEl);
     if (!el) return;
-    el.style.background = `url(${createBase64(text)}) left top repeat`;
+    el.style.background = `url(${createBase64(text, options)}) left top repeat`;
   };
 
   const createWatermark = (text: string) => {

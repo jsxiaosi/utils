@@ -11,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "strictFunctionTypes": false,
     "jsx": "preserve",
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "sourceMap": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
