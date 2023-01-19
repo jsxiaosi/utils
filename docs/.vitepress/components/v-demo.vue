@@ -3,7 +3,7 @@
     <p text="sm" v-html="decodedDescription" />
 
     <div class="example">
-      <Example :file="path" :demo="formatPathDemos[path]" />
+      <Example :file="pathName" :demo="formatPathDemos[pathName]" />
       <div class="op-btns">
         <span class="op-btn" @click="copyCode">复制</span>
         <span class="op-btn" @click="toggleSourceVisible">显示源代码</span>
@@ -36,6 +36,7 @@
     demos: Object;
     source: string;
     path: string;
+    pathName: string;
     rawSource: string;
     description?: string;
   }>();
@@ -46,7 +47,7 @@
     const demos: Object = {};
 
     Object.keys(props.demos).forEach((key: string) => {
-      demos[key.replace('../example/', '').replace('.vue', '')] = props.demos[key].default;
+      demos[key.split('./example/')[1].replace('.vue', '')] = props.demos[key].default;
     });
     return demos;
   });
@@ -76,7 +77,7 @@
 </script>
 <style lang="scss">
   .example {
-    border: 1px solid var(--vp-c-divider-light);
+    border: 1px solid var(--vp-c-divider);
     border-radius: 8px;
     .op-btns {
       padding: 0.5rem;
@@ -85,7 +86,7 @@
       justify-content: flex-end;
       height: 2.5rem;
       font-size: 14px;
-      border-top: 1px solid var(--vp-c-divider-light);
+      border-top: 1px solid var(--vp-c-divider);
 
       .op-btn {
         margin: 0 0.5rem;
@@ -101,7 +102,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-top: 1px solid var(--vp-c-divider-light);
+      border-top: 1px solid var(--vp-c-divider);
       height: 44px;
       box-sizing: border-box;
       // background-color: var(--bg-color, #fff);
