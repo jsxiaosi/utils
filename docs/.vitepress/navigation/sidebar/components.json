@@ -6,6 +6,20 @@
         {
           "text": "Button",
           "link": "button"
+        },
+        {
+          "text": "useWaterMark",
+          "link": "water-mark"
+        }
+      ]
+    },
+    {
+      "text": "Hooks",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "useWaterMark",
+          "link": "hooks/water-mark"
         }
       ]
     }
