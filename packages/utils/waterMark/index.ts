@@ -26,13 +26,13 @@ export function createBase64(text: string, options?: WaterMarkOptions) {
   canvas.height = height || 100;
   const ctx = canvas.getContext('2d'); // 获取画布上下文
 
-  if (ctx) {
+  if (ctx && text) {
     ctx.rotate(rotate || (-20 * Math.PI) / 180);
     ctx.font = fontSize || '14px normal';
     ctx.fillStyle = fillStyle || 'rgba(180, 180, 180, 0.3)';
     ctx.textAlign = textAlign || 'left';
     ctx.textBaseline = 'middle';
-    ctx.fillText(text || 'vue-xs-admin', canvas.width / 20, canvas.height / 1.5);
+    ctx.fillText(text, canvas.width / 20, canvas.height / 1.5);
   }
 
   return canvas.toDataURL('image/png');

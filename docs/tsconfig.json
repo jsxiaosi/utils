@@ -8,12 +8,13 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["unplugin-vue-define-options/vite", "vite/client"],
+    "types": ["unplugin-vue-define-options/vite", "vite/client", "element-plus/global"],
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
-    "lib": ["WebWorker"],
+    "lib": ["WebWorker", "ESNext", "Dom"],
     "paths": {
       "@xs-utils/*": ["../packages/"],
       "@/*": ["./.vitepress/"]

@@ -7,11 +7,14 @@ import '../styles/app.scss';
 import xsComponents from '@xs-utils/index';
 import '@xs-utils/theme-default/index.scss';
 
+import ElementPlus from 'element-plus';
+
 export default <Theme>{
   ...DefaultTheme,
   enhanceApp({ app }) {
     // register global components
     app.use(xsComponents);
+    app.use(ElementPlus);
     app.component('Demo', Demo);
   },
 };

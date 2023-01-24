@@ -1,15 +1,12 @@
 {
   "/components/": [
     {
-      "text": "组件",
+      "text": "指令",
+      "collapsible": true,
       "items": [
         {
-          "text": "Button",
-          "link": "button"
-        },
-        {
-          "text": "useWaterMark",
-          "link": "water-mark"
+          "text": "v-water-mark",
+          "link": "directive/water-mark"
         }
       ]
     },
