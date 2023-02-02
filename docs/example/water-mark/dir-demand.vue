@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { vWaterMark } from '@xs-utils/index';
+  import { vWaterMark } from 'xs-utils';
   const vMyWaterMark = vWaterMark;
 </script>
 

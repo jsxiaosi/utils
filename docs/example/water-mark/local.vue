@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useWaterMark } from '@xs-utils/index';
+  import { useWaterMark } from 'xs-utils';
   import { ref } from 'vue';
 
   const dom = ref<HTMLElement | undefined>();

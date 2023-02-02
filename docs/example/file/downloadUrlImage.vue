@@ -8,6 +8,6 @@
 
 <template>
   <div>
-    <ElButton @click="downloadChange"></ElButton>
+    <ElButton @click="downloadChange">下载图片</ElButton>
   </div>
 </template>

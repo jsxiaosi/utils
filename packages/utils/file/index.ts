@@ -138,7 +138,7 @@ export function urlToBase64(url: string, fileType?: string): Promise<string> {
 }
 
 // 下载Url图片
-export function downloadUrlImage(url: string, fileName: string, fileType: string) {
+export function downloadUrlImage(url: string, fileName: string, fileType?: string) {
   urlToBase64(url, fileType).then((res) => {
     downloadFile(base64ToBlob(res), fileName);
   });

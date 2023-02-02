@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { useWaterMark } from '@xs-utils/index';
+  import { useWaterMark } from 'xs-utils';
   const { setWaterMark, close } = useWaterMark();
 </script>
 

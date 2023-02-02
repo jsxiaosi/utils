@@ -4,11 +4,6 @@
     "link": "/"
   },
   {
-    "text": "指南",
-    "link": "/guide/getting-started",
-    "activeMatch": "/guide/"
-  },
-  {
     "text": "组件",
     "link": "/components/hooks/water-mark",
     "activeMatch": "/components/"
