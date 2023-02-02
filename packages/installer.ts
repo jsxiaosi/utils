@@ -1,10 +1,8 @@
 import type { App, Plugin } from 'vue';
 
-import { IButton } from './components/button';
-
 import { waterMark } from './components/waterMark';
 
-const component = [IButton] as Plugin[];
+const component = [] as Plugin[];
 
 const directive = [waterMark] as Plugin[];
 
