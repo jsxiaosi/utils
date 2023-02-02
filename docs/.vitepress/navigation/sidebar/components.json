@@ -19,6 +19,16 @@
           "link": "hooks/water-mark"
         }
       ]
+    },
+    {
+      "text": "Utils",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "file",
+          "link": "utils/file"
+        }
+      ]
     }
   ]
 }

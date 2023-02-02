@@ -174,12 +174,14 @@ importers:
     specifiers:
       '@types/lodash': ^4.14.191
       '@vueuse/core': ^9.9.0
+      image-conversion: ^2.1.1
       lodash: ^4.17.21
       vue: ^3.2.45
 
     dependencies:
       '@types/lodash': 4.14.191
       '@vueuse/core': 9.9.0_vue@3.2.45
+      image-conversion: 2.1.1
       lodash: 4.17.21
 
     devDependencies:
@@ -8710,6 +8712,13 @@ packages:
       }
     engines: { node: '>= 4' }
     dev: true
+
+  /image-conversion/2.1.1:
+    resolution:
+      {
+        integrity: sha512-hnMOmP7q2jxA+52FZ+wHNhg3fdFRlgfngsQH2JQHEQkafY7tj/8F15e6Rv/RxDegc872jvyaRHwMbkTZK1Cjbg==,
+      }
+    dev: false
 
   /immutable/4.1.0:
     resolution:

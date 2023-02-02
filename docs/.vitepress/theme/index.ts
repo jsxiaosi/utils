@@ -4,8 +4,8 @@ import type { Theme } from 'vitepress';
 import Demo from '../components/v-demo.vue';
 import '../styles/app.scss';
 
-import xsComponents from '@xs-utils/index';
-import '@xs-utils/theme-default/index.scss';
+import xsComponents from 'xs-utils';
+import 'xs-utils/theme-default/index.css';
 
 import ElementPlus from 'element-plus';
 
