@@ -1,7 +1,11 @@
 {
   "name": "xs-utils-docs",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "serve": "vitepress serve . --port 9581"
+  },
   "dependencies": {
     "element-plus": "^2.2.28",
     "markdown-it": "^13.0.1",
