@@ -21,5 +21,6 @@
     "vite-plugin-inspect": "^0.7.14",
     "vite-plugin-pwa": "^0.14.1",
     "vitepress": "1.0.0-alpha.40"
-  }
+  },
+  "version": "0.0.1"
 }

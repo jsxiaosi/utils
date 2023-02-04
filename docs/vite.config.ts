@@ -14,6 +14,10 @@ export default (): UserConfig => {
           find: '~/',
           replacement: `${path.resolve(__dirname, './.vitepress')}/`,
         },
+        {
+          find: 'xs-utils',
+          replacement: `${path.resolve(__dirname, '../packages')}/index.ts`,
+        },
       ],
     },
     server: {

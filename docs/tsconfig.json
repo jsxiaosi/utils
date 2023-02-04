@@ -16,8 +16,8 @@
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
     "lib": ["WebWorker", "ESNext", "Dom"],
     "paths": {
-      "@xs-utils/*": ["../packages/"],
-      "@/*": ["./.vitepress/"]
+      "@/*": ["./.vitepress/"],
+      "xs-utils": ["../packages/"]
     }
   },
   "include": ["**/*", ".vitepress/**/*"],
