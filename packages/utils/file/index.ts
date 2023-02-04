@@ -14,6 +14,7 @@ function readAsDataURL(data: File | Blob): Promise<string> {
 export function fileToBase64(file: File): Promise<string> {
   return readAsDataURL(file);
 }
+
 // File转化为二进制字符串
 export function fileToBinaryString(file: File): Promise<string> {
   return new Promise(function (resolve) {
@@ -61,8 +62,8 @@ export function base64ToBlob(base64Data: string): Blob {
 }
 
 // Base64转化为File
-export function base64toFile(dataurl: string, filename: String = 'file'): File {
-  const arr = dataurl.split(',');
+export function base64ToFile(base64Data: string, filename: String = 'file'): File {
+  const arr = base64Data.split(',');
   const mimeArr = arr[0].match(/:(.*?);/) as RegExpMatchArray;
   const mime = mimeArr[1] as string;
   const suffix = mime.split('/')[1];
@@ -89,9 +90,9 @@ export function blobToFile(data: Blob, fileName: string): File {
 }
 
 // 二进制字符串转化为Blob
-export function binaryStringToBlob(binaryString: string, type: string): Blob {
+export function binaryStringToBlob(binaryString: string): Blob {
   const uint8 = Uint8Array.from(binaryString, (c) => c.charCodeAt(0));
-  const blob = new Blob([uint8], { type });
+  const blob = new Blob([uint8]);
   return blob;
 }
 
@@ -99,16 +100,6 @@ export function binaryStringToBlob(binaryString: string, type: string): Blob {
 export function arrayBufferToBlob(arrayBuffer: ArrayBuffer): Blob {
   const blob = new Blob([arrayBuffer]);
   return blob;
-}
-
-//压缩图片
-export function beforeAvatarUpload(file: File): Promise<Blob> {
-  return new Promise((resolve) => {
-    // 压缩到100KB,这里的100就是要压缩的大小,可自定义
-    compress(file, 0.4).then((res) => {
-      resolve(res);
-    });
-  });
 }
 
 // url图片转成base64
@@ -138,7 +129,7 @@ export function urlToBase64(url: string, fileType?: string): Promise<string> {
 }
 
 // 下载Url图片
-export function downloadUrlImage(url: string, fileName: string, fileType?: string) {
+export function downloadImage(url: string, fileName: string, fileType?: string) {
   urlToBase64(url, fileType).then((res) => {
     downloadFile(base64ToBlob(res), fileName);
   });
@@ -151,13 +142,13 @@ export function downloadUrlFile(
   requestOption?: RequestInit,
   fileType?: string,
 ) {
-  downloadUrlToBlob(url, requestOption).then(async (res) => {
+  urlToBlob(url, requestOption).then(async (res) => {
     downloadFile(res, fileName, fileType);
   });
 }
 
 // Url下载Blob
-export function downloadUrlToBlob(url: string, requestOption?: RequestInit): Promise<Blob> {
+export function urlToBlob(url: string, requestOption?: RequestInit): Promise<Blob> {
   return new Promise((resolve, reject) => {
     fetch(url, requestOption).then((res) => {
       if (res.status === 200) {
@@ -204,5 +195,15 @@ export function pasteImage() {
         }
       }
     }
+  });
+}
+
+//压缩图片
+export function beforeAvatarUpload(file: File): Promise<Blob> {
+  return new Promise((resolve) => {
+    // 压缩到100KB,这里的100就是要压缩的大小,可自定义
+    compress(file, 0.4).then((res) => {
+      resolve(res);
+    });
   });
 }
