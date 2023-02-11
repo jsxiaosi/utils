@@ -59,7 +59,7 @@ export function isNumber(val: unknown): val is number {
 
 // 是否为promise类型
 export function isPromise<T = any>(val: unknown): val is Promise<T> {
-  return is(val, 'Promise') && isObject(val) && isFunction(val.then) && isFunction(val.catch);
+  return is(val, 'Promise');
 }
 
 // 是否string类型
@@ -101,10 +101,6 @@ export function isElement(val: unknown): val is Element {
 export function isMap(val: unknown): val is Map<any, any> {
   return is(val, 'Map');
 }
-
-export const isServer = typeof window === 'undefined';
-
-export const isClient = !isServer;
 
 // 是否为地址
 export function isUrl(path: string): boolean {
