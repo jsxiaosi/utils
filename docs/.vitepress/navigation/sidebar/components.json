@@ -25,12 +25,16 @@
       "collapsible": true,
       "items": [
         {
-          "text": "file 文件流",
+          "text": "file",
           "link": "utils/file"
         },
         {
-          "text": "is 判断",
+          "text": "is",
           "link": "utils/is"
+        },
+        {
+          "text": "storage",
+          "link": "utils/storage"
         }
       ]
     }
