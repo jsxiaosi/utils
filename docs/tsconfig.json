@@ -12,7 +12,7 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["unplugin-vue-define-options/vite", "vite/client", "element-plus/global"],
+    "types": ["unplugin-vue-macros/vite", "vite/client", "element-plus/global"],
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
     "lib": ["WebWorker", "ESNext", "Dom"],
     "paths": {

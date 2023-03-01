@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import DefineOptions from 'unplugin-vue-macros/rollup';
+import DefineOptions from 'unplugin-vue-macros/vite';
 
 export default defineConfig({
   plugins: [
@@ -20,6 +20,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./vitest.setup.ts'],
+    transformMode: {
+      web: [/.tsx$/],
+    },
   },
 });
