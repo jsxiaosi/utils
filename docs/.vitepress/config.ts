@@ -7,7 +7,7 @@ import nav from './navigation/nav.json';
 
 const config: UserConfig = {
   lang: 'zh-CN',
-  title: 'xs-utils',
+  title: 'xs-utils-vue',
   description: 'Just playing around.',
   lastUpdated: true,
   head: [
@@ -60,7 +60,7 @@ const config: UserConfig = {
   ],
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/xs-block/xs-utils/tree/main/docs/:path',
+      pattern: 'https://github.com/xs-block/xs-utils-vue/tree/main/docs/:path',
       text: '编辑此页面',
     },
     logo: '/logo2.png',
@@ -73,7 +73,7 @@ const config: UserConfig = {
         faeFilters: ['tags:guide,api'],
       },
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/xs-block/xs-utils' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/xs-block/xs-utils-vue' }],
     // 顶部标题栏
     nav,
     // 侧边栏

@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
-  import { urlToBase64 } from 'xs-utils';
+  import { urlToBase64 } from 'xs-utils-vue';
 
   const urlSrc = ref<string>();
 

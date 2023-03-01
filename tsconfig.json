@@ -42,7 +42,7 @@
 //       "dom"
 //     ],
 //     "paths": {
-//       "@xs-utils/*": [
+//       "@xs-utils-vue/*": [
 //         "../packages/"
 //       ]
 //     }

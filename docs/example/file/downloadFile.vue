@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { urlToBlob, downloadFile } from 'xs-utils';
+  import { urlToBlob, downloadFile } from 'xs-utils-vue';
 
   const dataUrlToBase64 = () => {
     urlToBlob('https://supercutexiaosi.top/resource/account_url.png').then((blob) => {

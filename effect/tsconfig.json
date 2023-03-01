@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "types": ["vite/client", "unplugin-vue-macros/macros-global"],
     "paths": {
-      "@xs-utils/*": ["../packages/*"]
+      "@xs-utils-vue/*": ["../packages/*"]
     }
   },
   "include": ["**/*", "typings/vue-shim.d.ts"],

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { downloadImage } from 'xs-utils';
+  import { downloadImage } from 'xs-utils-vue';
 
   const downloadChange = () => {
     downloadImage('https://supercutexiaosi.top/resource/account_url.png', 'logo.png');

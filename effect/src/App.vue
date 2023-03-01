@@ -1,9 +1,5 @@
 <script setup lang="ts">
-  // import { IButton } from '@xs-utils/index';
-  // import { useDeveloper } from '@xs-utils/hooks/useDeveloper';
-  // import { developFn } from '@xs-utils/utils/myDevelop';
-
-  import { vWaterMark } from '@packages/index';
+  import { vWaterMark } from '@xs-utils-vue/index';
 
   // const { num } = useDeveloper();
 

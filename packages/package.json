@@ -1,17 +1,17 @@
 {
-  "name": "xs-utils",
+  "name": "xs-utils-vue",
   "version": "0.0.1",
   "description": "Vue3 Component Library",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsxiaosi/xs-utils/issues"
+    "url": "https://github.com/jsxiaosi/xs-utils-vue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsxiaosi/xs-utils.git"
+    "url": "git+https://github.com/jsxiaosi/xs-utils-vue.git"
   },
   "keywords": [
-    "xs-utils",
+    "xs-utils-vue",
     "ui framework",
     "vue"
   ],

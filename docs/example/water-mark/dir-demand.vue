@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { vWaterMark } from 'xs-utils';
+  import { vWaterMark } from 'xs-utils-vue';
   const vMyWaterMark = vWaterMark;
 </script>
 
