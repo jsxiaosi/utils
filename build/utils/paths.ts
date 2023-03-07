@@ -3,7 +3,7 @@ import { resolve } from 'path';
 export const projRoot = resolve(__dirname, '..', '..');
 
 // name
-export const PKG_NAME = 'xs-utils-vue';
+export const PKG_NAME = 'xs-vue-utils';
 export const PKG_HUMP_NAME = 'XsComponents';
 
 // packages

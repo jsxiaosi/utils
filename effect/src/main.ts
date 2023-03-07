@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import xsCom from '@xs-utils-vue/index';
+import xsCom from '@xs-vue-utils/index';
 
 import App from './App.vue';
 

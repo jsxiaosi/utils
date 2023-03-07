@@ -1,5 +1,5 @@
 {
-  "name": "xs-utils-vue-build",
+  "name": "xs-vue-utils-build",
   "private": true,
   "scripts": {
     "build": "gulp --require @esbuild-kit/cjs-loader -f ./gulpfile.ts"

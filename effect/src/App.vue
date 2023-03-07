@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { vWaterMark } from '@xs-utils-vue/index';
+  import { vWaterMark } from '@xs-vue-utils/index';
 
   // const { num } = useDeveloper();
 

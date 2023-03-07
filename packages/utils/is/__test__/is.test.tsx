@@ -134,7 +134,7 @@ describe('is', () => {
   });
 
   test('isUrl', () => {
-    expect(isUrl('https://xs-utils-vue.vercel.app/')).toBeTruthy();
+    expect(isUrl('https://xs-vue-utils.vercel.app/')).toBeTruthy();
     expect(isUrl('123123')).toBeFalsy();
   });
 });

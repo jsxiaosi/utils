@@ -88,7 +88,7 @@ fileType | blob中的数组内容的MIME类型 | BlobPropertyBag['type'] | appli
 ::: details 示例代码
 
 ```js
-  import { fileToBase64 } from 'xs-utils-vue';
+  import { fileToBase64 } from 'xs-vue-utils';
 
   await fileToBase64(file)
 ```
@@ -108,7 +108,7 @@ file | file对象 | File |
 ::: details 示例代码
 
 ```js
-  import { fileToBinaryString } from 'xs-utils-vue';
+  import { fileToBinaryString } from 'xs-vue-utils';
 
   await fileToBinaryString(file)
 ```
@@ -128,7 +128,7 @@ file | file对象 | File |
 ::: details 示例代码
 
 ```js
-  import { fileToArrayBuffer } from 'xs-utils-vue';
+  import { fileToArrayBuffer } from 'xs-vue-utils';
 
   await fileToArrayBuffer(file)
 ```
@@ -148,7 +148,7 @@ file | file对象 | File |
 ::: details 示例代码
 
 ```js
-  import { base64ToBlob } from 'xs-utils-vue';
+  import { base64ToBlob } from 'xs-vue-utils';
 
   await base64ToBlob(base64Data)
 ```
@@ -168,7 +168,7 @@ base64Data | base64字符串 | string |
 ::: details 示例代码
 
 ```js
-  import { base64ToBlob } from 'xs-utils-vue';
+  import { base64ToBlob } from 'xs-vue-utils';
 
   await base64ToBlob(base64Data)
 ```
@@ -188,7 +188,7 @@ base64Data | base64字符串 | string |
 ::: details 示例代码
 
 ```js
-  import { blobToBase64 } from 'xs-utils-vue';
+  import { blobToBase64 } from 'xs-vue-utils';
 
   await blobToBase64(blob)
 ```
@@ -208,7 +208,7 @@ blob | blob对象 | Blob |
 ::: details 示例代码
 
 ```js
-  import { blobToFile } from 'xs-utils-vue';
+  import { blobToFile } from 'xs-vue-utils';
 
   await blobToFile(blob)
 ```
@@ -228,7 +228,7 @@ blob | blob对象 | Blob |
 ::: details 示例代码
 
 ```js
-  import { binaryStringToBlob } from 'xs-utils-vue';
+  import { binaryStringToBlob } from 'xs-vue-utils';
 
   await binaryStringToBlob(binaryString)
 ```
@@ -248,7 +248,7 @@ binaryString | 二进制字符串 | string |
 ::: details 示例代码
 
 ```js
-  import { arrayBufferToBlob } from 'xs-utils-vue';
+  import { arrayBufferToBlob } from 'xs-vue-utils';
 
   await arrayBufferToBlob(arrayBuffer)
 ```

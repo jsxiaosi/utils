@@ -1,9 +1,9 @@
 {
-  "name": "xs-utils-vue",
+  "name": "xs-vue-utils",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git:https://github.com/jsxiaosi/xs-utils-vue.git"
+    "url": "git:https://github.com/jsxiaosi/xs-vue-utils.git"
   },
   "workspaces": [
     "packages",

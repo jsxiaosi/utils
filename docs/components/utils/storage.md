@@ -7,7 +7,7 @@ outline: deep
 `localStorage`和`sessionStorage`二次封装，内置存储时效，加密数据存储逻辑
 
 ``` js
-import { storage } from 'xs-utils-vue'
+import { storage } from 'xs-vue-utils'
 ```
 
 ## setStorageConfig

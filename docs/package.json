@@ -1,5 +1,5 @@
 {
-  "name": "xs-utils-vue-docs",
+  "name": "xs-vue-utils-docs",
   "private": true,
   "scripts": {
     "dev": "vitepress dev .",

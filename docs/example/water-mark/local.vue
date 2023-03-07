@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useWaterMark } from 'xs-utils-vue';
+  import { useWaterMark } from 'xs-vue-utils';
   import { ref } from 'vue';
 
   const dom = ref<HTMLElement | undefined>();
@@ -8,7 +8,7 @@
 
 <template>
   <div>
-    <ElButton @click="() => setWaterMark('xs-utils-vue-demo')">生成水印</ElButton>
+    <ElButton @click="() => setWaterMark('xs-vue-utils-demo')">生成水印</ElButton>
     <ElButton @click="() => close()">清除水印</ElButton>
   </div>
   <div id="dom" ref="dom" class="local-demo"> </div>

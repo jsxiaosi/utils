@@ -11,12 +11,12 @@ export interface BuildInfo {
   output: {
     // es
     name: string;
-    // dist/xs-utils-vue
+    // dist/xs-vue-utils
     path: string;
   };
 
   bundle: {
-    // xs-utils-vue/es
+    // xs-vue-utils/es
     path: string;
   };
 }

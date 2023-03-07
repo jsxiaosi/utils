@@ -5,7 +5,7 @@ title: xs组件模板
 titleTemplate: Next Generation Frontend Tooling
 
 hero:
-  name: xs-utils-vue
+  name: xs-vue-utils
   text: 组件库模板
   tagline: 快速开发属于你自己的组件库、组件库文档
   image:
@@ -20,10 +20,10 @@ hero:
       link: /components/button
     - theme: alt
       text: Starred
-      link: https://github.com/xs-block/xs-utils-vue/
+      link: https://github.com/xs-block/xs-vue-utils/
     - theme: alt
       text: Forked
-      link: https://github.com/xs-block/xs-utils-vue/fork
+      link: https://github.com/xs-block/xs-vue-utils/fork
    
 
 features:
