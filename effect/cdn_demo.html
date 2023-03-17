@@ -3,8 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="https://unpkg.com/xs-vue-utils/cdn/index.css">
-    <script src="https://unpkg.com/xs-vue-utils@0.0.8/cdn/index.cdn.js"></script>
+    <script src="https://unpkg.com/@jsxiaosi/utils@0.0.8/cdn/index.cdn.js"></script>
     <title>demo</title>
   </head>
   <body>
@@ -19,11 +18,9 @@
           };
         },
         setup(){
-          const { num } = XsComponents.useDeveloper();
          }
       };
       const app = Vue.createApp(App);
-      app.use(XsComponents);
       app.mount("#app");
     </script>
   </body>

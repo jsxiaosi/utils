@@ -44,9 +44,9 @@ Built-in VitePress theme eliminates the trouble of writing style, with its own n
 - Get project code (Https or SSH)
 
 ```bash
-git clone https://github.com/jsxiaosi/xs-vue-utils.git
+git clone https://github.com/jsxiaosi/utils.git
 
-git clone git@github.com:jsxiaosi/xs-vue-utils.git
+git clone git@github.com:jsxiaosi/utils.git
 ```
 
 Alternatively, you can use the [`xs-cli`](https://github.com/jsxiaosi/xs-cli)to quickly create one

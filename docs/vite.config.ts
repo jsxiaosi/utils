@@ -16,7 +16,7 @@ export default (): UserConfig => {
           replacement: `${path.resolve(__dirname, './.vitepress')}/`,
         },
         {
-          find: 'xs-vue-utils',
+          find: '@jsxiaosi/utils',
           replacement: `${path.resolve(__dirname, '../packages')}/index.ts`,
         },
       ],
@@ -35,7 +35,7 @@ export default (): UserConfig => {
       VitePWA({
         includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
         manifest: {
-          name: 'xs-vue-utils',
+          name: '@jsxiaosi/utils',
           short_name: 'xs组件库模版',
           description: '基于 vue3+vitepress 搭建的后台模板',
           theme_color: '#ffffff',

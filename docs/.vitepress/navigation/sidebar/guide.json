@@ -1,0 +1,41 @@
+{
+  "/guide/": [
+    {
+      "text": "介绍",
+      "items": [
+        {
+          "text": "开始",
+          "link": "started"
+        }
+      ]
+    },
+    {
+      "text": "utils",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "file",
+          "link": "utils/file"
+        },
+        {
+          "text": "is",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "类型判断",
+              "link": "utils/is/type"
+            },
+            {
+              "text": "正则判断",
+              "link": "utils/is/regexp"
+            }
+          ]
+        },
+        {
+          "text": "storage",
+          "link": "utils/storage"
+        }
+      ]
+    }
+  ]
+}

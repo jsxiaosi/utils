@@ -25,7 +25,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@xs-vue-utils',
+        find: '@jsxiaosi/utils',
         replacement: `${path.resolve(__dirname, '../packages')}/`,
       },
     ],

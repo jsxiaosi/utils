@@ -17,7 +17,7 @@
     "lib": ["WebWorker", "ESNext", "Dom"],
     "paths": {
       "@/*": ["./.vitepress/"],
-      "xs-vue-utils": ["../packages/"]
+      "@jsxiaosi/utils": ["../packages/"]
     }
   },
   "include": ["**/*", ".vitepress/**/*"],

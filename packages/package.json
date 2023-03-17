@@ -1,17 +1,17 @@
 {
-  "name": "xs-vue-utils",
+  "name": "@jsxiaosi/utils",
   "version": "0.0.1",
   "description": "Vue3 Component Library",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsxiaosi/xs-vue-utils/issues"
+    "url": "https://github.com/jsxiaosi/utils/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsxiaosi/xs-vue-utils.git"
+    "url": "git+https://github.com/jsxiaosi/utils.git"
   },
   "keywords": [
-    "xs-vue-utils",
+    "@jsxiaosi/utils",
     "ui framework",
     "vue"
   ],
@@ -45,9 +45,7 @@
     "access": "public"
   },
   "style": "cdn/index.css",
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@types/lodash": "^4.14.191",
     "@vueuse/core": "^9.12.0",
@@ -56,7 +54,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "vue": "^3.2.47"
+    "@types/crypto-js": "^4.1.1"
   },
   "browserslist": [
     "> 1%",

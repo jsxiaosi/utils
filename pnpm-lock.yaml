@@ -180,6 +180,7 @@ importers:
 
   packages:
     specifiers:
+      '@types/crypto-js': ^4.1.1
       '@types/lodash': ^4.14.191
       '@vueuse/core': ^9.12.0
       crypto-js: ^4.1.1
@@ -195,6 +196,7 @@ importers:
       lodash: 4.17.21
 
     devDependencies:
+      '@types/crypto-js': 4.1.1
       vue: 3.2.47
 
 packages:
@@ -3394,6 +3396,13 @@ packages:
     dependencies:
       '@types/node': 18.11.17
       source-map: 0.6.1
+    dev: true
+
+  /@types/crypto-js/4.1.1:
+    resolution:
+      {
+        integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==,
+      }
     dev: true
 
   /@types/escape-html/1.0.2:

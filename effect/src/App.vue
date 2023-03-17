@@ -1,25 +1,7 @@
-<script setup lang="ts">
-  import { vWaterMark } from '@xs-vue-utils/index';
-
-  // const { num } = useDeveloper();
-
-  // const vWaterMark = waterMark;
-
-  // function add() {
-  //   developFn();
-  //   num.value = num.value + 1;
-  // }
-
-  // This starter template is using Vue 3 <script setup> SFCs
-  // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div v-water-mark="'admin'">
-    组件实例：
-    <!-- <i-button @click="add">按钮</i-button>
-    {{ num }} -->
-  </div>
+  <div> </div>
 </template>
 
 <style>

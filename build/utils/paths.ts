@@ -3,8 +3,8 @@ import { resolve } from 'path';
 export const projRoot = resolve(__dirname, '..', '..');
 
 // name
-export const PKG_NAME = 'xs-vue-utils';
-export const PKG_HUMP_NAME = 'XsComponents';
+export const PKG_NAME = '@jsxiaosi/utils';
+export const PKG_HUMP_NAME = 'jsxsUtils';
 
 // packages
 export const pkgRoot = resolve(projRoot, 'packages');

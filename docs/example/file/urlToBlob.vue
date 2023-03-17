@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
-  import { urlToBlob, blobToBase64 } from 'xs-vue-utils';
+  import { urlToBlob, blobToBase64 } from '@jsxiaosi/utils';
 
   const urlSrc = ref<string>();
 

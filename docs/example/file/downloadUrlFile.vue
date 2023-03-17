@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { downloadUrlFile } from 'xs-vue-utils';
+  import { downloadUrlFile } from '@jsxiaosi/utils';
 
   const downloadPDF = () => {
     downloadUrlFile('https://supercutexiaosi.top/resource/develop_pdf.pdf', 'develop_pdf.pdf');
