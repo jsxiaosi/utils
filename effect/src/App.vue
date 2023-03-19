@@ -1,9 +1,17 @@
 <script setup lang="ts">
-  import { isIdCard } from '@jsxiaosi/utils/index';
+  import { hasClass, addClass, removeClass } from '@jsxiaosi/utils/index';
+  import { ref, onMounted } from 'vue';
+
+  const elEef = ref<HTMLDivElement>();
+  onMounted(() => {
+    console.log(hasClass(elEef.value!, 'button'));
+    console.log(addClass(elEef.value!, 'button2 button3 button4'));
+    console.log(removeClass(elEef.value!, 'button2 button4 button3'));
+  });
 </script>
 
 <template>
-  <div> asdasdasd {{ isIdCard('111111190001014537') }}</div>
+  <div ref="elEef" class="button show element">admin</div>
 </template>
 
 <style>
