@@ -7,42 +7,57 @@ outline: deep
 ## isUrl
 
 是否为Url地址
+::: details 示例代码
 
 ``` js
 isUrl(val)
 ```
 
+:::
+
 ## isEmail
 
 是否为邮箱
+::: details 示例代码
 
 ``` js
 isEmail(val)
 ```
 
+:::
+
 ## isMobile
 
 是否为手机号码
+::: details 示例代码
 
 ``` js
 isMobile(val)
 ```
 
+:::
+
 ## isPhone
 
 是否为座机号码
+::: details 示例代码
 
 ``` js
 isPhone(val)
 ```
 
+:::
+
 ## isIdCard
 
 判断是否为身份证号码
+::: details 示例代码
 
 ``` js
 isIdCard(val)
 ```
+
+:::
 
 返回值：
 参数 | 说明 | 类型
@@ -61,15 +76,21 @@ errorCode：
 ## isWeiXin
 
 是否为微信浏览器
+::: details 示例代码
 
 ``` js
-isWeiXin(val)
+isWeiXin()
 ```
+
+:::
 
 ## isQQBrowser
 
 是否为QQ浏览器
+::: details 示例代码
 
 ``` js
-isQQBrowser(val)
+isQQBrowser()
 ```
+
+:::

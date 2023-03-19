@@ -8,7 +8,9 @@ element 类名添加、删除、查找操作
 
 ## hasClass
 
-判断当前类型是否在element中
+判断当前class类名是否在element中
+
+::: details 示例代码
 
 ``` ts
 import { hasClass } from '@jsxiaosi/utils'
@@ -19,6 +21,8 @@ ele.className = 'foo bar';
 hasClass(ele, 'foo') // true
 hasClass(ele, 'baz') // false
 ```
+
+:::
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
