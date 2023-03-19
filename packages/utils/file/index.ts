@@ -40,8 +40,7 @@ export function fileToArrayBuffer(file: File): Promise<ArrayBuffer> {
 // Base64转化为Blob流
 export function base64ToBlob(base64Data: string): Blob {
   let byteString;
-  if (base64Data.split(',')[0].indexOf('base64') >= 0)
-    byteString = window.atob(base64Data.split(',')[1]);
+  if (base64Data.split(',')[0].indexOf('base64') >= 0) byteString = window.atob(base64Data.split(',')[1]);
   //base64 解码
   else {
     byteString = decodeURIComponent(base64Data.split(',')[1]);
@@ -136,12 +135,7 @@ export function downloadImage(url: string, fileName: string, fileType?: string) 
 }
 
 // 下载Url文件
-export function downloadUrlFile(
-  url: string,
-  fileName: string,
-  requestOption?: RequestInit,
-  fileType?: string,
-) {
+export function downloadUrlFile(url: string, fileName: string, requestOption?: RequestInit, fileType?: string) {
   urlToBlob(url, requestOption).then(async (res) => {
     downloadFile(res, fileName, fileType);
   });

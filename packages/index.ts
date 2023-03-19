@@ -1,3 +1,4 @@
-export * from './is';
-export * from './storage';
-export * from './file';
+export * from './utils/is';
+export * from './utils/file';
+
+export * from './window/storage';
