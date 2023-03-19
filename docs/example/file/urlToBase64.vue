@@ -10,18 +10,14 @@
 </script>
 
 <template>
-  <div class="content">
+  <div class="demos_content">
     <ElButton @click="dataUrlToBase64">url图片转成base64</ElButton>
     <ElImage class="image" :src="urlSrc"></ElImage>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .content {
-    display: flex;
-    align-items: center;
-    .image {
-      margin-left: 12px;
-    }
+  .image {
+    margin-left: 12px;
   }
 </style>

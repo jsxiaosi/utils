@@ -2,7 +2,7 @@ import DefaultTheme from 'vitepress/theme';
 import type { Theme } from 'vitepress';
 
 import Demo from '../components/v-demo.vue';
-import '../styles/app.scss';
+import '../styles/index.scss';
 
 import ElementPlus from 'element-plus';
 

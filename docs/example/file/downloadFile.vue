@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="content">
+  <div class="demos_content">
     <ElButton @click="dataUrlToBase64">保存文件到本地</ElButton>
   </div>
 </template>
