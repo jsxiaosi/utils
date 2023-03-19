@@ -48,6 +48,7 @@ pnpm add @jsxiaosi/utils
 ```
 
 ``` js [jsdelivr]
+<script src="https://cdn.jsdelivr.net/npm/crypto-js/index.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@jsxiaosi/utils"></script>
 ```
 

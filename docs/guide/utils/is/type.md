@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# is 判断
+# 类型判断
 
 ## is
 
@@ -143,12 +143,4 @@ isWindow(val)
 
 ``` js
 isElement(val)
-```
-
-## isUrl
-
-是否为Url地址
-
-``` js
-isUrl(val)
 ```

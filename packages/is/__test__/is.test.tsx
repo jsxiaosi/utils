@@ -19,11 +19,19 @@ import {
   isWindow,
   isMap,
   isElement,
+  isEmail,
+  isPhone,
+  isMobile,
+  isWeiXin,
+  isQQBrowser,
+  isIdCard,
 } from '..';
 
-const window = {};
-
-vi.stubGlobal('window', {});
+vi.mock('./__mocks__/navigator', () => {
+  return {
+    userAgent: 'test user agent',
+  };
+});
 
 describe('is', () => {
   test('is', () => {
@@ -129,12 +137,66 @@ describe('is', () => {
   });
 
   it('isElement', () => {
+    expect(isElement('tag')).toBeFalsy();
     expect(isElement({})).toBeFalsy();
-    expect(isElement({ tagName: 'DIV' })).toBeTruthy();
+    const el = document.createElement('div');
+    expect(isElement(el)).toBeTruthy();
   });
 
   test('isUrl', () => {
-    expect(isUrl('https://@jsxiaosi/utils.vercel.app/')).toBeTruthy();
+    expect(isUrl('https://jsxiaosi/utils.vercel.app/')).toBeTruthy();
     expect(isUrl('123123')).toBeFalsy();
+  });
+
+  test('isEmail', () => {
+    expect(isEmail('1531733886@qq.com')).toBeTruthy();
+    expect(isEmail('153173388611.com')).toBeFalsy();
+  });
+
+  test('isMobile', () => {
+    expect(isMobile('13000000000')).toBeTruthy();
+    expect(isMobile('130000000')).toBeFalsy();
+  });
+
+  test('isPhone', () => {
+    expect(isPhone('020-12345678')).toBeTruthy();
+    expect(isPhone('12345678')).toBeTruthy();
+    expect(isPhone('020-1234-5678')).toBeFalsy();
+  });
+
+  test('isWeiXin', () => {
+    vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.21(0x17001528) NetType/WIFI Language/zh_CN',
+    );
+    expect(isWeiXin()).toBeTruthy();
+
+    vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.9999.99 Safari/537.36',
+    );
+    expect(isWeiXin()).toBeFalsy();
+  });
+
+  test('isQQBrowser', () => {
+    vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue(
+      'Mozilla/5.0 (Linux; Android 11; ELS-AN00 Build/HUAWEIELS-AN00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36 MQQBrowser/12.0.2.1320',
+    );
+    expect(isQQBrowser()).toBeTruthy();
+
+    vi.spyOn(navigator, 'userAgent', 'get').mockReturnValue(
+      'Mozilla/5.0 (Linux; Android 11; ELS-AN00 Build/HUAWEIELS-AN00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36',
+    );
+    expect(isQQBrowser()).toBeFalsy();
+  });
+
+  test('isIdCard', () => {
+    expect(isIdCard('12345678901234')).toEqual({ code: 1001, result: false });
+
+    expect(isIdCard('001111190001014537')).toEqual({ code: 2001, result: false });
+
+    expect(isIdCard('111111190031014537')).toEqual({ code: 3001, result: false });
+
+    expect(isIdCard('111111190001014538')).toEqual({ code: 4001, result: false });
+
+    expect(isIdCard('111111190001014537')).toEqual({ code: 0, result: true });
   });
 });

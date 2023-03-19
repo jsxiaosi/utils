@@ -68,29 +68,21 @@ class Storage {
   }
 
   // 设置 setStorage
-  setStorage<T>(
-    key: string,
-    value: StorageValue<T>,
-    expire = 0,
-    type: StorageType = 'localStorage',
-  ) {
+  setStorage<T>(key: string, value: StorageValue<T>, expire = 0, type: StorageType = 'localStorage') {
     if (value === null || value === undefined) {
       value = null;
     }
 
     if (isNaN(expire) || expire < 0) throw new Error('Expire 必须是数字');
 
-    if (this.config.expire > 0 || expire > 0)
-      expire = (expire ? expire : this.config.expire) * 1000;
+    if (this.config.expire > 0 || expire > 0) expire = (expire ? expire : this.config.expire) * 1000;
     const data = {
       value: value, // 存储值
       time: Date.now(), //存值时间戳
       expire: expire, // 过期时间
     };
 
-    const encryptString = this.config.isEncrypt
-      ? this.encrypt(JSON.stringify(data))
-      : JSON.stringify(data);
+    const encryptString = this.config.isEncrypt ? this.encrypt(JSON.stringify(data)) : JSON.stringify(data);
     window[type].setItem(this.autoAddPrefix(key), encryptString);
   }
 

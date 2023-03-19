@@ -30,10 +30,36 @@
               "link": "utils/is/regexp"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "text": "Window",
+      "collapsed": false,
+      "items": [
         {
           "text": "storage",
-          "link": "utils/storage"
+          "link": "window/storage"
+        }
+      ]
+    },
+    {
+      "text": "Element",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Class",
+          "link": "element/class"
+        }
+      ]
+    },
+    {
+      "text": "功能",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Color",
+          "link": "function/color"
         }
       ]
     }

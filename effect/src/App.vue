@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { isIdCard } from '@jsxiaosi/utils/index';
+</script>
 
 <template>
-  <div> </div>
+  <div> asdasdasd {{ isIdCard('111111190001014537') }}</div>
 </template>
 
 <style>
