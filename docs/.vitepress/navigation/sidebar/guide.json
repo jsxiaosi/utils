@@ -48,7 +48,7 @@
       "collapsed": false,
       "items": [
         {
-          "text": "Class",
+          "text": "class",
           "link": "element/class"
         }
       ]
@@ -58,7 +58,7 @@
       "collapsed": false,
       "items": [
         {
-          "text": "Color",
+          "text": "color",
           "link": "function/color"
         }
       ]

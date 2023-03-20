@@ -4,22 +4,18 @@
 
     <div class="example">
       <Example :file="pathName" :demo="formatPathDemos[pathName]" />
-      <div class="op-btns">
+      <!-- <div class="op-btns">
         <span class="op-btn" @click="copyCode">复制</span>
         <span class="op-btn" @click="toggleSourceVisible">显示源代码</span>
-        <!-- <VIcon class="op-btn" name="icon-github"></VIcon>
-      <VIcon class="op-btn" name="icon-fuzhi" @click="copyCode"></VIcon>
-      <VIcon class="op-btn" name="icon-zitidaima" @click="toggleSourceVisible"></VIcon> -->
       </div>
       <VTransition>
         <SourceCode v-show="sourceVisible" :source="source" />
       </VTransition>
       <Transition name="fade">
         <div v-show="sourceVisible" class="example-float-control" @click="toggleSourceVisible()">
-          <!-- <VIcon class="op-btn" name="icon-sanjiao2"></VIcon> -->
           <span>隐藏源代码</span>
         </div>
-      </Transition>
+      </Transition> -->
     </div>
   </ClientOnly>
 </template>
@@ -27,8 +23,8 @@
   import { computed, ref } from 'vue';
   import { useClipboard } from '@vueuse/core';
   import Example from './v-example.vue';
-  import SourceCode from './v-source-code.vue';
-  import VTransition from './v-transition.vue';
+  // import SourceCode from './v-source-code.vue';
+  // import VTransition from './v-transition.vue';
   // import VIcon from './v-icon.vue';
   import message from './message';
 
