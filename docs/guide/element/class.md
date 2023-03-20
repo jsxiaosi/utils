@@ -24,6 +24,8 @@ hasClass(ele, 'baz') // false
 
 :::
 
+参数:
+
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
 ele | Element | T extends HTMLElement |
@@ -39,6 +41,18 @@ class/addClass
 
 :::
 
+::: details 示例代码
+
+``` ts
+import { addClass } from '@jsxiaosi/utils'
+
+addClass(divDom, 'className')
+```
+
+:::
+
+参数:
+
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
 ele | Element | T extends HTMLElement |
@@ -51,6 +65,18 @@ cls | class类名 | string |
 class/removeClass
 
 :::
+
+::: details 示例代码
+
+``` ts
+import { removeClass } from '@jsxiaosi/utils'
+
+removeClass(divDom, 'className')
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------

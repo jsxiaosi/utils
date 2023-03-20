@@ -12,7 +12,17 @@ file/downloadUrlImage
 
 :::
 
-downloadUrlImage(url, fileName, fileType)
+::: details 示例代码
+
+```js
+  import { downloadImage } from '@jsxiaosi/utils';
+
+  downloadImage('https://supercutexiaosi.top/resource/account_url.png', 'logo.png')
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -28,7 +38,17 @@ file/downloadUrlFile
 
 :::
 
-downloadUrlFile(url, fileName, requestOption, fileType)
+::: details 示例代码
+
+```js
+  import { downloadUrlFile } from '@jsxiaosi/utils';
+
+  downloadUrlFile('https://supercutexiaosi.top/resource/develop_pdf.pdf', 'develop_pdf.pdf');
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -45,7 +65,17 @@ file/urlToBase64
 
 :::
 
-urlToBase64(url, fileType)
+::: details 示例代码
+
+```js
+  import { urlToBase64 } from '@jsxiaosi/utils';
+
+  const base64 = await urlToBase64('https://supercutexiaosi.top/resource/account_url.png');
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -60,7 +90,17 @@ file/urlToBlob
 
 :::
 
-urlToBlob(url, requestOption)
+::: details 示例代码
+
+```js
+  import { urlToBlob } from '@jsxiaosi/utils';
+
+  const blob = await urlToBlob('https://supercutexiaosi.top/resource/account_url.png');
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -75,7 +115,17 @@ file/downloadFile
 
 :::
 
-downloadFile(data, fileName, fileType)
+::: details 示例代码
+
+```js
+  import { downloadFile } from '@jsxiaosi/utils';
+
+  downloadFile(data, 'account.png');
+```
+
+:::
+
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -95,7 +145,7 @@ fileType | blob中的数组内容的MIME类型 | BlobPropertyBag['type'] | appli
 
 :::
 
-fileToBase64(file): `Promise<string>`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -115,7 +165,7 @@ file | file对象 | File |
 
 :::
 
-fileToBinaryString(file): `Promise<string>`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -135,7 +185,7 @@ file | file对象 | File |
 
 :::
 
-fileToArrayBuffer(file): `Promise<ArrayBuffer>`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -155,7 +205,7 @@ file | file对象 | File |
 
 :::
 
-base64ToBlob(base64Data): `Blob`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -175,7 +225,7 @@ base64Data | base64字符串 | string |
 
 :::
 
-base64ToFile(base64Data): `File`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -195,7 +245,7 @@ base64Data | base64字符串 | string |
 
 :::
 
-blobToBase64(blob): `Promise<string>`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -215,7 +265,7 @@ blob | blob对象 | Blob |
 
 :::
 
-blobToFile(blob): `File`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -235,7 +285,7 @@ blob | blob对象 | Blob |
 
 :::
 
-binaryStringToBlob(binaryString): `Blob`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
@@ -255,7 +305,7 @@ binaryString | 二进制字符串 | string |
 
 :::
 
-arrayBufferToBlob(arrayBuffer): `Blob`
+参数:
 
 参数 | 说明 | 类型 | 默认值
 ---------|----------|---------|---------
