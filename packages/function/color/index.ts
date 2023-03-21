@@ -195,7 +195,7 @@ export function colorPalette(color1: string, neutralColor: string, weight: numbe
   weight = Math.max(Math.min(Number(weight), 1), 0);
   const mainColor = hexToRgb(color1);
   const mixColor = hexToRgb(neutralColor);
-  const hex = [];
+  const hex: number[] = [];
   for (const key in mainColor) {
     const idx = key as keyof typeof mainColor;
     hex.push(Math.round(mainColor[idx] * (1 - weight) + mixColor[idx] * weight));
