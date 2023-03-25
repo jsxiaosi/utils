@@ -53,7 +53,7 @@ export const buildNodeModules = async () => {
 export const buildCdnModules = async () => {
   const bundle = await rollup({
     input: resolve(pkgRoot, 'index.ts'),
-    plugins: rollupBuildPlugins(true),
+    plugins: rollupBuildPlugins(),
     external: await generateExternal('cdn'),
     treeshake: false,
   });

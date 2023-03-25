@@ -2,10 +2,11 @@ import { resolve } from 'path';
 // import vue from '@vitejs/plugin-vue';
 // import vueJsx from '@vitejs/plugin-vue-jsx';
 // import DefineOptions from 'unplugin-vue-macros/rollup';
-import image from '@rollup/plugin-image';
+// import image from '@rollup/plugin-image';
+// import esbuild from 'rollup-plugin-esbuild';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import esbuild from 'rollup-plugin-esbuild';
+import babel from '@rollup/plugin-babel';
 import type { InputPluginOption } from 'rollup';
 import { pkgRoot } from './paths';
 
@@ -35,10 +36,10 @@ export const generateExternal = async (buildType: 'node' | 'cdn') => {
 };
 
 // Rollup插件配置
-export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
+export const rollupBuildPlugins = (): InputPluginOption => {
   const plugins: InputPluginOption = [
     // 图片处理
-    image(),
+    // image(),
     // Rollup 处理外部模块
     nodeResolve({
       extensions: ['.mjs', '.js', '.json', '.ts'],
@@ -46,12 +47,42 @@ export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
     // Rollup 识别 commonjs
     commonjs(),
     // Esm 编译器
-    esbuild({
-      sourceMap: true,
-      target: 'es2015',
-      minify,
-      treeShaking: true,
-      legalComments: 'eof',
+    // esbuild({
+    //   sourceMap: true,
+    //   target: 'es2015',
+    //   minify,
+    //   treeShaking: true,
+    //   legalComments: 'eof',
+    // }),
+
+    babel({
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', 'ts', 'tsx'],
+      exclude: resolve(pkgRoot, 'node_modules'),
+      babelHelpers: 'bundled',
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              chrome: '41',
+              edge: '12',
+              firefox: '46',
+              safari: '10',
+              node: '4',
+              ie: '11',
+              ios: '10',
+              opera: '28',
+              electron: '0.24',
+            },
+          },
+          // {
+          //   targets: '> 0.25%, not dead',
+          //   useBuiltIns: 'usage',
+          //   corejs: 3,
+          // },
+        ],
+        '@babel/preset-typescript',
+      ],
     }),
   ];
   return plugins;
