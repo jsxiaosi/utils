@@ -6,3 +6,4 @@ export * from './window/storage';
 export * from './element/class';
 
 export * from './function/color';
+export * from './function/money';

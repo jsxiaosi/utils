@@ -10,12 +10,6 @@ interface HSLColor {
   s: number;
 }
 
-interface HWBColor {
-  h: number;
-  w: number;
-  b: number;
-}
-
 // hex转rgb
 export function hexToRgb(hex: string): RGBColor {
   const hxs: string[] = hex.replace('#', '').match(/../g) || [];
@@ -93,32 +87,61 @@ export function hslToRgb(hsl: HSLColor): RGBColor {
   return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
 }
 
-export function rgbToHwb(rgb: RGBColor): HWBColor {
-  const rRatio = rgb.r / 255;
-  const gRatio = rgb.g / 255;
-  const bRatio = rgb.b / 255;
-  const max = Math.max(rRatio, gRatio, bRatio);
-  const min = Math.min(rRatio, gRatio, bRatio);
-  const delta = max - min;
-  const w = Math.round((min / max) * 100);
-  const b = Math.round((1 - max) * 100);
-  let h;
-
-  if (delta === 0) {
-    h = 0;
-  } else if (max === rRatio) {
-    h = ((gRatio - bRatio) / delta) % 6;
-  } else if (max === gRatio) {
-    h = (bRatio - rRatio) / delta + 2;
-  } else {
-    h = (rRatio - gRatio) / delta + 4;
+// 参考element style 计算
+export function colorPalette(color1: string, neutralColor: string, weight: number): string {
+  weight = Math.max(Math.min(Number(weight), 1), 0);
+  const mainColor = hexToRgb(color1);
+  const mixColor = hexToRgb(neutralColor);
+  const hex: number[] = [];
+  for (const key in mainColor) {
+    const idx = key as keyof typeof mainColor;
+    hex.push(Math.round(mainColor[idx] * (1 - weight) + mixColor[idx] * weight));
   }
-
-  h = Math.round(h * 60);
-  if (h < 0) h += 360;
-
-  return { h, w, b };
+  return rgbToHex({ r: hex[0], g: hex[1], b: hex[2] });
 }
+
+export function batchColorMatching(primaryColor: string, themeMode: 'light' | 'dark'): string[] {
+  if (!primaryColor) return [];
+  const mixColor = themeMode === 'dark' ? '#141414' : '#ffffff';
+  const colorList: string[] = [];
+  for (let i = 1; i <= 9; i++) {
+    colorList.push(colorPalette(primaryColor, mixColor, i * 0.1));
+  }
+  return colorList;
+}
+
+// interface HWBColor {
+//   h: number;
+//   w: number;
+//   b: number;
+// }
+
+// export function rgbToHwb(rgb: RGBColor): HWBColor {
+//   const rRatio = rgb.r / 255;
+//   const gRatio = rgb.g / 255;
+//   const bRatio = rgb.b / 255;
+//   const max = Math.max(rRatio, gRatio, bRatio);
+//   const min = Math.min(rRatio, gRatio, bRatio);
+//   const delta = max - min;
+//   const w = Math.round((min / max) * 100);
+//   const b = Math.round((1 - max) * 100);
+//   let h;
+
+//   if (delta === 0) {
+//     h = 0;
+//   } else if (max === rRatio) {
+//     h = ((gRatio - bRatio) / delta) % 6;
+//   } else if (max === gRatio) {
+//     h = (bRatio - rRatio) / delta + 2;
+//   } else {
+//     h = (rRatio - gRatio) / delta + 4;
+//   }
+
+//   h = Math.round(h * 60);
+//   if (h < 0) h += 360;
+
+//   return { h, w, b };
+// }
 
 // export function hwbToRgb(hwb: HWBColor): RGBColor {
 //   const { h, w, b } = hwb;
@@ -189,26 +212,3 @@ export function rgbToHwb(rgb: RGBColor): HWBColor {
 
 //   return { r: Math.round(r * rgbMax), g: Math.round(g * rgbMax), b: Math.round(b * rgbMax) };
 // }
-
-// 参考element style 计算
-export function colorPalette(color1: string, neutralColor: string, weight: number): string {
-  weight = Math.max(Math.min(Number(weight), 1), 0);
-  const mainColor = hexToRgb(color1);
-  const mixColor = hexToRgb(neutralColor);
-  const hex: number[] = [];
-  for (const key in mainColor) {
-    const idx = key as keyof typeof mainColor;
-    hex.push(Math.round(mainColor[idx] * (1 - weight) + mixColor[idx] * weight));
-  }
-  return rgbToHex({ r: hex[0], g: hex[1], b: hex[2] });
-}
-
-export function batchColorMatching(primaryColor: string, themeMode: 'light' | 'dark'): string[] {
-  if (!primaryColor) return [];
-  const mixColor = themeMode === 'dark' ? '#141414' : '#ffffff';
-  const colorList: string[] = [];
-  for (let i = 1; i <= 9; i++) {
-    colorList.push(colorPalette(primaryColor, mixColor, i * 0.1));
-  }
-  return colorList;
-}
