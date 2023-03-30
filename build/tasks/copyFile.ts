@@ -2,14 +2,14 @@ import { resolve, join } from 'path';
 import { copy, copyFile } from 'fs-extra';
 import type { TaskFunction } from 'gulp';
 import { parallel } from 'gulp';
-import { buildOutput, epOutput, epOutputCdn, pkgRoot } from '../utils/paths';
+import { buildOutput, epOutput, epOutputCdn, pkgRoot, projRoot } from '../utils/paths';
 import type { Module } from '../utils/buildConfig';
 import { buildConfig } from '../utils/buildConfig';
 
 export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = resolve(buildOutput, 'types', 'packages');
   const copyTypes = (module: Module) =>
-    Object.assign(() => copy(src, buildConfig[module].output.path, { recursive: true }), {
+    Object.assign(() => copy(src, buildConfig[module].output.path), {
       displayName: `copyTypes:${module}`,
     });
 
@@ -22,4 +22,8 @@ export const copyThemeCdn = () => {
 
 export const copyComponentsPackages = () => {
   return copyFile(resolve(pkgRoot, 'package.json'), join(epOutput, 'package.json'));
+};
+
+export const copyReadmeMd = () => {
+  return copyFile(resolve(projRoot, 'README.md'), join(epOutput, 'README.md'));
 };
