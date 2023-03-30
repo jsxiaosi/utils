@@ -1,5 +1,6 @@
 export * from './utils/is';
 export * from './utils/file';
+export * from './utils/string';
 
 export * from './window/storage';
 

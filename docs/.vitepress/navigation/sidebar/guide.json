@@ -33,8 +33,7 @@
         },
         {
           "text": "string",
-          "collapsed": true,
-          "items": []
+          "link": "utils/string"
         }
       ]
     },

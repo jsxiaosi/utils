@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { hasClass, addClass, removeClass, toChineseUpper } from '@jsxiaosi/utils/index';
+  import { hasClass, addClass, removeClass, transformString, stringTrim } from '@jsxiaosi/utils/index';
   import { ref, onMounted } from 'vue';
 
   const elEef = ref<HTMLDivElement>();
@@ -11,7 +11,12 @@
 </script>
 
 <template>
-  <div ref="elEef" class="button show element">{{ toChineseUpper(1034567890) }}</div>
+  <div ref="elEef" class="button show element">{{ transformString('update admin', 'upperCase') }}</div>
+  <div ref="elEef" class="button show element">{{ transformString('update_admin-xiaosisi', 'lowerCamelCase') }}</div>
+  <div ref="elEef" class="button show element">{{ transformString('update_admin-xiaosisi', 'upperCamelCase') }}</div>
+
+  <div ref="elEef" class="button show element">{{ stringTrim(' update admin xiaosisi', 'all') }}</div>
+
   <!-- <div ref="elEef" class="button show element">{{ toChineseUpper(100000000) }}</div>
   <div ref="elEef" class="button show element">{{ toChineseUpper(10345) }}</div>
   <div ref="elEef" class="button show element">{{ toChineseUpper(101.6511) }}</div>
