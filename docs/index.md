@@ -17,10 +17,10 @@ hero:
       link: /guide/started
     - theme: alt
       text: Starred
-      link: https://github.com/xs-block/@jsxiaosi/utils/
+      link: https://github.com/jsxiaosi/utils/
     - theme: alt
       text: Forked
-      link: https://github.com/xs-block/@jsxiaosi/utils/fork
+      link: https://github.com/jsxiaosi/utils/fork
    
 
 features:

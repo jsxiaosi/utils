@@ -60,7 +60,7 @@ const config: UserConfig = {
   ],
   themeConfig: {
     editLink: {
-      pattern: 'https://github.com/xs-block/@jsxiaosi/utils/tree/main/docs/:path',
+      pattern: 'https://github.com/jsxiaosi/utils/tree/main/docs/:path',
       text: '编辑此页面',
     },
     logo: '/logo2.png',
@@ -73,7 +73,7 @@ const config: UserConfig = {
         faeFilters: ['tags:guide,api'],
       },
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/xs-block/@jsxiaosi/utils' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jsxiaosi/utils' }],
     // 顶部标题栏
     nav,
     // 侧边栏
