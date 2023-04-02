@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git:https://github.com/jsxiaosi/utils.git"
@@ -34,7 +34,8 @@
     "lint:staged": "lint-staged",
     "cz": "czg",
     "prepare": "husky install",
-    "release": "bump package.json packages/package.json docs/package.json"
+    "release": "bump package.json packages/package.json docs/package.json",
+    "publish": "bash ./script/publish.sh"
   },
   "dependencies": {
     "@vueuse/core": "^9.12.0"
