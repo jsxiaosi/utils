@@ -1,4 +1,6 @@
-export function stringTrim(str: string, type: 'all' | 'left' | 'right' = 'all'): string {
+type StringTrimType = 'all' | 'left' | 'right';
+
+export function stringTrim(str: string, type: StringTrimType = 'all'): string {
   switch (type) {
     case 'left':
       return str.replace(/^\s+/, '');
@@ -11,7 +13,7 @@ export function stringTrim(str: string, type: 'all' | 'left' | 'right' = 'all'):
 
 type StringTransformType = 'lowerCamelCase' | 'upperCamelCase' | 'upperCase';
 
-export function transformString(str: string, type: StringTransformType): string {
+export function transformString(str: string, type?: StringTransformType): string {
   switch (type) {
     case 'lowerCamelCase':
       return str.replace(/[-_]+(\w)/g, (_, c) => c.toUpperCase());

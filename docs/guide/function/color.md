@@ -30,7 +30,7 @@ hexToRgb('#409eff') // return {r:64, g:158, b:255}
 ---------|----------|---------|---------
 hex | 十六进制颜色代码 | string |
 
-返回类型`RGBColor`：
+返回类型：`RGBColor`：
 
 参数 | 说明 | 类型
 ---------|----------|---------
@@ -69,7 +69,7 @@ r | 红 | number |
 g | 绿 | number |
 b | 蓝 | number |
 
-返回类型`string`
+返回类型：`string`
 
 ## rgbToHsl
 
@@ -102,7 +102,7 @@ r | 红 | number |
 g | 绿 | number |
 b | 蓝 | number |
 
-返回类型`HSLColor`
+返回类型：`HSLColor`
 参数 | 说明 | 类型
 ---------|----------|---------
 h | 色相 | number |
@@ -135,7 +135,7 @@ h | 色相 | number |
 s | 饱和度 | number |
 l | 亮度 | number |
 
-返回类型`RGBColor`：
+返回类型：`RGBColor`：
 
 参数 | 说明 | 类型
 ---------|----------|---------
@@ -169,7 +169,7 @@ color | 主色 | string |
 neutralColor | 中性色 | string |
 weight | 调色深度，范围 0~1 | number |
 
-返回类型`string`：
+返回类型：`string`：
 
 ## batchColorMatching
 

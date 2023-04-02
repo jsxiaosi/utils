@@ -151,7 +151,7 @@ fileType | blob中的数组内容的MIME类型 | BlobPropertyBag['type'] | appli
 ---------|----------|---------|---------
 file | file对象 | File |
 
-返回类型 `Promise<string>` 一个base64字符串
+返回类型： `Promise<string>` 一个base64字符串
 
 ## File转化为二进制字符串
 
@@ -171,7 +171,7 @@ file | file对象 | File |
 ---------|----------|---------|---------
 file | file对象 | File |
 
-返回类型 `Promise<string>` 一个二进制字符串
+返回类型： `Promise<string>` 一个二进制字符串
 
 ## File转化为二进制数组
 
@@ -191,7 +191,7 @@ file | file对象 | File |
 ---------|----------|---------|---------
 file | file对象 | File |
 
-返回类型 `Promise<ArrayBuffer>` 一个二进制数组
+返回类型： `Promise<ArrayBuffer>` 一个二进制数组
 
 ## Base64转化为Blob流
 
@@ -211,7 +211,7 @@ file | file对象 | File |
 ---------|----------|---------|---------
 base64Data | base64字符串 | string |
 
-返回类型 `Blob`
+返回类型： `Blob`
 
 ## Base64转化为File
 
@@ -231,7 +231,7 @@ base64Data | base64字符串 | string |
 ---------|----------|---------|---------
 base64Data | base64字符串 | string |
 
-返回类型 `File`
+返回类型： `File`
 
 ## Blob流转化为Base64
 
@@ -251,7 +251,7 @@ base64Data | base64字符串 | string |
 ---------|----------|---------|---------
 blob | blob对象 | Blob |
 
-返回类型 `Promise<string>`
+返回类型： `Promise<string>`
 
 ## Blob流转化为File
 
@@ -271,7 +271,7 @@ blob | blob对象 | Blob |
 ---------|----------|---------|---------
 blob | blob对象 | Blob |
 
-返回类型 `File`
+返回类型： `File`
 
 ## 二进制字符串转化为Blob
 
@@ -291,7 +291,7 @@ blob | blob对象 | Blob |
 ---------|----------|---------|---------
 binaryString | 二进制字符串 | string |
 
-返回类型 `Blob`
+返回类型： `Blob`
 
 ## 二进制数组转化为Blob
 
@@ -311,4 +311,4 @@ binaryString | 二进制字符串 | string |
 ---------|----------|---------|---------
 arrayBuffer | 二进制数组 | ArrayBuffer |
 
-返回类型 `Blob`
+返回类型： `Blob`

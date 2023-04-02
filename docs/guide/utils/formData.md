@@ -63,6 +63,8 @@ formData/objectToFormData2
 obj | 转换的对象 | T |
 outFormData | 需要添加数据的FormData，不传默认生成一个FormData返回 | FormData | FormData
 
+返回类型：`FormData`
+
 ## mergeFormData
 
 合并两个FormData，将来源FormData合并到目标FormData
@@ -89,3 +91,5 @@ outFormData | 需要添加数据的FormData，不传默认生成一个FormData�
 ---------|----------|---------|---------
 targetFormData | 目标FormData | FormData |
 sourceFormData | 来源FormData | FormData |
+
+返回类型：`FormData`

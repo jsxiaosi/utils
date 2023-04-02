@@ -14,10 +14,6 @@
       "collapsed": false,
       "items": [
         {
-          "text": "file",
-          "link": "utils/file"
-        },
-        {
           "text": "is",
           "collapsed": true,
           "items": [
@@ -32,12 +28,16 @@
           ]
         },
         {
-          "text": "formData",
-          "link": "utils/formData"
-        },
-        {
           "text": "string",
           "link": "utils/string"
+        },
+        {
+          "text": "file",
+          "link": "utils/file"
+        },
+        {
+          "text": "formData",
+          "link": "utils/formData"
         }
       ]
     },

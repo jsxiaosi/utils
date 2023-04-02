@@ -45,7 +45,7 @@ storage.isSupportStorage()
 
 :::
 
-返回类型 `Blob`
+返回类型： `Blob`
 
 ## setStorage`<T>`
 
@@ -86,7 +86,7 @@ key | 存储名称 | string | |
 expire | 存储时效 | number | 0 | 为0不设置超时时间
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型`T | null | undefined`
+返回类型：`T | null | undefined`
 
 ## hasStorage
 
@@ -106,7 +106,7 @@ storage.hasStorage(key, value)
 key | 存储名称 | string | |
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型`boolean`
+返回类型：`boolean`
 
 ## getStorageKeys
 
@@ -126,7 +126,7 @@ storage.getStorageKeys(key, value)
 key | 存储名称 | string | |
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型`string[]`
+返回类型：`string[]`
 
 ## getStorageForIndex
 
@@ -146,7 +146,7 @@ storage.getStorageForIndex(index, type)
 index | 下标 | number | |
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型`string`
+返回类型：`string`
 
 ## getStorageLength
 
@@ -165,7 +165,7 @@ storage.getStorageLength(type)
 ---------|----------|---------|---------|---------
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型`number`
+返回类型：`number`
 
 ## getStorageAll
 
@@ -184,7 +184,7 @@ storage.getStorageAll(type)
 ---------|----------|---------|---------|---------
 type | 存储方式 | localStorage/sessionStorage | localStorage |
 
-返回类型
+返回类型：
 
 参数 | 说明 | 类型 | 默认值 | 备注
 ---------|----------|---------|---------|---------
@@ -243,7 +243,7 @@ storage.autoAddPrefix(key)
 ---------|----------|---------|---------|---------
 key | 存储名称 | string | |
 
-返回类型`string`
+返回类型：`string`
 
 ## autoRemovePrefix
 
@@ -262,4 +262,4 @@ storage.autoRemovePrefix(key)
 ---------|----------|---------|---------|---------
 key | 存储名称 | string | |
 
-返回类型`string`
+返回类型：`string`

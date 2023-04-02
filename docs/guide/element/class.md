@@ -31,7 +31,7 @@ hasClass(ele, 'baz') // false
 ele | Element | T extends HTMLElement |
 cls | class类名 | string |
 
-返回类型 `Blob`
+返回类型： `Blob`
 
 ## addClass
 

@@ -39,7 +39,7 @@
     </div>
     <br />
     <ElButton @click="onTransformChange">转换</ElButton>
-    <ElText v-show="showToast" style="margin-left: 12px" type="danger">查看控制台</ElText>
+    <ElText v-show="showToast" style="margin-left: 12px" type="danger">在控制台查看遍历的formData数据</ElText>
 
     <!-- <span v-show="showToast" style="margin-left: 12px; color: red">查看控制台</span> -->
   </div>

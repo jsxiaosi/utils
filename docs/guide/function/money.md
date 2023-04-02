@@ -6,7 +6,7 @@ outline: deep
 
 金额转换工具
 
-## 千分符
+## amountSeparator
 
 :::demo 金额添加千分符
 
@@ -30,9 +30,9 @@ amountSeparator(123456789) // 123,456,789
 ---------|----------|---------
 amount | 金额 | string / number |
 
-返回类型`string`
+返回类型：`string`
 
-## 保留小数位
+## formatDecimal
 
 :::demo 金额保留小数位
 
@@ -57,9 +57,9 @@ formatDecimal(12345.6789,2) // 12345.67
 amount | 金额 | string / number |
 decimalPlaces| 位数 | number
 
-返回类型`string`
+返回类型：`string`
 
-## 分转元
+## centsToYuan
 
 :::demo 金额分单位转元单位
 
@@ -83,9 +83,9 @@ centsToYuan(1234567) // 12345.67
 ---------|----------|---------
 amount | 金额 | string / number |
 
-返回类型`number`
+返回类型：`number`
 
-## 元转分
+## yuanToCents
 
 :::demo 金额元单位转分单位
 
@@ -109,9 +109,9 @@ yuanToCents(12345.67) // 1234567
 ---------|----------|---------
 amount | 金额 | string / number |
 
-返回类型`number`
+返回类型：`number`
 
-## 金额转大写
+## toChineseUpper
 
 :::demo 金额转换为中文大写
 
@@ -135,4 +135,4 @@ toChineseUpper(12345.67) // 壹万贰仟叁佰肆拾伍元陆角柒分
 ---------|----------|---------
 amount | 金额 | string / number |
 
-返回类型`string`
+返回类型：`string`
