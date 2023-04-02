@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "types": ["unplugin-vue-macros/vite", "vite/client", "element-plus/global"],
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
-    "lib": ["WebWorker", "ESNext", "Dom"],
+    "lib": ["WebWorker", "ESNext", "Dom", "DOM.Iterable"],
     "paths": {
       "@/*": ["./.vitepress/"],
       "@jsxiaosi/utils": ["../packages/"]

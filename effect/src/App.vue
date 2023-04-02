@@ -1,27 +1,49 @@
 <script setup lang="ts">
-  import { hasClass, addClass, removeClass, transformString, stringTrim } from '@jsxiaosi/utils/index';
+  import { objectToFormData, mergeFormData } from '@jsxiaosi/utils/index';
   import { ref, onMounted } from 'vue';
 
   const elEef = ref<HTMLDivElement>();
   onMounted(() => {
-    console.log(hasClass(elEef.value!, 'button'));
-    console.log(addClass(elEef.value!, 'button2 button3 button4'));
-    console.log(removeClass(elEef.value!, 'button2 button4 button3'));
+    const obj = {
+      name: 'Alice',
+      age: 25,
+      contact: {
+        email: 'alice@example.com',
+        phone: '1234567890',
+      },
+      hobbies: ['reading', 'hiking'],
+    };
+
+    const formData = objectToFormData(obj);
+    const formData2 = new FormData();
+    formData2.append('souce', 'yes????');
+    mergeFormData(formData, formData2);
+    console.log('formData', formData.values());
+    for (const value of formData.values()) {
+      console.log(value);
+    }
+
+    for (const key of formData.keys()) {
+      console.log(key);
+    }
+
+    // console.log(formData.get('name')); // 'Alice'
+    // console.log(formData.get('age')); // '25'
+    // console.log(formData.get('contact[email]')); // 'alice@example.com'
+    // console.log(formData.get('contact[phone]')); // '1234567890'
+    // console.log(formData.get('hobbies[0]')); // 'reading'
+    // console.log(formData.get('hobbies[1]')); // 'hiking'
   });
 </script>
 
 <template>
-  <div ref="elEef" class="button show element">{{ transformString('update admin', 'upperCase') }}</div>
-  <div ref="elEef" class="button show element">{{ transformString('update_admin-xiaosisi', 'lowerCamelCase') }}</div>
-  <div ref="elEef" class="button show element">{{ transformString('update_admin-xiaosisi', 'upperCamelCase') }}</div>
-
-  <div ref="elEef" class="button show element">{{ stringTrim(' update admin xiaosisi', 'all') }}</div>
+  <div ref="elEef" class="button show element">formData</div>
 
   <!-- <div ref="elEef" class="button show element">{{ toChineseUpper(100000000) }}</div>
-  <div ref="elEef" class="button show element">{{ toChineseUpper(10345) }}</div>
-  <div ref="elEef" class="button show element">{{ toChineseUpper(101.6511) }}</div>
-  <div ref="elEef" class="button show element">{{ toChineseUpper(0) }}</div>
-  <div ref="elEef" class="button show element">{{ toChineseUpper(0.6511) }}</div> -->
+        <div ref="elEef" class="button show element">{{ toChineseUpper(10345) }}</div>
+        <div ref="elEef" class="button show element">{{ toChineseUpper(101.6511) }}</div>
+        <div ref="elEef" class="button show element">{{ toChineseUpper(0) }}</div>
+        <div ref="elEef" class="button show element">{{ toChineseUpper(0.6511) }}</div> -->
 </template>
 
 <style>

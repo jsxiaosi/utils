@@ -1,6 +1,7 @@
 export * from './utils/is';
 export * from './utils/file';
 export * from './utils/string';
+export * from './utils/formData';
 
 export * from './window/storage';
 
