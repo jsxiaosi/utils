@@ -11,7 +11,7 @@ import {
   w as F,
   f,
   h as m,
-} from './app.c381dac2.js';
+} from './app.c898d5db.js';
 function S(a) {
   const [s, n] = String(a).split('.'),
     u = s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -119,45 +119,15 @@ const P = d({
     -1,
   ),
   G = t('p', null, 'money/amountSeparator', -1),
-  J = m(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">amountSeparator</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82AAFF;">amountSeparator</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">123456789</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// 123,456,789</span></span>
-<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>amount</td><td>金额</td><td>string / number</td></tr></tbody></table><p>返回类型：<code>string</code></p><h2 id="formatdecimal" tabindex="-1">formatDecimal <a class="header-anchor" href="#formatdecimal" aria-hidden="true">#</a></h2>`,
-    5,
-  ),
+  J = m('', 5),
   W = t('p', null, 'money/formatDecimal', -1),
-  H = m(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">formatDecimal</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82AAFF;">formatDecimal</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">12345.6789</span><span style="color:#89DDFF;">,</span><span style="color:#F78C6C;">2</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// 12345.67</span></span>
-<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>amount</td><td>金额</td><td>string / number</td></tr><tr><td>decimalPlaces</td><td>位数</td><td>number</td></tr></tbody></table><p>返回类型：<code>string</code></p><h2 id="centstoyuan" tabindex="-1">centsToYuan <a class="header-anchor" href="#centstoyuan" aria-hidden="true">#</a></h2>`,
-    5,
-  ),
+  H = m('', 5),
   K = t('p', null, 'money/centsToYuan', -1),
-  Q = m(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">centsToYuan</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82AAFF;">centsToYuan</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">1234567</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// 12345.67</span></span>
-<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>amount</td><td>金额</td><td>string / number</td></tr></tbody></table><p>返回类型：<code>number</code></p><h2 id="yuantocents" tabindex="-1">yuanToCents <a class="header-anchor" href="#yuantocents" aria-hidden="true">#</a></h2>`,
-    5,
-  ),
+  Q = m('', 5),
   X = t('p', null, 'money/yuanToCents', -1),
-  Z = m(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">yuanToCents</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82AAFF;">yuanToCents</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">12345.67</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// 1234567</span></span>
-<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>amount</td><td>金额</td><td>string / number</td></tr></tbody></table><p>返回类型：<code>number</code></p><h2 id="tochineseupper" tabindex="-1">toChineseUpper <a class="header-anchor" href="#tochineseupper" aria-hidden="true">#</a></h2>`,
-    5,
-  ),
+  Z = m('', 5),
   s2 = t('p', null, 'money/toChineseUpper', -1),
-  a2 = m(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">toChineseUpper</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#82AAFF;">toChineseUpper</span><span style="color:#A6ACCD;">(</span><span style="color:#F78C6C;">12345.67</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// 壹万贰仟叁佰肆拾伍元陆角柒分</span></span>
-<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>amount</td><td>金额</td><td>string / number</td></tr></tbody></table><p>返回类型：<code>string</code></p>`,
-    4,
-  ),
+  a2 = m('', 4),
   p2 = JSON.parse(
     '{"title":"money","description":"","frontmatter":{"outline":"deep"},"headers":[{"level":2,"title":"amountSeparator","slug":"amountseparator","link":"#amountseparator","children":[]},{"level":2,"title":"formatDecimal","slug":"formatdecimal","link":"#formatdecimal","children":[]},{"level":2,"title":"centsToYuan","slug":"centstoyuan","link":"#centstoyuan","children":[]},{"level":2,"title":"yuanToCents","slug":"yuantocents","link":"#yuantocents","children":[]},{"level":2,"title":"toChineseUpper","slug":"tochineseupper","link":"#tochineseupper","children":[]}],"relativePath":"guide/function/money.md","lastUpdated":1680448147000}',
   ),

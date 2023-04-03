@@ -58,6 +58,7 @@ const config: UserConfig = {
       },
     ],
   ],
+  base: '/utils',
   themeConfig: {
     editLink: {
       pattern: 'https://github.com/jsxiaosi/utils/tree/main/docs/:path',

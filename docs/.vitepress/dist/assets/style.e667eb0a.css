@@ -5,7 +5,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-cyrillic.5f2c6c8c.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-cyrillic.5f2c6c8c.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
@@ -14,7 +14,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-cyrillic-ext.e75737ce.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-cyrillic-ext.e75737ce.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 @font-face {
@@ -23,7 +23,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-greek.d5a6d92a.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-greek.d5a6d92a.woff2) format('woff2');
   unicode-range: U+0370-03FF;
 }
 @font-face {
@@ -32,7 +32,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-greek-ext.ab0619bc.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-greek-ext.ab0619bc.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 @font-face {
@@ -41,7 +41,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-latin.2ed14f66.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-latin.2ed14f66.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -51,7 +51,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-latin-ext.0030eebd.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-latin-ext.0030eebd.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
@@ -60,7 +60,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/inter-roman-vietnamese.14ce25a6.woff2) format('woff2');
+  src: url(/utils/assets/inter-roman-vietnamese.14ce25a6.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 @font-face {
@@ -69,7 +69,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-cyrillic.ea42a392.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-cyrillic.ea42a392.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
@@ -78,7 +78,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-cyrillic-ext.33bd5a8e.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-cyrillic-ext.33bd5a8e.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 @font-face {
@@ -87,7 +87,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-greek.8f4463c4.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-greek.8f4463c4.woff2) format('woff2');
   unicode-range: U+0370-03FF;
 }
 @font-face {
@@ -96,7 +96,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-greek-ext.4fbe9427.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-greek-ext.4fbe9427.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 @font-face {
@@ -105,7 +105,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-latin.bd3b6f56.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-latin.bd3b6f56.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -115,7 +115,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-latin-ext.bd8920cc.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-latin-ext.bd8920cc.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
@@ -124,7 +124,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/inter-italic-vietnamese.6ce511fb.woff2) format('woff2');
+  src: url(/utils/assets/inter-italic-vietnamese.6ce511fb.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 :root {

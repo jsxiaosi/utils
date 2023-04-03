@@ -4088,7 +4088,7 @@ const ct = (e, t) => {
   },
   tS = 'modulepreload',
   nS = function (e) {
-    return '/' + e;
+    return '/utils/' + e;
   },
   ph = {},
   Cy = function (t, n, o) {
@@ -4138,7 +4138,7 @@ const oS = K({
 });
 const lS = ct(oS, [['__scopeId', 'data-v-2d426bb4']]),
   sS = JSON.parse(
-    '{"lang":"zh-CN","dir":"ltr","title":"@jsxiaosi/utils","description":"Just playing around.","base":"/","head":[],"appearance":true,"themeConfig":{"editLink":{"pattern":"https://github.com/jsxiaosi/utils/tree/main/docs/:path","text":"编辑此页面"},"logo":"/logo2.png","logoSmall":"/pwa/favicon-32x32.png","algolia":{"appKey":"","indexName":"","searchParameters":{"faeFilters":["tags:guide,api"]}},"socialLinks":[{"icon":"github","link":"https://github.com/jsxiaosi/utils"}],"nav":[{"text":"指引","link":"/guide/started","activeMatch":"/guide/started"}],"sidebar":{"/guide/":[{"text":"介绍","items":[{"text":"开始","link":"/guide/started"}]},{"text":"Utils","collapsed":false,"items":[{"text":"is","collapsed":true,"items":[{"text":"类型判断","link":"/guide/utils/is/type"},{"text":"正则判断","link":"/guide/utils/is/regexp"}]},{"text":"string","link":"/guide/utils/string"},{"text":"file","link":"/guide/utils/file"},{"text":"formData","link":"/guide/utils/formData"}]},{"text":"Window","collapsed":false,"items":[{"text":"storage","link":"/guide/window/storage"}]},{"text":"Element","collapsed":false,"items":[{"text":"class","link":"/guide/element/class"}]},{"text":"功能","collapsed":false,"items":[{"text":"money","link":"/guide/function/money"},{"text":"color","link":"/guide/function/color"}]}]}},"locales":{},"scrollOffset":90,"cleanUrls":false}',
+    '{"lang":"zh-CN","dir":"ltr","title":"@jsxiaosi/utils","description":"Just playing around.","base":"/utils/","head":[],"appearance":true,"themeConfig":{"editLink":{"pattern":"https://github.com/jsxiaosi/utils/tree/main/docs/:path","text":"编辑此页面"},"logo":"/logo2.png","logoSmall":"/pwa/favicon-32x32.png","algolia":{"appKey":"","indexName":"","searchParameters":{"faeFilters":["tags:guide,api"]}},"socialLinks":[{"icon":"github","link":"https://github.com/jsxiaosi/utils"}],"nav":[{"text":"指引","link":"/guide/started","activeMatch":"/guide/started"}],"sidebar":{"/guide/":[{"text":"介绍","items":[{"text":"开始","link":"/guide/started"}]},{"text":"Utils","collapsed":false,"items":[{"text":"is","collapsed":true,"items":[{"text":"类型判断","link":"/guide/utils/is/type"},{"text":"正则判断","link":"/guide/utils/is/regexp"}]},{"text":"string","link":"/guide/utils/string"},{"text":"file","link":"/guide/utils/file"},{"text":"formData","link":"/guide/utils/formData"}]},{"text":"Window","collapsed":false,"items":[{"text":"storage","link":"/guide/window/storage"}]},{"text":"Element","collapsed":false,"items":[{"text":"class","link":"/guide/element/class"}]},{"text":"功能","collapsed":false,"items":[{"text":"money","link":"/guide/function/money"},{"text":"color","link":"/guide/function/color"}]}]}},"locales":{},"scrollOffset":90,"cleanUrls":false}',
   ),
   Du = /^[a-z]+:/i,
   aS = /^pathname:\/\//,
@@ -4244,7 +4244,7 @@ function tr(e) {
 function Iy(e) {
   let t = e.replace(/\.html$/, '');
   if (((t = decodeURIComponent(t)), (t = t.replace(/\/$/, '/index')), vn)) {
-    const n = '/';
+    const n = '/utils/';
     t = mh(t.slice(n.length).replace(/\//g, '_') || 'index') + '.md';
     let o = __VP_HASH_MAP__[t.toLowerCase()];
     o ||
@@ -5308,7 +5308,7 @@ const g$ = { key: 0, class: 'VPNavBarSearch' },
     __name: 'VPNavBarSearch',
     setup(e) {
       Fk((c) => ({ 34153729: s.value }));
-      const t = LC(() => Cy(() => import('./chunks/VPAlgoliaSearchBox.bd05fb03.js'), [])),
+      const t = LC(() => Cy(() => import('./chunks/VPAlgoliaSearchBox.11a8d956.js'), [])),
         { theme: n, localeIndex: o } = Lt(),
         l = I(!1),
         s = I("'Meta'"),

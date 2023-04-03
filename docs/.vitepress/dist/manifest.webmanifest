@@ -1,11 +1,11 @@
 {
   "name": "@jsxiaosi/utils",
   "short_name": "xs组件库模版",
-  "start_url": "/",
+  "start_url": "/utils/",
   "display": "standalone",
   "background_color": "#ffffff",
   "lang": "en",
-  "scope": "/",
+  "scope": "/utils/",
   "description": "基于 vue3+vitepress 搭建的后台模板",
   "theme_color": "#ffffff",
   "icons": [
