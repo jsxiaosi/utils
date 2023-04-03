@@ -94,3 +94,51 @@ isQQBrowser()
 ```
 
 :::
+
+## isImage
+
+文件是否为图片格式：  
+jpg，jpeg，png，gif，bmp，svg，webp
+::: details 示例代码
+
+``` js
+isImage(fileName)
+```
+
+:::
+
+## isWord
+
+文件是否为Word格式：  
+doc，docx，docm，dot，dotx，dotm，docb
+::: details 示例代码
+
+``` js
+isWord(fileName)
+```
+
+:::
+
+## isExcel
+
+文件是否为Excel格式：  
+xls，xlsx，xlsm，xlsb，xlt，xltx，xltm，xlam
+::: details 示例代码
+
+``` js
+isExcel(fileName)
+```
+
+:::
+
+## isPowerPoint
+
+文件是否为PPT格式：  
+ppt，pptx，pptm，pot，potx，potm，ppa，ppam，pps，ppsx，ppsm
+::: details 示例代码
+
+``` js
+isPowerPoint(fileName)
+```
+
+:::

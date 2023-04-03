@@ -25,6 +25,10 @@ import {
   isWeiXin,
   isQQBrowser,
   isIdCard,
+  isImage,
+  isWord,
+  isExcel,
+  isPowerPoint,
 } from '..';
 
 vi.mock('./__mocks__/navigator', () => {
@@ -198,5 +202,21 @@ describe('is', () => {
     expect(isIdCard('111111190001014538')).toEqual({ code: 4001, result: false });
 
     expect(isIdCard('111111190001014537')).toEqual({ code: 0, result: true });
+  });
+
+  test('isImage', () => {
+    expect(isImage('test.png')).toBeTruthy();
+  });
+
+  test('isWord', () => {
+    expect(isWord('test.docx')).toBeTruthy();
+  });
+
+  test('isExcel', () => {
+    expect(isExcel('test.xlsx')).toBeTruthy();
+  });
+
+  test('isPowerPoint', () => {
+    expect(isPowerPoint('test.pptx')).toBeTruthy();
   });
 });

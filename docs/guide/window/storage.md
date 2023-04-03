@@ -45,7 +45,7 @@ storage.isSupportStorage()
 
 :::
 
-返回类型： `Blob`
+返回类型： `boolean`
 
 ## setStorage`<T>`
 
