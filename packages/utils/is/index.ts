@@ -223,3 +223,23 @@ export function isQQBrowser(): boolean {
   const na = navigator.userAgent.toLowerCase();
   return !!na.match(/mqqbrowser|qzone|qqbrowser|qbwebviewtype/i);
 }
+
+// 判断是否为图片
+export function isImage(fileName: string): boolean {
+  return /\.(jpg|jpeg|png|gif|bmp|svg|webp)$/i.test(fileName);
+}
+
+// 判断是否为word
+export function isWord(fileName: string): boolean {
+  return /\.(doc|docx|docm|dot|dotx|dotm|docb)$/i.test(fileName);
+}
+
+// 判断是否为excel
+export function isExcel(fileName: string): boolean {
+  return /\.(xls|xlsx|xlsm|xlsb|xlt|xltx|xltm|xlam)$/i.test(fileName);
+}
+
+// 判断是否为ppt
+export function isPowerPoint(fileName: string): boolean {
+  return /\.(ppt|pptx|pptm|pot|potx|potm|ppa|ppam|pps|ppsx|ppsm)$/i.test(fileName);
+}

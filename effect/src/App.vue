@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { objectToFormData, mergeFormData } from '@jsxiaosi/utils/index';
+  import { objectToFormData, mergeFormData, isWord } from '@jsxiaosi/utils/index';
   import { ref, onMounted } from 'vue';
 
   const elEef = ref<HTMLDivElement>();
@@ -37,7 +37,7 @@
 </script>
 
 <template>
-  <div ref="elEef" class="button show element">formData</div>
+  <div ref="elEef" class="button show element">{{ isWord('admib.doc') }}</div>
 
   <!-- <div ref="elEef" class="button show element">{{ toChineseUpper(100000000) }}</div>
         <div ref="elEef" class="button show element">{{ toChineseUpper(10345) }}</div>
