@@ -20,8 +20,8 @@ if (!self.define) {
     if (e[u]) return;
     let r = {};
     const a = (s) => i(s, u),
-      d = { module: { uri: u }, exports: r, require: a };
-    e[u] = Promise.all(l.map((s) => d[s] || a(s))).then((s) => (n(...s), r));
+      t = { module: { uri: u }, exports: r, require: a };
+    e[u] = Promise.all(l.map((s) => t[s] || a(s))).then((s) => (n(...s), r));
   };
 }
 define(['./workbox-340a5dce'], function (s) {
@@ -39,20 +39,20 @@ define(['./workbox-340a5dce'], function (s) {
         { url: 'assets/guide_function_color.md.6a9dcac6.lean.js', revision: null },
         { url: 'assets/guide_function_money.md.e48e3bc9.js', revision: null },
         { url: 'assets/guide_function_money.md.e48e3bc9.lean.js', revision: null },
-        { url: 'assets/guide_started.md.998ced04.js', revision: null },
-        { url: 'assets/guide_started.md.998ced04.lean.js', revision: null },
+        { url: 'assets/guide_started.md.049a5852.js', revision: null },
+        { url: 'assets/guide_started.md.049a5852.lean.js', revision: null },
         { url: 'assets/guide_utils_file.md.c797ccfc.js', revision: null },
         { url: 'assets/guide_utils_file.md.c797ccfc.lean.js', revision: null },
         { url: 'assets/guide_utils_formData.md.eabb47de.js', revision: null },
         { url: 'assets/guide_utils_formData.md.eabb47de.lean.js', revision: null },
-        { url: 'assets/guide_utils_is_regexp.md.5f06c969.js', revision: null },
-        { url: 'assets/guide_utils_is_regexp.md.5f06c969.lean.js', revision: null },
+        { url: 'assets/guide_utils_is_regexp.md.a39e63b5.js', revision: null },
+        { url: 'assets/guide_utils_is_regexp.md.a39e63b5.lean.js', revision: null },
         { url: 'assets/guide_utils_is_type.md.6e2ad839.js', revision: null },
         { url: 'assets/guide_utils_is_type.md.6e2ad839.lean.js', revision: null },
         { url: 'assets/guide_utils_string.md.9a678502.js', revision: null },
         { url: 'assets/guide_utils_string.md.9a678502.lean.js', revision: null },
-        { url: 'assets/guide_window_storage.md.9b417952.js', revision: null },
-        { url: 'assets/guide_window_storage.md.9b417952.lean.js', revision: null },
+        { url: 'assets/guide_window_storage.md.73146166.js', revision: null },
+        { url: 'assets/guide_window_storage.md.73146166.lean.js', revision: null },
         { url: 'assets/index.md.1780c7ff.js', revision: null },
         { url: 'assets/index.md.1780c7ff.lean.js', revision: null },
         { url: 'assets/style.e667eb0a.css', revision: null },
