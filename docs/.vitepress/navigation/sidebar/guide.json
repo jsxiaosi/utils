@@ -72,6 +72,10 @@
         {
           "text": "color",
           "link": "function/color"
+        },
+        {
+          "text": "信息脱敏",
+          "link": "function/mask"
         }
       ]
     }

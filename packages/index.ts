@@ -9,3 +9,4 @@ export * from './element/class';
 
 export * from './function/color';
 export * from './function/money';
+export * from './function/mask';
