@@ -66,12 +66,16 @@
       "collapsed": false,
       "items": [
         {
+          "text": "color",
+          "link": "function/color"
+        },
+        {
           "text": "money",
           "link": "function/money"
         },
         {
-          "text": "color",
-          "link": "function/color"
+          "text": "uuid",
+          "link": "function/uuid"
         },
         {
           "text": "信息脱敏",

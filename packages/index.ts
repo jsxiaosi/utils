@@ -1,12 +1,17 @@
+// utils
 export * from './utils/is';
 export * from './utils/file';
 export * from './utils/string';
 export * from './utils/formData';
 
+// window
 export * from './window/storage';
 
+// element
 export * from './element/class';
 
+// function
 export * from './function/color';
 export * from './function/money';
 export * from './function/mask';
+export * from './function/uuid';
