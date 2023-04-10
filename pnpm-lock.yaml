@@ -194,11 +194,9 @@ importers:
     specifiers:
       '@types/crypto-js': ^4.1.1
       crypto-js: ^4.1.1
-      image-conversion: ^2.1.1
 
     dependencies:
       crypto-js: 4.1.1
-      image-conversion: 2.1.1
 
     devDependencies:
       '@types/crypto-js': 4.1.1
@@ -8824,11 +8822,6 @@ packages:
       { integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ== }
     engines: { node: '>= 4' }
     dev: true
-
-  /image-conversion/2.1.1:
-    resolution:
-      { integrity: sha512-hnMOmP7q2jxA+52FZ+wHNhg3fdFRlgfngsQH2JQHEQkafY7tj/8F15e6Rv/RxDegc872jvyaRHwMbkTZK1Cjbg== }
-    dev: false
 
   /immutable/4.1.0:
     resolution:
