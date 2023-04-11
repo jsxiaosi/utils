@@ -1,4 +1,4 @@
-import { compress } from 'image-conversion';
+// import { compress } from 'image-conversion';
 
 function readAsDataURL(data: File | Blob): Promise<string> {
   return new Promise(function (resolve) {
@@ -192,12 +192,12 @@ export function pasteImage() {
   });
 }
 
-//压缩图片
-export function beforeAvatarUpload(file: File): Promise<Blob> {
-  return new Promise((resolve) => {
-    // 压缩到100KB,这里的100就是要压缩的大小,可自定义
-    compress(file, 0.4).then((res) => {
-      resolve(res);
-    });
-  });
-}
+// //压缩图片
+// export function beforeAvatarUpload(file: File): Promise<Blob> {
+//   return new Promise((resolve) => {
+//     // 压缩到100KB,这里的100就是要压缩的大小,可自定义
+//     compress(file, 0.4).then((res) => {
+//       resolve(res);
+//     });
+//   });
+// }
