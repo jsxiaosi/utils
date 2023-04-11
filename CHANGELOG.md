@@ -1,3 +1,13 @@
+## <small>0.0.6 (2023-04-11)</small>
+
+* fix: 🐛 compress esm error ([e135c1e](https://https//github.com/jsxiaosi/utils/commits/e135c1e))
+* fix: 🐛 修改started文档CDN unpkg引入缺少cryptojs ([7bb1f7d](https://https//github.com/jsxiaosi/utils/commits/7bb1f7d))
+* build: 📦️ lock ([24619de](https://https//github.com/jsxiaosi/utils/commits/24619de))
+* feat: ✨ add uuid ([17958b8](https://https//github.com/jsxiaosi/utils/commits/17958b8))
+* feat: ✨ add 脱敏方法 ([a9bf9eb](https://https//github.com/jsxiaosi/utils/commits/a9bf9eb))
+
+
+
 ## <small>0.0.5 (2023-04-03)</small>
 
 * feat: ✨ - ([d568b57](https://https//github.com/jsxiaosi/utils/commits/d568b57))
@@ -16,13 +26,11 @@
 * feat: ✨ add vitest ([1794e2b](https://https//github.com/jsxiaosi/utils/commits/1794e2b))
 * feat: ✨ add WaterMark ([bf9cbdb](https://https//github.com/jsxiaosi/utils/commits/bf9cbdb))
 * feat: ✨ add xs-utils ([70c1d32](https://https//github.com/jsxiaosi/utils/commits/70c1d32))
-* feat: ✨ build ([f6a6648](https://https//github.com/jsxiaosi/utils/commits/f6a6648))
 * feat: ✨ build ([d31e8b4](https://https//github.com/jsxiaosi/utils/commits/d31e8b4))
 * feat: ✨ cdn pack ([b16371f](https://https//github.com/jsxiaosi/utils/commits/b16371f))
 * feat: ✨ class ([dd3d7f8](https://https//github.com/jsxiaosi/utils/commits/dd3d7f8))
 * feat: ✨ color ([350a877](https://https//github.com/jsxiaosi/utils/commits/350a877))
-* feat: ✨ docs ([abbf1e1](https://https//github.com/jsxiaosi/utils/commits/abbf1e1))
-* feat: ✨ is 添加office、图片格式判断 ([7680d73](https://https//github.com/jsxiaosi/utils/commits/7680d73))
+* feat: ✨ is 添加office、图片格式判断 ([9fc5fbf](https://https//github.com/jsxiaosi/utils/commits/9fc5fbf))
 * feat: ✨ scripts ([edc0dd2](https://https//github.com/jsxiaosi/utils/commits/edc0dd2))
 * feat: ✨ v.1.0.1 ([895871c](https://https//github.com/jsxiaosi/utils/commits/895871c))
 * feat: ✨ 增强组件类型提示 ([79539a9](https://https//github.com/jsxiaosi/utils/commits/79539a9))
@@ -53,6 +61,17 @@
 * docs: 📝 修改文档 ([6bd111d](https://https//github.com/jsxiaosi/utils/commits/6bd111d))
 * docs: 📝 修改首页描述 ([7372085](https://https//github.com/jsxiaosi/utils/commits/7372085))
 * docs: 📝 指导 ([d5c6125](https://https//github.com/jsxiaosi/utils/commits/d5c6125))
+* docs: add page.json ([cb25172](https://https//github.com/jsxiaosi/utils/commits/cb25172))
+* docs: cHANGELOG ([5f396db](https://https//github.com/jsxiaosi/utils/commits/5f396db))
+* docs: readme ([7f80394](https://https//github.com/jsxiaosi/utils/commits/7f80394))
+* docs: 修改文档 ([c527b67](https://https//github.com/jsxiaosi/utils/commits/c527b67))
+* docs: 修改错别字 ([d807b5c](https://https//github.com/jsxiaosi/utils/commits/d807b5c))
+* docs: 修改错字 ([94065e8](https://https//github.com/jsxiaosi/utils/commits/94065e8))
+* docs: 更换地址 ([37fadb1](https://https//github.com/jsxiaosi/utils/commits/37fadb1))
+* docs: 添加md描述 ([b75488f](https://https//github.com/jsxiaosi/utils/commits/b75488f))
+* docs: 添加个人签名 ([a15026f](https://https//github.com/jsxiaosi/utils/commits/a15026f))
+* docs: 添加使用文档 ([69afc3e](https://https//github.com/jsxiaosi/utils/commits/69afc3e))
+* docs: 添加文档 ([b345410](https://https//github.com/jsxiaosi/utils/commits/b345410))
 * docs(components): 📝 water-mark ([0d2c86a](https://https//github.com/jsxiaosi/utils/commits/0d2c86a))
 * docs(components): 📝 组件文档 ([2fb8ae6](https://https//github.com/jsxiaosi/utils/commits/2fb8ae6))
 * docs(utils): 📝 添加file使用文档 ([bbcde64](https://https//github.com/jsxiaosi/utils/commits/bbcde64))
@@ -67,6 +86,7 @@
 * chore: 🔨 name ([81d8772](https://https//github.com/jsxiaosi/utils/commits/81d8772))
 * chore: 🔨 upadte name ([fabedb9](https://https//github.com/jsxiaosi/utils/commits/fabedb9))
 * chore: 🔨 模块化目录 ([e39ed37](https://https//github.com/jsxiaosi/utils/commits/e39ed37))
+* chore: docs 依赖 ([f1b7e92](https://https//github.com/jsxiaosi/utils/commits/f1b7e92))
 * chore: 依赖 ([fb191ed](https://https//github.com/jsxiaosi/utils/commits/fb191ed))
 * fix: 🐛 ` ([be92d10](https://https//github.com/jsxiaosi/utils/commits/be92d10))
 * fix: 🐛 cHANGELOG.md ([b7a11c8](https://https//github.com/jsxiaosi/utils/commits/b7a11c8))
@@ -96,32 +116,18 @@
 * fix: License Errors ([f6b46cb](https://https//github.com/jsxiaosi/utils/commits/f6b46cb))
 * perf: ⚡️ 优化打包依赖项，优化组件库根index结构，更新文档，添加bump工具管理版本 ([f16ed06](https://https//github.com/jsxiaosi/utils/commits/f16ed06))
 * perf: ⚡️ 删除多余文件 ([81c377f](https://https//github.com/jsxiaosi/utils/commits/81c377f))
+* perf: 优化css 压缩 ([2e75cce](https://https//github.com/jsxiaosi/utils/commits/2e75cce))
+* perf: 优化style打包 ([6186b79](https://https//github.com/jsxiaosi/utils/commits/6186b79))
+* perf: 优化打包输出目录 ([595170e](https://https//github.com/jsxiaosi/utils/commits/595170e))
 * Create node.js.yml ([01e00e5](https://https//github.com/jsxiaosi/utils/commits/01e00e5))
 * Update node.js.yml ([70064d0](https://https//github.com/jsxiaosi/utils/commits/70064d0))
 * types: 💡 effect 组件类型 ([8e34dc7](https://https//github.com/jsxiaosi/utils/commits/8e34dc7))
 * ci: 🛠 add .vscode ([a30e66e](https://https//github.com/jsxiaosi/utils/commits/a30e66e))
-* feature: add pwa ([aca00c3](https://https//github.com/jsxiaosi/utils/commits/aca00c3))
-* feature: eslint ([d728a42](https://https//github.com/jsxiaosi/utils/commits/d728a42))
-
-
-
-## 1.0.0 (2022-09-05)
-
-* docs: add page.json ([cb25172](https://https//github.com/jsxiaosi/utils/commits/cb25172))
-* docs: cHANGELOG ([5f396db](https://https//github.com/jsxiaosi/utils/commits/5f396db))
-* docs: readme ([7f80394](https://https//github.com/jsxiaosi/utils/commits/7f80394))
-* docs: 修改文档 ([c527b67](https://https//github.com/jsxiaosi/utils/commits/c527b67))
-* docs: 修改错别字 ([d807b5c](https://https//github.com/jsxiaosi/utils/commits/d807b5c))
-* docs: 修改错字 ([94065e8](https://https//github.com/jsxiaosi/utils/commits/94065e8))
-* docs: 更换地址 ([37fadb1](https://https//github.com/jsxiaosi/utils/commits/37fadb1))
-* docs: 添加md描述 ([b75488f](https://https//github.com/jsxiaosi/utils/commits/b75488f))
-* docs: 添加个人签名 ([a15026f](https://https//github.com/jsxiaosi/utils/commits/a15026f))
-* docs: 添加使用文档 ([69afc3e](https://https//github.com/jsxiaosi/utils/commits/69afc3e))
-* docs: 添加文档 ([b345410](https://https//github.com/jsxiaosi/utils/commits/b345410))
-* chore: docs 依赖 ([f1b7e92](https://https//github.com/jsxiaosi/utils/commits/f1b7e92))
 * feature: add CHANGELOG ([2b8f36c](https://https//github.com/jsxiaosi/utils/commits/2b8f36c))
 * feature: add package.json ([bd19504](https://https//github.com/jsxiaosi/utils/commits/bd19504))
 * feature: add pnpm ([89f2a48](https://https//github.com/jsxiaosi/utils/commits/89f2a48))
+* feature: add pwa ([aca00c3](https://https//github.com/jsxiaosi/utils/commits/aca00c3))
+* feature: eslint ([d728a42](https://https//github.com/jsxiaosi/utils/commits/d728a42))
 * feature: 修改组件名称 ([440d59a](https://https//github.com/jsxiaosi/utils/commits/440d59a))
 * feature: 修改首页，添加插件 ([aab051f](https://https//github.com/jsxiaosi/utils/commits/aab051f))
 * feature: 打包组件库 ([c5a1af9](https://https//github.com/jsxiaosi/utils/commits/c5a1af9))
@@ -152,9 +158,6 @@
 * fixbug: 修改脚本问题 ([bd53673](https://https//github.com/jsxiaosi/utils/commits/bd53673))
 * fixbug: 添加脚本 ([5571f96](https://https//github.com/jsxiaosi/utils/commits/5571f96))
 * refactor: 重构打包 ([31c4736](https://https//github.com/jsxiaosi/utils/commits/31c4736))
-* perf: 优化css 压缩 ([2e75cce](https://https//github.com/jsxiaosi/utils/commits/2e75cce))
-* perf: 优化style打包 ([6186b79](https://https//github.com/jsxiaosi/utils/commits/6186b79))
-* perf: 优化打包输出目录 ([595170e](https://https//github.com/jsxiaosi/utils/commits/595170e))
 
 
 
