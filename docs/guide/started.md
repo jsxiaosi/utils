@@ -44,6 +44,7 @@ pnpm add @jsxiaosi/utils
 ::: code-group
 
 ``` js [unpkg]
+<script src="https://unpkg.com/crypto-js/index.js"></script>
 <script src="https://unpkg.com/@jsxiaosi/utils"></script>
 ```
 
