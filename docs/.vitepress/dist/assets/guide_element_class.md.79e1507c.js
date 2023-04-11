@@ -12,7 +12,7 @@ import {
   _ as k,
   g as m,
   h as r,
-} from './app.c898d5db.js';
+} from './app.5368908a.js';
 function A(a, s) {
   return !!a.className.match(new RegExp('(\\s|^)' + s + '(\\s|$)'));
 }
@@ -77,11 +77,33 @@ const h = k(g, [['__scopeId', 'data-v-6626a87f']]),
   });
 const v = k(B, [['__scopeId', 'data-v-af7b2c9f']]),
   b = Object.freeze(Object.defineProperty({ __proto__: null, default: v }, Symbol.toStringTag, { value: 'Module' })),
-  x = r('', 9),
+  x = r(
+    `<h1 id="class" tabindex="-1">Class <a class="header-anchor" href="#class" aria-hidden="true">#</a></h1><p>element 类名添加、删除、查找操作</p><h2 id="hasclass" tabindex="-1">hasClass <a class="header-anchor" href="#hasclass" aria-hidden="true">#</a></h2><p>判断当前class类名是否在element中</p><details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">hasClass</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span></span>
+<span class="line"><span style="color:#C792EA;">const</span><span style="color:#A6ACCD;"> ele</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#FFCB6B;">HTMLDivElement</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> document</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">createElement</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">div</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">ele</span><span style="color:#89DDFF;">.</span><span style="color:#A6ACCD;">className </span><span style="color:#89DDFF;">=</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">foo bar</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#82AAFF;">hasClass</span><span style="color:#A6ACCD;">(ele</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">foo</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// true</span></span>
+<span class="line"><span style="color:#82AAFF;">hasClass</span><span style="color:#A6ACCD;">(ele</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">baz</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">) </span><span style="color:#676E95;font-style:italic;">// false</span></span>
+<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>ele</td><td>Element</td><td>T extends HTMLElement</td><td></td></tr><tr><td>cls</td><td>class类名</td><td>string</td><td></td></tr></tbody></table><p>返回类型： <code>Blob</code></p><h2 id="addclass" tabindex="-1">addClass <a class="header-anchor" href="#addclass" aria-hidden="true">#</a></h2>`,
+    9,
+  ),
   w = E('p', null, 'class/addClass', -1),
-  T = r('', 4),
+  T = r(
+    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">addClass</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#82AAFF;">addClass</span><span style="color:#A6ACCD;">(divDom</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">className</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>ele</td><td>Element</td><td>T extends HTMLElement</td><td></td></tr><tr><td>cls</td><td>class类名</td><td>string</td><td></td></tr></tbody></table><h2 id="removeclass" tabindex="-1">removeClass <a class="header-anchor" href="#removeclass" aria-hidden="true">#</a></h2>`,
+    4,
+  ),
   R = E('p', null, 'class/removeClass', -1),
-  N = r('', 3),
+  N = r(
+    `<details class="details custom-block"><summary>示例代码</summary><div class="language-ts"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">removeClass</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#82AAFF;">removeClass</span><span style="color:#A6ACCD;">(divDom</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">className</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">)</span></span>
+<span class="line"></span></code></pre></div></details><p>参数:</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>ele</td><td>Element</td><td>T extends HTMLElement</td><td></td></tr><tr><td>cls</td><td>class类名</td><td>string</td><td></td></tr></tbody></table>`,
+    3,
+  ),
   M = JSON.parse(
     '{"title":"Class","description":"","frontmatter":{"outline":"deep"},"headers":[{"level":2,"title":"hasClass","slug":"hasclass","link":"#hasclass","children":[]},{"level":2,"title":"addClass","slug":"addclass","link":"#addclass","children":[]},{"level":2,"title":"removeClass","slug":"removeclass","link":"#removeclass","children":[]}],"relativePath":"guide/element/class.md","lastUpdated":1680448147000}',
   ),

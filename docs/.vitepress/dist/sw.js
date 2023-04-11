@@ -19,9 +19,9 @@ if (!self.define) {
     const u = s || ('document' in self ? document.currentScript.src : '') || location.href;
     if (e[u]) return;
     let r = {};
-    const a = (s) => i(s, u),
-      t = { module: { uri: u }, exports: r, require: a };
-    e[u] = Promise.all(l.map((s) => t[s] || a(s))).then((s) => (n(...s), r));
+    const t = (s) => i(s, u),
+      d = { module: { uri: u }, exports: r, require: t };
+    e[u] = Promise.all(l.map((s) => d[s] || t(s))).then((s) => (n(...s), r));
   };
 }
 define(['./workbox-340a5dce'], function (s) {
@@ -31,30 +31,34 @@ define(['./workbox-340a5dce'], function (s) {
   }),
     s.precacheAndRoute(
       [
-        { url: 'assets/app.c898d5db.js', revision: null },
-        { url: 'assets/chunks/VPAlgoliaSearchBox.11a8d956.js', revision: null },
-        { url: 'assets/guide_element_class.md.9aa85a3b.js', revision: null },
-        { url: 'assets/guide_element_class.md.9aa85a3b.lean.js', revision: null },
-        { url: 'assets/guide_function_color.md.6a9dcac6.js', revision: null },
-        { url: 'assets/guide_function_color.md.6a9dcac6.lean.js', revision: null },
-        { url: 'assets/guide_function_money.md.e48e3bc9.js', revision: null },
-        { url: 'assets/guide_function_money.md.e48e3bc9.lean.js', revision: null },
-        { url: 'assets/guide_started.md.049a5852.js', revision: null },
-        { url: 'assets/guide_started.md.049a5852.lean.js', revision: null },
-        { url: 'assets/guide_utils_file.md.c797ccfc.js', revision: null },
-        { url: 'assets/guide_utils_file.md.c797ccfc.lean.js', revision: null },
-        { url: 'assets/guide_utils_formData.md.eabb47de.js', revision: null },
-        { url: 'assets/guide_utils_formData.md.eabb47de.lean.js', revision: null },
-        { url: 'assets/guide_utils_is_regexp.md.a39e63b5.js', revision: null },
-        { url: 'assets/guide_utils_is_regexp.md.a39e63b5.lean.js', revision: null },
-        { url: 'assets/guide_utils_is_type.md.6e2ad839.js', revision: null },
-        { url: 'assets/guide_utils_is_type.md.6e2ad839.lean.js', revision: null },
-        { url: 'assets/guide_utils_string.md.9a678502.js', revision: null },
-        { url: 'assets/guide_utils_string.md.9a678502.lean.js', revision: null },
-        { url: 'assets/guide_window_storage.md.73146166.js', revision: null },
-        { url: 'assets/guide_window_storage.md.73146166.lean.js', revision: null },
-        { url: 'assets/index.md.1780c7ff.js', revision: null },
-        { url: 'assets/index.md.1780c7ff.lean.js', revision: null },
+        { url: 'assets/app.5368908a.js', revision: null },
+        { url: 'assets/chunks/VPAlgoliaSearchBox.a769aa46.js', revision: null },
+        { url: 'assets/guide_element_class.md.79e1507c.js', revision: null },
+        { url: 'assets/guide_element_class.md.79e1507c.lean.js', revision: null },
+        { url: 'assets/guide_function_color.md.7f9cfbbe.js', revision: null },
+        { url: 'assets/guide_function_color.md.7f9cfbbe.lean.js', revision: null },
+        { url: 'assets/guide_function_mask.md.1853db3e.js', revision: null },
+        { url: 'assets/guide_function_mask.md.1853db3e.lean.js', revision: null },
+        { url: 'assets/guide_function_money.md.60400263.js', revision: null },
+        { url: 'assets/guide_function_money.md.60400263.lean.js', revision: null },
+        { url: 'assets/guide_function_uuid.md.8c8cfa6c.js', revision: null },
+        { url: 'assets/guide_function_uuid.md.8c8cfa6c.lean.js', revision: null },
+        { url: 'assets/guide_started.md.69e403e9.js', revision: null },
+        { url: 'assets/guide_started.md.69e403e9.lean.js', revision: null },
+        { url: 'assets/guide_utils_file.md.1fee0884.js', revision: null },
+        { url: 'assets/guide_utils_file.md.1fee0884.lean.js', revision: null },
+        { url: 'assets/guide_utils_formData.md.3bb47872.js', revision: null },
+        { url: 'assets/guide_utils_formData.md.3bb47872.lean.js', revision: null },
+        { url: 'assets/guide_utils_is_regexp.md.e960e388.js', revision: null },
+        { url: 'assets/guide_utils_is_regexp.md.e960e388.lean.js', revision: null },
+        { url: 'assets/guide_utils_is_type.md.98fe7233.js', revision: null },
+        { url: 'assets/guide_utils_is_type.md.98fe7233.lean.js', revision: null },
+        { url: 'assets/guide_utils_string.md.dbbf690b.js', revision: null },
+        { url: 'assets/guide_utils_string.md.dbbf690b.lean.js', revision: null },
+        { url: 'assets/guide_window_storage.md.2cefb709.js', revision: null },
+        { url: 'assets/guide_window_storage.md.2cefb709.lean.js', revision: null },
+        { url: 'assets/index.md.e185b2ec.js', revision: null },
+        { url: 'assets/index.md.e185b2ec.lean.js', revision: null },
         { url: 'assets/style.e667eb0a.css', revision: null },
         { url: 'registerSW.js', revision: 'a908ecbfd41489342c748035ff8cfc8e' },
         { url: 'pwa/android-chrome-192x192.png', revision: 'a5bff5ef047458deca74d03df602cf86' },

@@ -1,13 +1,15 @@
 {
-  "index.md": "1780c7ff",
-  "guide_started.md": "049a5852",
-  "guide_utils_is_regexp.md": "a39e63b5",
-  "guide_window_storage.md": "73146166",
-  "guide_element_class.md": "9aa85a3b",
-  "guide_utils_is_type.md": "6e2ad839",
-  "guide_utils_formdata.md": "eabb47de",
-  "guide_utils_string.md": "9a678502",
-  "guide_function_money.md": "e48e3bc9",
-  "guide_utils_file.md": "c797ccfc",
-  "guide_function_color.md": "6a9dcac6"
+  "index.md": "e185b2ec",
+  "guide_utils_is_type.md": "98fe7233",
+  "guide_utils_formdata.md": "3bb47872",
+  "guide_function_mask.md": "1853db3e",
+  "guide_function_uuid.md": "8c8cfa6c",
+  "guide_utils_is_regexp.md": "e960e388",
+  "guide_utils_string.md": "dbbf690b",
+  "guide_started.md": "69e403e9",
+  "guide_element_class.md": "79e1507c",
+  "guide_window_storage.md": "2cefb709",
+  "guide_function_money.md": "60400263",
+  "guide_utils_file.md": "1fee0884",
+  "guide_function_color.md": "7f9cfbbe"
 }
