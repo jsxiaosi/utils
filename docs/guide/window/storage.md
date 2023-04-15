@@ -8,7 +8,7 @@ outline: deep
 ::: details 示例代码
 
 ``` js
-import { storage } from '@jsxiaosi/utils'
+import { _storage } from '@jsxiaosi/utils'
 ```
 
 :::
@@ -19,7 +19,7 @@ import { storage } from '@jsxiaosi/utils'
 ::: details 示例代码
 
 ``` js
-storage.setStorageConfig(StorageConfig)
+_storage.setStorageConfig(StorageConfig)
 ```
 
 :::
@@ -40,7 +40,7 @@ secret_iv | 加密秘钥偏移量 | string | | isEncrypt为true生效
 ::: details 示例代码
 
 ``` js
-storage.isSupportStorage()
+_storage.isSupportStorage()
 ```
 
 :::
@@ -53,7 +53,7 @@ storage.isSupportStorage()
 ::: details 示例代码
 
 ``` js
-storage.setStorage<T>(key, value, expire, type)
+_storage.setStorage<T>(key, value, expire, type)
 ```
 
 :::
@@ -73,7 +73,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.getStorage<T>(key, expire, type)
+_storage.getStorage<T>(key, expire, type)
 ```
 
 :::
@@ -94,7 +94,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.hasStorage(key, value)
+_storage.hasStorage(key, value)
 ```
 
 :::
@@ -114,7 +114,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.getStorageKeys(key, value)
+_storage.getStorageKeys(key, value)
 ```
 
 :::
@@ -134,7 +134,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.getStorageForIndex(index, type)
+_storage.getStorageForIndex(index, type)
 ```
 
 :::
@@ -154,7 +154,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.getStorageLength(type)
+_storage.getStorageLength(type)
 ```
 
 :::
@@ -173,7 +173,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.getStorageAll(type)
+_storage.getStorageAll(type)
 ```
 
 :::
@@ -197,7 +197,7 @@ val | 存储数据 | string | | JSON
 ::: details 示例代码
 
 ``` js
-storage.removeStorage(key, type)
+_storage.removeStorage(key, type)
 ```
 
 :::
@@ -215,7 +215,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.clearStorage(type)
+_storage.clearStorage(type)
 ```
 
 :::
@@ -232,7 +232,7 @@ type | 存储方式 | localStorage/sessionStorage | localStorage |
 ::: details 示例代码
 
 ``` js
-storage.autoAddPrefix(key)
+_storage.autoAddPrefix(key)
 ```
 
 :::
@@ -251,7 +251,7 @@ key | 存储名称 | string | |
 ::: details 示例代码
 
 ``` js
-storage.autoRemovePrefix(key)
+_storage.autoRemovePrefix(key)
 ```
 
 :::
