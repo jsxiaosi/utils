@@ -29,6 +29,7 @@ import {
   isWord,
   isExcel,
   isPowerPoint,
+  isObjectHasValue,
 } from '..';
 
 vi.mock('./__mocks__/navigator', () => {
@@ -62,6 +63,13 @@ describe('is', () => {
     expect(isObject(obj)).toBeTruthy();
     const str = '';
     expect(isObject(str)).toBeFalsy();
+  });
+
+  test('isObject', () => {
+    const obj = {};
+    expect(isObjectHasValue(obj)).toBeFalsy();
+    const objValue = { name: 'xs' };
+    expect(isObjectHasValue(objValue)).toBeTruthy();
   });
 
   test('isEmpty', () => {

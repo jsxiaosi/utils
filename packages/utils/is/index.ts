@@ -20,6 +20,11 @@ export function isObject(val: any): val is Record<any, any> {
   return val !== null && is(val, 'Object');
 }
 
+// object是否有值
+export function isObjectHasValue(val: any): val is Record<any, any> {
+  return isObject(val) && Object.keys(val).length > 0;
+}
+
 // 判断 string array map set object 是否为空
 export function isEmpty<T = unknown>(val: T): val is T {
   if (isArray(val) || isString(val)) {

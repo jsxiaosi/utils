@@ -59,6 +59,18 @@ isObject(val)
 
 :::
 
+## isObjectHasValue
+
+判断是否为空对象
+
+::: details 示例代码
+
+``` js
+isObjectHasValue(val)
+```
+
+:::
+
 ## isEmpty
 
 判断 String Array Map Set Object 是否为空
