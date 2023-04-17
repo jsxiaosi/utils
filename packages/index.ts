@@ -6,6 +6,7 @@ export * from './utils/formData';
 
 // window
 export * from './window/storage';
+export * from './window/url';
 
 // element
 export * from './element/class';

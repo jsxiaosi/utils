@@ -48,6 +48,10 @@
         {
           "text": "storage",
           "link": "window/storage"
+        },
+        {
+          "text": "url",
+          "link": "window/url"
         }
       ]
     },

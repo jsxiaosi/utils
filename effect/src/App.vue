@@ -1,49 +1,34 @@
 <script setup lang="ts">
-  import { objectToFormData, mergeFormData, isWord } from '@jsxiaosi/utils/index';
-  import { ref, onMounted } from 'vue';
+  import { objectToUrlParams, urlParamsToObject, appendUrlParams } from '@jsxiaosi/utils/index';
 
-  const elEef = ref<HTMLDivElement>();
-  onMounted(() => {
-    const obj = {
-      name: 'Alice',
-      age: 25,
-      contact: {
-        email: 'alice@example.com',
-        phone: '1234567890',
-      },
-      hobbies: ['reading', 'hiking'],
-    };
-
-    const formData = objectToFormData(obj);
-    const formData2 = new FormData();
-    formData2.append('souce', 'yes????');
-    mergeFormData(formData, formData2);
-    console.log('formData', formData.values());
-    for (const value of formData.values()) {
-      console.log(value);
-    }
-
-    for (const key of formData.keys()) {
-      console.log(key);
-    }
-
-    // console.log(formData.get('name')); // 'Alice'
-    // console.log(formData.get('age')); // '25'
-    // console.log(formData.get('contact[email]')); // 'alice@example.com'
-    // console.log(formData.get('contact[phone]')); // '1234567890'
-    // console.log(formData.get('hobbies[0]')); // 'reading'
-    // console.log(formData.get('hobbies[1]')); // 'hiking'
-  });
+  const params = {
+    name: 'John',
+    age: 30,
+    tags: ['a', 'b', 'c'],
+  };
 </script>
 
 <template>
-  <div ref="elEef" class="button show element">{{ isWord('admib.doc') }}</div>
-
-  <!-- <div ref="elEef" class="button show element">{{ toChineseUpper(100000000) }}</div>
-        <div ref="elEef" class="button show element">{{ toChineseUpper(10345) }}</div>
-        <div ref="elEef" class="button show element">{{ toChineseUpper(101.6511) }}</div>
-        <div ref="elEef" class="button show element">{{ toChineseUpper(0) }}</div>
-        <div ref="elEef" class="button show element">{{ toChineseUpper(0.6511) }}</div> -->
+  <!-- <div ref="elEef" class="button show element"
+    >{{ objectToUrlParams(params, 'comma') }}：{{ urlParamsToObject(objectToUrlParams(params, 'comma')) }}</div
+  >
+  <div ref="elEef" class="button show element"
+    >{{ objectToUrlParams(params, 'brackets') }}：{{ urlParamsToObject(objectToUrlParams(params, 'brackets')) }}</div
+  >
+  <div ref="elEef" class="button show element"
+    >{{ objectToUrlParams(params, 'indices') }}：{{ urlParamsToObject(objectToUrlParams(params, 'indices')) }}</div
+  >
+  <div ref="elEef" class="button show element"
+    >{{ objectToUrlParams(params, 'repeat') }}：{{ urlParamsToObject(objectToUrlParams(params, 'repeat')) }}</div
+  > -->
+  <div ref="elEef" class="button show element"
+    >{{ appendUrlParams('https://example.com/api/data?existingKey=existingValue', params, 'unnamed') }}：{{
+      urlParamsToObject(appendUrlParams('https://example.com/api/data?existingKey=existingValue', params, 'unnamed'))
+    }}</div
+  >
+  <div ref="elEef" class="button show element"
+    >{{ objectToUrlParams(params, 'unnamed') }}：{{ urlParamsToObject('https://example.com/api/data') }}</div
+  >
 </template>
 
 <style>
