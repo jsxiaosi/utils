@@ -20,6 +20,11 @@ export function isObject(val: any): val is Record<any, any> {
   return val !== null && is(val, 'Object');
 }
 
+// object是否有值
+export function isObjectHasValue(val: any): val is Record<any, any> {
+  return isObject(val) && Object.keys(val).length > 0;
+}
+
 // 判断 string array map set object 是否为空
 export function isEmpty<T = unknown>(val: T): val is T {
   if (isArray(val) || isString(val)) {
@@ -104,8 +109,9 @@ export function isMap(val: unknown): val is Map<any, any> {
 
 // 是否为地址
 export function isUrl(path: string): boolean {
-  const reg =
-    /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
+  // const reg =
+  //   /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
+  const reg = /^https?:\/\/(([^:/?#]+)(?::([0-9]+))?)(\/[^?#]*)?(\?[^#]*)?(#.*)?$/;
   return reg.test(path);
 }
 

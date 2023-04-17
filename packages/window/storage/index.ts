@@ -58,17 +58,17 @@ class Storage {
   }
 
   // 根据请求配置替换默认config
-  setStorageConfig(info: Partial<StorageConfig>) {
+  public setStorageConfig(info: Partial<StorageConfig>) {
     this.config = { ...this.config, ...info };
   }
 
   // 判断是否支持 Storage
-  isSupportStorage() {
+  public isSupportStorage() {
     return typeof Storage !== 'undefined';
   }
 
   // 设置 setStorage
-  setStorage<T>(key: string, value: StorageValue<T>, expire = 0, type: StorageType = 'localStorage') {
+  public setStorage<T>(key: string, value: StorageValue<T>, expire = 0, type: StorageType = 'localStorage') {
     if (value === null || value === undefined) {
       value = null;
     }
@@ -87,7 +87,7 @@ class Storage {
   }
 
   // 获取 getStorage
-  getStorage<T>(key: string, type: StorageType = 'localStorage'): StorageValue<T> {
+  public getStorage<T>(key: string, type: StorageType = 'localStorage'): StorageValue<T> {
     key = this.autoAddPrefix(key);
     // key 不存在判断
     if (!window[type].getItem(key) || JSON.stringify(window[type].getItem(key)) === 'null') {
@@ -117,7 +117,7 @@ class Storage {
   }
 
   // 是否存在 hasStorage
-  hasStorage(key: string, type: StorageType = 'localStorage'): boolean {
+  public hasStorage(key: string, type: StorageType = 'localStorage'): boolean {
     key = this.autoAddPrefix(key);
     const arr = this.getStorageAll(type).filter((item) => {
       return item.key === key;
@@ -126,7 +126,7 @@ class Storage {
   }
 
   // 获取所有key
-  getStorageKeys(type: StorageType = 'localStorage'): (string | null)[] {
+  public getStorageKeys(type: StorageType = 'localStorage'): (string | null)[] {
     const items = this.getStorageAll(type);
     const keys: string[] = [];
     for (let index = 0; index < items.length; index++) {
@@ -136,17 +136,17 @@ class Storage {
   }
 
   // 根据索引获取key
-  getStorageForIndex(index: number, type: StorageType = 'localStorage') {
+  public getStorageForIndex(index: number, type: StorageType = 'localStorage') {
     return window[type].key(index);
   }
 
   // 获取localStorage长度
-  getStorageLength(type: StorageType = 'localStorage') {
+  public getStorageLength(type: StorageType = 'localStorage') {
     return window[type].length;
   }
 
   // 获取全部 getAllStorage
-  getStorageAll(type: StorageType = 'localStorage'): { key: string; val: string | null }[] {
+  public getStorageAll(type: StorageType = 'localStorage'): { key: string; val: string | null }[] {
     const len = window[type].length; // 获取长度
     const arr: { key: string; val: string | null }[] = []; // 定义数据集
     for (let i = 0; i < len; i++) {
@@ -161,28 +161,28 @@ class Storage {
   }
 
   // 删除 removeStorage
-  removeStorage(key: string, type: StorageType = 'localStorage') {
+  public removeStorage(key: string, type: StorageType = 'localStorage') {
     window[type].removeItem(this.autoAddPrefix(key));
   }
 
   // 清空 clearStorage
-  clearStorage(type: StorageType = 'localStorage') {
+  public clearStorage(type: StorageType = 'localStorage') {
     window[type].clear();
   }
 
   // 名称前自动添加前缀
-  autoAddPrefix(key: string): string {
+  public autoAddPrefix(key: string): string {
     const prefix = this.config.prefix ? this.config.prefix + '_' : '';
     return prefix + key;
   }
 
   // 移除已添加的前缀
-  autoRemovePrefix(key: string) {
+  public autoRemovePrefix(key: string) {
     const len = this.config.prefix ? this.config.prefix.length + 1 : 0;
     return key.substring(len);
   }
 }
 
-const storage = new Storage(defConfig);
+const _storage = new Storage(defConfig);
 
-export { storage };
+export { _storage };

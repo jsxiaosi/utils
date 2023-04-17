@@ -1,5 +1,5 @@
 import { test, describe, expect, it, vi } from 'vitest';
-import { storage } from '..';
+import { _storage as storage } from '..';
 
 const KEY = 'utils';
 

@@ -1,10 +1,23 @@
+## <small>0.0.7 (2023-04-17)</small>
+
+* feat: ✨ index cdn docs ([14f11b0](https://https//github.com/jsxiaosi/utils/commits/14f11b0))
+* feat: ✨ is add isObjectHasValue ([5ced265](https://https//github.com/jsxiaosi/utils/commits/5ced265))
+* feat: ✨ url ([430df28](https://https//github.com/jsxiaosi/utils/commits/430df28))
+* feat: ✨ 防抖 ([b7a5f2f](https://https//github.com/jsxiaosi/utils/commits/b7a5f2f))
+* fix: 🐛 cdn ([7a2815e](https://https//github.com/jsxiaosi/utils/commits/7a2815e))
+* fix: 🐛 is isurl ([e60f036](https://https//github.com/jsxiaosi/utils/commits/e60f036))
+* fix: 🐛 修复storage cdn引入无法正常使用问题 ([bea3383](https://https//github.com/jsxiaosi/utils/commits/bea3383))
+
+
+
 ## <small>0.0.6 (2023-04-11)</small>
 
+* feat: ✨ 0.0.6 ([9643859](https://https//github.com/jsxiaosi/utils/commits/9643859))
+* feat: ✨ add uuid ([17958b8](https://https//github.com/jsxiaosi/utils/commits/17958b8))
+* feat: ✨ add 脱敏方法 ([a9bf9eb](https://https//github.com/jsxiaosi/utils/commits/a9bf9eb))
 * fix: 🐛 compress esm error ([e135c1e](https://https//github.com/jsxiaosi/utils/commits/e135c1e))
 * fix: 🐛 修改started文档CDN unpkg引入缺少cryptojs ([7bb1f7d](https://https//github.com/jsxiaosi/utils/commits/7bb1f7d))
 * build: 📦️ lock ([24619de](https://https//github.com/jsxiaosi/utils/commits/24619de))
-* feat: ✨ add uuid ([17958b8](https://https//github.com/jsxiaosi/utils/commits/17958b8))
-* feat: ✨ add 脱敏方法 ([a9bf9eb](https://https//github.com/jsxiaosi/utils/commits/a9bf9eb))
 
 
 
