@@ -13,6 +13,7 @@ export * from './element/class';
 
 // function
 export * from './function/color';
+export * from './function/debounceThrottle';
 export * from './function/money';
 export * from './function/mask';
 export * from './function/uuid';

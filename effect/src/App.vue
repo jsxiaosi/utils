@@ -1,34 +1,32 @@
 <script setup lang="ts">
-  import { objectToUrlParams, urlParamsToObject, appendUrlParams } from '@jsxiaosi/utils/index';
+  import { throttle } from '@jsxiaosi/utils/index';
 
-  const params = {
-    name: 'John',
-    age: 30,
-    tags: ['a', 'b', 'c'],
+  const admin = (): Promise<string> => {
+    return new Promise((rej) => {
+      setTimeout(() => {
+        rej('123123');
+      }, 0);
+    });
+  };
+
+  const dba = throttle<(name: string) => Promise<string>>(
+    async (name: string) => {
+      console.log('防抖', name);
+      return await admin();
+    },
+    2000,
+    (result) => {
+      console.log('防抖的返回值', result);
+    },
+  );
+
+  const debouncedLogChange = () => {
+    dba('namename');
   };
 </script>
 
 <template>
-  <!-- <div ref="elEef" class="button show element"
-    >{{ objectToUrlParams(params, 'comma') }}：{{ urlParamsToObject(objectToUrlParams(params, 'comma')) }}</div
-  >
-  <div ref="elEef" class="button show element"
-    >{{ objectToUrlParams(params, 'brackets') }}：{{ urlParamsToObject(objectToUrlParams(params, 'brackets')) }}</div
-  >
-  <div ref="elEef" class="button show element"
-    >{{ objectToUrlParams(params, 'indices') }}：{{ urlParamsToObject(objectToUrlParams(params, 'indices')) }}</div
-  >
-  <div ref="elEef" class="button show element"
-    >{{ objectToUrlParams(params, 'repeat') }}：{{ urlParamsToObject(objectToUrlParams(params, 'repeat')) }}</div
-  > -->
-  <div ref="elEef" class="button show element"
-    >{{ appendUrlParams('https://example.com/api/data?existingKey=existingValue', params, 'unnamed') }}：{{
-      urlParamsToObject(appendUrlParams('https://example.com/api/data?existingKey=existingValue', params, 'unnamed'))
-    }}</div
-  >
-  <div ref="elEef" class="button show element"
-    >{{ objectToUrlParams(params, 'unnamed') }}：{{ urlParamsToObject('https://example.com/api/data') }}</div
-  >
+  <button @click="debouncedLogChange">防抖</button>
 </template>
 
 <style>
