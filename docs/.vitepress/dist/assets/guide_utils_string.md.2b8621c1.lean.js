@@ -11,7 +11,7 @@ import {
   u as D,
   b as l,
   h as A,
-} from './app.5368908a.js';
+} from './app.913d3036.js';
 function m(n, a = 'all') {
   switch (a) {
     case 'left':
@@ -99,21 +99,9 @@ const f = g({
     -1,
   ),
   x = l('p', null, 'string/stringTrim', -1),
-  b = A(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-js"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">stringTrim</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#82AAFF;">stringTrim</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">   abc   def   ghi   </span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">all</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span><span style="color:#A6ACCD;"> </span><span style="color:#676E95;font-style:italic;">// &#39;abcdefghi&#39;</span></span>
-<span class="line"></span></code></pre></div></details><p>参数：</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>str</td><td>需要转换的字符串</td><td>string</td><td></td></tr><tr><td>type</td><td>转换类型</td><td>StringTrimType</td><td>all</td></tr></tbody></table><p>StringTrimType：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>all</td><td>去除全部空格</td></tr><tr><td>left</td><td>去除首位空格</td></tr><tr><td>right</td><td>去除尾部空格</td></tr></tbody></table><p>返回类型：<code>string</code></p><h2 id="transformstring" tabindex="-1">transformString <a class="header-anchor" href="#transformstring" aria-hidden="true">#</a></h2>`,
-    7,
-  ),
+  b = A('', 7),
   w = l('p', null, 'string/transformString', -1),
-  S = A(
-    `<details class="details custom-block"><summary>示例代码</summary><div class="language-js"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki material-theme-palenight" tabindex="0"><code><span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;font-style:italic;">import</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;"> </span><span style="color:#A6ACCD;">transformString</span><span style="color:#F07178;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;font-style:italic;">from</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">@jsxiaosi/utils</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#82AAFF;">transformString</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">my-transform-string</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">upperCamelCase</span><span style="color:#89DDFF;">&#39;</span><span style="color:#A6ACCD;">)</span><span style="color:#89DDFF;">;</span><span style="color:#A6ACCD;"> </span><span style="color:#676E95;font-style:italic;">// &#39;MyTransformString&#39;</span></span>
-<span class="line"></span></code></pre></div></details><p>参数：</p><table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>str</td><td>需要转换的字符串</td><td>string</td><td></td></tr><tr><td>type</td><td>转换类型</td><td>StringTransformType</td><td></td></tr></tbody></table><p>StringTransformType：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>lowerCamelCase</td><td>小驼峰(第一个单词首字母小写，其他单词首字母大写)转换，并去掉<code>-</code></td></tr><tr><td>upperCamelCase</td><td>大驼峰(全部单词首字母大写)转换，并去掉<code>-</code></td></tr><tr><td>upperCase</td><td>全部转换为大写，保留<code>-</code></td></tr></tbody></table><p>返回类型：<code>string</code></p>`,
-    6,
-  ),
+  S = A('', 6),
   q = JSON.parse(
     '{"title":"string","description":"","frontmatter":{"outline":"deep"},"headers":[{"level":2,"title":"stringTrim","slug":"stringtrim","link":"#stringtrim","children":[]},{"level":2,"title":"transformString","slug":"transformstring","link":"#transformstring","children":[]}],"relativePath":"guide/utils/string.md","lastUpdated":1680448147000}',
   ),
