@@ -10,6 +10,7 @@ export * from './window/url';
 
 // element
 export * from './element/class';
+export * from './element/event';
 
 // function
 export * from './function/color';

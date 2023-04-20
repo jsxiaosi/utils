@@ -1,37 +1,39 @@
 <script setup lang="ts">
-  import { throttle } from '@jsxiaosi/utils/index';
+  import { disableElementEvents } from '@jsxiaosi/utils/index';
+  import { onMounted } from 'vue';
 
-  const admin = (): Promise<string> => {
-    return new Promise((rej) => {
-      setTimeout(() => {
-        rej('123123');
-      }, 0);
-    });
-  };
+  onMounted(() => {
+    // disableElementEvents(document.getElementById('input'), ['contextmenu', 'copy']);
 
-  const dba = throttle<(name: string) => Promise<string>>(
-    async (name: string) => {
-      console.log('防抖', name);
-      return await admin();
-    },
-    2000,
-    (result) => {
-      console.log('防抖的返回值', result);
-    },
-  );
+    setTimeout(() => {
+      // enableEvents(document.body, ['contextmenu', 'copy']);
+    }, 2000);
+  });
 
-  const debouncedLogChange = () => {
-    dba('namename');
+  const onChange = () => {
+    disableElementEvents(document.body, ['contextmenu', 'copy', 'paste']);
   };
 </script>
 
 <template>
-  <button @click="debouncedLogChange">防抖</button>
+  <button @click="onChange">防抖</button>
+  <input id="input" />
+  <div>textkajsfakjsdfhjashfjsdfhj</div>
 </template>
 
 <style>
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #app {
-    margin-top: 60px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     color: #2c3e50;
     text-align: center;
