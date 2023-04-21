@@ -4,7 +4,9 @@ JavaScript 工具库，使用TypeScript编写
 
 ## 文档
 
-<https://jsxiaosi-utils.vercel.app/>
+[Vercel](https://jsxiaosi-utils.vercel.app/)
+
+[Gitee](https://jsxiaosi.gitee.io/utils/)
 
 ## 特性
 
