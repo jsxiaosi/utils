@@ -14,6 +14,18 @@
       "collapsed": false,
       "items": [
         {
+          "text": "date",
+          "link": "utils/date"
+        },
+        {
+          "text": "file",
+          "link": "utils/file"
+        },
+        {
+          "text": "formData",
+          "link": "utils/formData"
+        },
+        {
           "text": "is",
           "collapsed": true,
           "items": [
@@ -30,14 +42,6 @@
         {
           "text": "string",
           "link": "utils/string"
-        },
-        {
-          "text": "file",
-          "link": "utils/file"
-        },
-        {
-          "text": "formData",
-          "link": "utils/formData"
         }
       ]
     },
