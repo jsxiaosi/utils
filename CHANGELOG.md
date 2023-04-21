@@ -1,5 +1,14 @@
+## <small>0.0.8 (2023-04-21)</small>
+
+* docs: 📝 md ([a9a1677](https://https//github.com/jsxiaosi/utils/commits/a9a1677))
+* feat: ✨ date ([ef7c573](https://https//github.com/jsxiaosi/utils/commits/ef7c573))
+* feat: ✨ elementEvents ([439a76d](https://https//github.com/jsxiaosi/utils/commits/439a76d))
+
+
+
 ## <small>0.0.7 (2023-04-17)</small>
 
+* feat: ✨ 0.0.7 ([8cd17d5](https://https//github.com/jsxiaosi/utils/commits/8cd17d5))
 * feat: ✨ index cdn docs ([14f11b0](https://https//github.com/jsxiaosi/utils/commits/14f11b0))
 * feat: ✨ is add isObjectHasValue ([5ced265](https://https//github.com/jsxiaosi/utils/commits/5ced265))
 * feat: ✨ url ([430df28](https://https//github.com/jsxiaosi/utils/commits/430df28))
