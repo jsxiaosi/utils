@@ -4,6 +4,29 @@ outline: deep
 
 # Date
 
+## isNormalDate
+
+判断传入的Date是否是一个正常的日期对象
+
+::: details 示例代码
+
+```ts
+  import { isNormalDate } from '@jsxiaosi/utils';
+
+  isNormalDate(new Date()) // true
+  isNormalDate(new Date('invalid')) // false
+```
+
+:::
+
+参数:
+
+参数 | 说明 | 类型 | 默认值
+---------|----------|---------|---------
+date | 判断的日期 | `Date` |
+
+返回类型： `boolean`
+
 ## parseDate
 
 字符串转Date对象

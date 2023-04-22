@@ -1,8 +1,16 @@
+## <small>0.0.9 (2023-04-22)</small>
+
+* feat(utils): ✨ [date] 添加测试，添加isNormalDate 方法 ([de2df1d](https://https//github.com/jsxiaosi/utils/commits/de2df1d))
+* docs: 📝 md ([487d02a](https://https//github.com/jsxiaosi/utils/commits/487d02a))
+
+
+
 ## <small>0.0.8 (2023-04-21)</small>
 
-* docs: 📝 md ([a9a1677](https://https//github.com/jsxiaosi/utils/commits/a9a1677))
+* feat: ✨ 0.0.8 ([c16d06e](https://https//github.com/jsxiaosi/utils/commits/c16d06e))
 * feat: ✨ date ([ef7c573](https://https//github.com/jsxiaosi/utils/commits/ef7c573))
 * feat: ✨ elementEvents ([439a76d](https://https//github.com/jsxiaosi/utils/commits/439a76d))
+* docs: 📝 md ([a9a1677](https://https//github.com/jsxiaosi/utils/commits/a9a1677))
 
 
 
