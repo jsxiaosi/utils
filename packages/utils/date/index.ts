@@ -1,15 +1,23 @@
-import { isDate } from '../is';
+import { isDate, isNullOrUnDef } from '../is';
 
 type DateInput = string | Date;
+
+export function isNormalDate(date: Date): boolean {
+  if (!isDate(date)) {
+    return false;
+  }
+  const dateString = date.toString();
+  return dateString !== 'Invalid Date' && dateString !== 'NaN';
+}
 
 // 字符串转换成Date()
 export function parseDate(dateInput: DateInput): Date {
   if (isDate(dateInput)) {
     return dateInput;
   } else {
+    if (!dateInput || dateInput.trim() === '' || isNullOrUnDef(dateInput)) return new Date('Invalid Date');
     const [datePart, timePart] = dateInput.split(' ');
     const [year, month = 1, day = 1] = datePart.split(/-|\//).map((i) => Number(i || 1)); // 支持 "-" 和 "/" 作为日期分隔符
-    console.log(year, month, day);
     if (timePart) {
       const [hour = 0, minute = 0, second = 0] = timePart.split(':').map(Number);
       const millisecond = Number(timePart.split('.')[1] || '0');
@@ -21,10 +29,11 @@ export function parseDate(dateInput: DateInput): Date {
 }
 
 // 时间转成日期
-function parseDateTime(dateInput: DateInput): Date {
+export function parseDateTime(dateInput: DateInput): Date {
   if (isDate(dateInput)) {
     return dateInput;
   } else {
+    if (!dateInput || dateInput.trim() === '' || isNullOrUnDef(dateInput)) return new Date('Invalid Date');
     const today = new Date();
     const parts = dateInput.split(' ');
     if (parts.length === 1) {
@@ -37,7 +46,7 @@ function parseDateTime(dateInput: DateInput): Date {
       return new Date(today.getFullYear(), today.getMonth(), today.getDate(), hour, minute, second, millisecond);
     } else {
       // 包含日期部分，将时间添加到日期中
-      return new Date(parseDate(dateInput));
+      return parseDate(dateInput);
     }
   }
 }
@@ -46,6 +55,8 @@ function parseDateTime(dateInput: DateInput): Date {
 export function isDateTimeInRange(dateTimeRange: string, date: DateInput = new Date()): boolean {
   const parsedDate = parseDateTime(date);
   const [start, end] = dateTimeRange.split('-').map((time) => time.trim());
+  if (!start.includes(':') || !end.includes(':'))
+    throw new Error('isDateTimeInRange: dateTimeRange is not a correct time range string');
   const [startHour, startMinute = 0, startSecond = 0, startMillisecond = 0] = start
     .split(':')
     .flatMap((part) => part.split('.'))
@@ -77,8 +88,7 @@ export function isDateTimeInRange(dateTimeRange: string, date: DateInput = new D
     return dateInMilliseconds >= startInMilliseconds && dateInMilliseconds <= endInMilliseconds;
   }
 
-  console.error('isDateTimeInRange: Invalid date range format');
-  return false;
+  throw new Error('isDateTimeInRange: Invalid date range format');
 }
 
 // 判断日期是否在开始结束日期内
@@ -95,7 +105,7 @@ export function isDateInRange(startDateInput: DateInput, endDateInput: DateInput
 }
 
 // 比较日期
-type ComparisonType = 'greater' | 'greaterOrEqual' | 'less' | 'lessOrEqual';
+export type ComparisonType = 'greater' | 'greaterOrEqual' | 'less' | 'lessOrEqual';
 
 export function compareDates(
   date1: DateInput,
