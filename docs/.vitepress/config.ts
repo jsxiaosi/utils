@@ -57,6 +57,12 @@ const config: UserConfig = {
         src: '/registerSW.js',
       },
     ],
+    [
+      'script',
+      {
+        src: 'https://cdn.jsdelivr.net/npm/@jsxiaosi/utils',
+      },
+    ],
   ],
   base: '/utils',
   themeConfig: {

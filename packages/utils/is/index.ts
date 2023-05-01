@@ -1,8 +1,12 @@
-const toString = Object.prototype.toString;
+// const toString = Object.prototype.toString;
+
+export function getObjectProtoType(value: unknown): string {
+  return Object.prototype.toString.call(value);
+}
 
 // toString() 检测对象类型
 export function is(val: unknown, type: string) {
-  return toString.call(val) === `[object ${type}]`;
+  return getObjectProtoType(val) === `[object ${type}]`;
 }
 
 // 属性是否定义
