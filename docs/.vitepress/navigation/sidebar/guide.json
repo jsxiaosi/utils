@@ -40,6 +40,10 @@
           ]
         },
         {
+          "text": "object",
+          "link": "utils/object"
+        },
+        {
           "text": "string",
           "link": "utils/string"
         }
@@ -56,6 +60,10 @@
         {
           "text": "url",
           "link": "window/url"
+        },
+        {
+          "text": "浏览器信息",
+          "link": "window/browser"
         }
       ]
     },
@@ -88,6 +96,10 @@
         {
           "text": "uuid",
           "link": "function/uuid"
+        },
+        {
+          "text": "deepEqual",
+          "link": "function/deepEqual"
         },
         {
           "text": "信息脱敏",
