@@ -1,5 +1,12 @@
+## <small>0.0.10 (2023-05-01)</small>
+
+* feat(function,utils,window): ✨ 新函数 ([7de94e1](https://https//github.com/jsxiaosi/utils/commits/7de94e1))
+
+
+
 ## <small>0.0.9 (2023-04-22)</small>
 
+* feat: ✨ 0.0.9 ([8e3403c](https://https//github.com/jsxiaosi/utils/commits/8e3403c))
 * feat(utils): ✨ [date] 添加测试，添加isNormalDate 方法 ([de2df1d](https://https//github.com/jsxiaosi/utils/commits/de2df1d))
 * docs: 📝 md ([487d02a](https://https//github.com/jsxiaosi/utils/commits/487d02a))
 
