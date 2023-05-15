@@ -19,6 +19,7 @@ export * from './element/event';
 export * from './function/color';
 export * from './function/debounceThrottle';
 export * from './function/deepEqual';
+export * from './function/fingerprint';
 export * from './function/mask';
 export * from './function/money';
 export * from './function/uuid';

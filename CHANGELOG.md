@@ -1,5 +1,11 @@
+## <small>0.0.11 (2023-05-15)</small>
+
+
+
+
 ## <small>0.0.10 (2023-05-01)</small>
 
+* feat: ✨ 0.0.10 ([f21fe88](https://https//github.com/jsxiaosi/utils/commits/f21fe88))
 * feat(function,utils,window): ✨ 新函数 ([7de94e1](https://https//github.com/jsxiaosi/utils/commits/7de94e1))
 
 
