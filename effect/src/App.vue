@@ -1,19 +1,26 @@
 <script setup lang="ts">
-  import { parseDate, parseDateTime } from '@jsxiaosi/utils/index';
+  import { parseDate, getFingerprintId } from '@jsxiaosi/utils/index';
+  import { onMounted } from 'vue';
 
   const date = parseDate('2022//');
   console.log(date); // 输出：Thu Apr 21 2023 12:33:22 GMT+0800 (中国标准时间)
 
-  console.log(parseDateTime(''));
+  onMounted(async () => {
+    console.log(await getFingerprintId({ cookies: false }));
+  });
+
+  const info = navigator.userAgent;
 
   // console.log(parseDate(date2).toString());
   // console.log(isDateTimeInRange('12:00:00.100-15:00:00.000', '12:00:00.100')); // true
   // console.log(isDateTimeInRange('12:00:00-15:00:00', '2023-04-21 12:33:22.123')); // true
   // console.log(isDateTimeInRange('12:00:00.000-15:00:00.000', '2023-04-21 12:33:22')); // true
+
+  const zhiwen = async () => {};
 </script>
 
 <template>
-  <div></div>
+  <div @click="zhiwen">{{ info }}</div>
 </template>
 
 <style>

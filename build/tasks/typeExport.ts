@@ -48,23 +48,27 @@ export const generateTypesDefinitions = async () => {
 
     consola.trace(chalk.yellow(`Generating definition for file: ${chalk.bold(relativePath)}`));
 
-    const emitOutput = sourceFile.getEmitOutput();
-    const emitFiles = emitOutput.getOutputFiles();
-    if (emitFiles.length === 0) {
-      throw new Error(`Emit no file: ${chalk.bold(relativePath)}`);
-    }
+    if (relativePath === 'global.d.ts') {
+      // copyFile(sourceFile.getFilePath(), path.join(epOutput, relativePath));
+    } else {
+      const emitOutput = sourceFile.getEmitOutput();
+      const emitFiles = emitOutput.getOutputFiles();
+      if (emitFiles.length === 0) {
+        throw new Error(`Emit no file: ${chalk.bold(relativePath)}`);
+      }
 
-    const subTasks = emitFiles.map(async (outputFile) => {
-      const filepath = outputFile.getFilePath();
+      const subTasks = emitFiles.map(async (outputFile) => {
+        const filepath = outputFile.getFilePath();
 
-      await mkdir(path.dirname(filepath), {
-        recursive: true,
+        await mkdir(path.dirname(filepath), {
+          recursive: true,
+        });
+
+        consola.success(chalk.green(`Definition for file: ${chalk.bold(relativePath)} generated`));
       });
 
-      consola.success(chalk.green(`Definition for file: ${chalk.bold(relativePath)} generated`));
-    });
-
-    await Promise.all(subTasks);
+      await Promise.all(subTasks);
+    }
   });
 
   await Promise.all(tasks);
