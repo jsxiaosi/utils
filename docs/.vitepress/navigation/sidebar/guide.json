@@ -112,6 +112,10 @@
         {
           "text": "浏览器指纹",
           "link": "function/fingerprint"
+        },
+        {
+          "text": "浏览器跨标签通讯",
+          "link": "function/tabCommunicator"
         }
       ]
     }

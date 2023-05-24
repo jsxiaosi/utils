@@ -1,26 +1,37 @@
 <script setup lang="ts">
-  import { parseDate, getFingerprintId } from '@jsxiaosi/utils/index';
+  import { TabCommunicator } from '@jsxiaosi/utils/index';
   import { onMounted } from 'vue';
 
-  const date = parseDate('2022//');
-  console.log(date); // 输出：Thu Apr 21 2023 12:33:22 GMT+0800 (中国标准时间)
+  const tabComm = new TabCommunicator<{ event1: string; event2: { name: string } }>('keystring');
+
+  const tabComm2: TabCommunicator = new TabCommunicator('keystring2');
 
   onMounted(async () => {
-    console.log(await getFingerprintId({ cookies: false }));
+    tabComm.on('event1', (data) => {
+      console.log('event1', data);
+    });
+    tabComm.on('event2', (data) => {
+      console.log('event2', data);
+    });
+
+    tabComm2.on('event1', (data) => {
+      console.log('tabComm2event1', data);
+    });
+    tabComm2.on('event2', (data) => {
+      console.log('tabComm2event2', data);
+    });
   });
 
-  const info = navigator.userAgent;
+  const zhiwen = async () => {
+    tabComm.emit('event1', '123');
+    tabComm.emit('event2', { name: 'name' });
 
-  // console.log(parseDate(date2).toString());
-  // console.log(isDateTimeInRange('12:00:00.100-15:00:00.000', '12:00:00.100')); // true
-  // console.log(isDateTimeInRange('12:00:00-15:00:00', '2023-04-21 12:33:22.123')); // true
-  // console.log(isDateTimeInRange('12:00:00.000-15:00:00.000', '2023-04-21 12:33:22')); // true
-
-  const zhiwen = async () => {};
+    // tabComm.destroy();
+  };
 </script>
 
 <template>
-  <div @click="zhiwen">{{ info }}</div>
+  <div @click="zhiwen">push</div>
 </template>
 
 <style>

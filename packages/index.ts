@@ -22,4 +22,5 @@ export * from './function/deepEqual';
 export * from './function/fingerprint';
 export * from './function/mask';
 export * from './function/money';
+export * from './function/tabCommunicator';
 export * from './function/uuid';
