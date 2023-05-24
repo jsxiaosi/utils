@@ -1,5 +1,6 @@
-## <small>0.0.11 (2023-05-15)</small>
+## <small>0.0.12 (2023-05-24)</small>
 
+* feat(function): ✨ add fingerprint ([647acdc](https://https//github.com/jsxiaosi/utils/commits/647acdc))
 
 
 
