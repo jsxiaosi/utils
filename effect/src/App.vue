@@ -1,33 +1,24 @@
 <script setup lang="ts">
-  import { TabCommunicator } from '@jsxiaosi/utils/index';
+  import { IndexedDBHelper } from '@jsxiaosi/utils/index';
   import { onMounted } from 'vue';
 
-  const tabComm = new TabCommunicator<{ event1: string; event2: { name: string } }>('keystring');
-
-  const tabComm2: TabCommunicator = new TabCommunicator('keystring2');
+  interface MyDBSchema {
+    users: { id: string; name: string; email: string };
+    orders: { orderId: number; userId: string; product: string };
+    // More stores...
+  }
 
   onMounted(async () => {
-    tabComm.on('event1', (data) => {
-      console.log('event1', data);
-    });
-    tabComm.on('event2', (data) => {
-      console.log('event2', data);
-    });
+    const dbManager = new IndexedDBHelper<MyDBSchema>('MyDatabase', 1, [
+      { storeName: 'users', keyPath: 'id', indexConfigs: [{ indexName: 'name', keyPath: 'name' }] },
+      { storeName: 'orders', keyPath: 'orderId', indexConfigs: [{ indexName: 'productId', keyPath: 'productId' }] },
+    ]);
 
-    tabComm2.on('event1', (data) => {
-      console.log('tabComm2event1', data);
-    });
-    tabComm2.on('event2', (data) => {
-      console.log('tabComm2event2', data);
-    });
+    dbManager.add('users', { id: '1', name: 'John Doe', email: '' });
+    dbManager.add('orders', { orderId: 1, userId: 'product1', product: '' });
   });
 
-  const zhiwen = async () => {
-    tabComm.emit('event1', '123');
-    tabComm.emit('event2', { name: 'name' });
-
-    // tabComm.destroy();
-  };
+  const zhiwen = async () => {};
 </script>
 
 <template>
