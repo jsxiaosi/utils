@@ -16,6 +16,7 @@
 
     dbManager.add('users', { id: '1', name: 'John Doe', email: '' });
     dbManager.add('orders', { orderId: 1, userId: 'product1', product: '' });
+    dbManager.get('admin');
   });
 
   const zhiwen = async () => {};

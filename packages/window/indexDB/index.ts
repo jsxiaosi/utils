@@ -62,16 +62,21 @@ export class IndexedDBHelper<T extends Record<string, any>> {
   public async get<K extends keyof T>(storeName: Extract<K, string>, id: string | number): Promise<T[K]> {
     const db = await this.dbPromise;
     return new Promise<any>((resolve, reject) => {
-      const transaction = db.transaction([storeName], 'readonly');
-      const store = transaction?.objectStore(storeName);
-      const request = store?.get(id);
+      try {
+        const transaction = db.transaction([storeName], 'readonly');
+        const store = transaction?.objectStore(storeName);
+        const request = store?.get(id);
 
-      request?.addEventListener('success', (event: any) => {
-        resolve(event.target.result);
-      });
-      request?.addEventListener('error', (event: any) => {
-        reject(event.target.error);
-      });
+        request?.addEventListener('success', (event: any) => {
+          resolve(event.target.result);
+        });
+      } catch (error) {
+        reject((error as Error).message);
+      }
+
+      // request?.addEventListener('error', (event: any) => {
+      //   reject(event.target.error);
+      // });
     });
   }
 
@@ -82,17 +87,22 @@ export class IndexedDBHelper<T extends Record<string, any>> {
   ): Promise<T[K]> {
     const db = await this.dbPromise;
     return new Promise<any>((resolve, reject) => {
-      const transaction = db.transaction([storeName], 'readonly');
-      const store = transaction?.objectStore(storeName);
-      const index = store?.index(indexName);
-      const request = index?.get(indexValue);
+      try {
+        const transaction = db.transaction([storeName], 'readonly');
+        transaction.addEventListener('error', (event: any) => reject(event.target.error));
+        const store = transaction?.objectStore(storeName);
+        const index = store?.index(indexName);
+        const request = index?.get(indexValue);
 
-      request?.addEventListener('success', (event: any) => {
-        resolve(event.target.result);
-      });
-      request?.addEventListener('error', (event: any) => {
-        reject(event.target.error);
-      });
+        request?.addEventListener('success', (event: any) => {
+          resolve(event.target.result);
+        });
+      } catch (error) {
+        reject((error as Error).message);
+      }
+      // request?.addEventListener('error', (event: any) => {
+      //   reject(event.target.error);
+      // });
     });
   }
 }
