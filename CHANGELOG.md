@@ -1,6 +1,13 @@
+## <small>0.0.13 (2023-07-12)</small>
+
+* feat(window): ✨ indexDB ([4fcb463](https://https//github.com/jsxiaosi/utils/commits/4fcb463))
+
+
+
 ## <small>0.0.12 (2023-05-24)</small>
 
 * feat(function): ✨ add fingerprint ([647acdc](https://https//github.com/jsxiaosi/utils/commits/647acdc))
+* feat(function): ✨ tabCommunicator ([919592a](https://https//github.com/jsxiaosi/utils/commits/919592a))
 
 
 

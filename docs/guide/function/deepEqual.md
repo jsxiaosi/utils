@@ -13,7 +13,7 @@ outline: deep
 ::: details 示例代码
 
 ```ts
-  import {deepEqual } from '@jsxiaosi/utils';
+  import { deepEqual } from '@jsxiaosi/utils';
 
   deepEqual(val1,val2) // boolean
 ```

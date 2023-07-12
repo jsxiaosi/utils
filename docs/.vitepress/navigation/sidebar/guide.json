@@ -54,6 +54,10 @@
       "collapsed": false,
       "items": [
         {
+          "text": "indexDB",
+          "link": "window/indexedDB"
+        },
+        {
           "text": "storage",
           "link": "window/storage"
         },
@@ -82,7 +86,7 @@
       ]
     },
     {
-      "text": "功能",
+      "text": "Function",
       "collapsed": false,
       "items": [
         {
