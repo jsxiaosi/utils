@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { stringTrim, transformString } from '..';
+import { removeString, stringTrim, transformString } from '..';
 
 describe('stringTrim function', () => {
   it('should trim all spaces', () => {
@@ -29,7 +29,17 @@ describe('transformString function', () => {
     expect(transformString('my-transform-string', 'upperCase')).toBe('MY-TRANSFORM-STRING');
   });
 
+  it('should transform to kebabCase', () => {
+    expect(transformString('myTransformString', 'kebabCase')).toBe('my-transform-string');
+  });
+
   it('should no transform ', () => {
     expect(transformString('my-transform-string')).toBe('my-transform-string');
+  });
+});
+
+describe('removeString function', () => {
+  it('should removeString ', () => {
+    expect(removeString('my-transform-string', ['-', 'string'])).toBe('mytransform');
   });
 });

@@ -11,7 +11,7 @@ export function stringTrim(str: string, type: StringTrimType = 'all'): string {
   }
 }
 
-type StringTransformType = 'lowerCamelCase' | 'upperCamelCase' | 'upperCase';
+type StringTransformType = 'lowerCamelCase' | 'upperCamelCase' | 'upperCase' | 'kebabCase';
 
 export function transformString(str: string, type?: StringTransformType): string {
   switch (type) {
@@ -21,7 +21,14 @@ export function transformString(str: string, type?: StringTransformType): string
       return str.replace(/[-_]+(\w)/g, (_, c) => c.toUpperCase()).replace(/^(\w)/, (_, c) => c.toUpperCase());
     case 'upperCase':
       return str.toUpperCase();
+    case 'kebabCase':
+      return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
     default:
       return str;
   }
+}
+
+export function removeString(str: string, substrings: string[]): string {
+  const regex = new RegExp(substrings.join('|'), 'g');
+  return str.replace(regex, '');
 }
