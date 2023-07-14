@@ -69,5 +69,27 @@ StringTransformType：
 lowerCamelCase | 小驼峰(第一个单词首字母小写，其他单词首字母大写)转换，并去掉`-`
 upperCamelCase | 大驼峰(全部单词首字母大写)转换，并去掉`-`
 upperCase | 全部转换为大写，保留`-`
+kebabCase | 大写转小写，带`-`
+
+返回类型：`string`
+
+## removeString
+
+::: details 示例代码
+
+```js
+  import { removeString } from '@jsxiaosi/utils';
+
+  removeString('my-transform-string', ['-', 'string']); // 'mytransform'
+```
+
+:::
+
+参数：
+
+参数 | 说明 | 类型 | 默认值
+---------|----------|---------|---------
+str | 需要删除的字符串 | string |
+substrings | 需要删除的内容 | string[] |  |
 
 返回类型：`string`
