@@ -15,6 +15,7 @@ export * from './window/url';
 // element
 export * from './element/class';
 export * from './element/event';
+export * from './element/style';
 
 // function
 export * from './function/color';

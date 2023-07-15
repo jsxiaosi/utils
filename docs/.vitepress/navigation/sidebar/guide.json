@@ -82,6 +82,10 @@
         {
           "text": "event",
           "link": "element/event"
+        },
+        {
+          "text": "style",
+          "link": "element/style"
         }
       ]
     },

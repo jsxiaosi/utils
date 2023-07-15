@@ -283,6 +283,9 @@ importers:
       crypto-js:
         specifier: ^4.1.1
         version: 4.1.1
+      csstype:
+        specifier: ^3.1.2
+        version: 3.1.2
 
     devDependencies:
       '@types/crypto-js':
@@ -5543,6 +5546,11 @@ packages:
   /csstype@2.6.20:
     resolution:
       { integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA== }
+
+  /csstype@3.1.2:
+    resolution:
+      { integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ== }
+    dev: false
 
   /cz-conventional-changelog@3.3.0:
     resolution:

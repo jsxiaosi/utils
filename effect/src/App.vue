@@ -1,29 +1,29 @@
 <script setup lang="ts">
-  import { IndexedDBHelper } from '@jsxiaosi/utils/index';
-  import { onMounted } from 'vue';
+  import { onMounted, ref } from 'vue';
+  import { setStyle, getStyle, removeStyle } from '@jsxiaosi/utils/index';
 
-  interface MyDBSchema {
-    users: { id: string; name: string; email: string };
-    orders: { orderId: number; userId: string; product: string };
-    // More stores...
-  }
+  const dome = ref<HTMLDivElement>();
 
   onMounted(async () => {
-    const dbManager = new IndexedDBHelper<MyDBSchema>('MyDatabase', 1, [
-      { storeName: 'users', keyPath: 'id', indexConfigs: [{ indexName: 'name', keyPath: 'name' }] },
-      { storeName: 'orders', keyPath: 'orderId', indexConfigs: [{ indexName: 'productId', keyPath: 'productId' }] },
-    ]);
-
-    dbManager.add('users', { id: '1', name: 'John Doe', email: '' });
-    dbManager.add('orders', { orderId: 1, userId: 'product1', product: '' });
-    dbManager.get('admin');
+    const admin = document.getElementById('dome');
+    console.log(admin?.style);
+    // admin[0].style
   });
 
-  const zhiwen = async () => {};
+  const zhiwen = async () => {
+    if (dome.value) {
+      setStyle(dome.value, { display: 'block', textAlign: 'center' });
+      removeStyle(dome.value, ['color']);
+      console.log(getStyle(dome.value));
+    }
+  };
 </script>
 
 <template>
-  <div @click="zhiwen">push</div>
+  <div>
+    <div id="dome" ref="dome" class="dome" style="color: red"></div>
+    <button @click="zhiwen">asdasasd</button>
+  </div>
 </template>
 
 <style>
@@ -36,6 +36,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .dome {
+    width: 500px;
+    height: 500px;
+    background-color: red;
   }
 
   #app {
