@@ -73,13 +73,13 @@ const config: UserConfig = {
     logo: '/logo2.png',
     logoSmall: '/pwa/favicon-32x32.png',
     // 展示搜索框
-    algolia: {
-      appKey: '',
-      indexName: '',
-      searchParameters: {
-        faeFilters: ['tags:guide,api'],
-      },
-    },
+    // algolia: {
+    //   appKey: '',
+    //   indexName: '',
+    //   searchParameters: {
+    //     faeFilters: ['tags:guide,api'],
+    //   },
+    // },
     socialLinks: [{ icon: 'github', link: 'https://github.com/jsxiaosi/utils' }],
     // 顶部标题栏
     nav,

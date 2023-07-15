@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { onMounted, ref } from 'vue';
-  import { setStyle, getStyle, removeStyle } from '@jsxiaosi/utils/index';
+  import { openFullScreen, closeFullScreen } from '@jsxiaosi/utils/index';
 
   const dome = ref<HTMLDivElement>();
 
@@ -12,17 +12,17 @@
 
   const zhiwen = async () => {
     if (dome.value) {
-      setStyle(dome.value, { display: 'block', textAlign: 'center' });
-      removeStyle(dome.value, ['color']);
-      console.log(getStyle(dome.value));
+      openFullScreen();
     }
   };
 </script>
 
 <template>
   <div>
-    <div id="dome" ref="dome" class="dome" style="color: red"></div>
-    <button @click="zhiwen">asdasasd</button>
+    <div id="dome" ref="dome" class="dome" style="color: red">
+      <button @click="closeFullScreen">close</button>
+    </div>
+    <button @click="zhiwen">open</button>
   </div>
 </template>
 
