@@ -27,9 +27,5 @@ export function setStyle(elem: HTMLElement, styles: CSSProperty): void {
 }
 
 export function removeStyle(elem: HTMLElement, styles: Styles[]): void {
-  for (const prop in styles) {
-    if (Object.prototype.hasOwnProperty.call(styles, prop)) {
-      elem.style.removeProperty(prop);
-    }
-  }
+  styles.forEach((prop) => elem.style.removeProperty(transformString(prop, 'kebabCase')));
 }
