@@ -130,9 +130,7 @@ dbHelper.getByIndex('myStore', 'nameIndex', 'John').then(data => console.log(dat
 `keyPath` | `string` 或 `string[]` | 键路径
 `options` | `IDBIndexParameters` | 可选参数
 
-### API
-
-`IndexedDBHelper` 类是操作 IndexedDB 数据库的主类。
+## API
 
 方法 | 参数 | 返回值 | 描述
 ---|---|---|---

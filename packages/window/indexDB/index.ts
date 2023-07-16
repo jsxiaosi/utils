@@ -33,7 +33,7 @@ export class IndexedDBHelper<T extends Record<string, any>> {
             });
           }
         });
-        resolve(db);
+        // resolve(db);
       };
     });
   }
