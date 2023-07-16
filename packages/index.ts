@@ -8,6 +8,7 @@ export * from './utils/string';
 
 // window
 export * from './window/browser';
+export * from './window/cookies';
 export * from './window/indexDB';
 export * from './window/storage';
 export * from './window/url';

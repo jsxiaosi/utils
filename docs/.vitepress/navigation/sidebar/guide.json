@@ -54,6 +54,10 @@
       "collapsed": false,
       "items": [
         {
+          "text": "cookies",
+          "link": "window/cookies"
+        },
+        {
           "text": "indexDB",
           "link": "window/indexedDB"
         },
