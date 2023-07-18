@@ -132,11 +132,62 @@ dbHelper.getByIndex('myStore', 'nameIndex', 'John').then(data => console.log(dat
 
 ## API
 
-方法 | 参数 | 返回值 | 描述
----|---|---|---
-`constructor` | `dbName: string, version: number, storeConfigs: StoreConfig<T, keyof T>[]` | - | 构造函数
-`add` | `storeName: Extract<K, string>, data: T[K]` | `Promise<void>` | 添加数据
-`update` | `storeName: Extract<K, string>, data: T[K]` | `Promise<void>` | 更新数据
-`delete` | `storeName: Extract<K, string>, id: string` | `number` | `Promise<void>` | 删除数据
-`get` | `storeName: Extract<K, string>, id: string` | `number` | `Promise<T[K]>` | 根据 id 获取数据
-`getByIndex` | `storeName: Extract<K, string>, indexName: string, indexValue: string` | `number` | `Promise<T[K]>` | 根据索引获取数据
+- ### add
+
+  添加数据
+
+  参数：
+
+  参数 | 说明 | 类型
+  ---|---|---
+  storeName | 存储对象的名称。该名称必须是 T 类型对象的键 | `K`/`string`
+  data | 存储对象的数据。其类型与 T 类型对象中对应键的值的类型相同。 | `T[K]`
+
+- ### update
+
+  更新数据
+
+  参数：
+
+  参数 | 说明 | 类型
+  ---|---|---
+  storeName | 存储对象的名称。该名称必须是 T 类型对象的键 | `K`/`string`
+  data | 存储对象的数据。其类型与 T 类型对象中对应键的值的类型相同。 | `T[K]`
+
+- ### delete
+
+  删除数据
+
+  参数：
+
+  参数 | 说明 | 类型
+  ---|---|---
+  storeName | 存储对象的名称。该名称必须是 T 类型对象的键 | `K`/`string`
+  id | 根据`StoreConfig`里的`keyPath`键路径删除数据。 | `IDBValidKey`/`IDBKeyRange`
+
+- ### get
+
+  根据 id 获取数据
+
+  参数：
+
+  参数 | 说明 | 类型
+  ---|---|---
+  storeName | 存储对象的名称。该名称必须是 T 类型对象的键 | `K`/`string`
+  id | 查找记录的键或键范围。[`StoreConfig`](#storeconfig-数据库存储的配置)里的`keyPath` | `IDBValidKey`/`IDBKeyRange`
+
+  返回值：`Promise<T[K]>`
+
+- ### getByIndex
+
+  根据索引获取数据
+
+  参数：
+
+  参数 | 说明 | 类型
+  ---|---|---
+  storeName | 存储对象的名称。该名称必须是 T 类型对象的键 | `K`/`string`
+  indexName | [`IndexConfig`](#indexconfig-数据库索引的配置)里的`keyPath`键路径名称。 | `string`
+  indexValue | 查询条件参数。 | `IDBValidKey`/`IDBKeyRange`
+
+  返回值：`Promise<T[K]>`
