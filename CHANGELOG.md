@@ -1,5 +1,17 @@
-## <small>0.0.13 (2023-07-12)</small>
+## <small>0.0.16 (2023-07-18)</small>
 
+* docs(function,window): 📝 tabCommunicator、indexDB ([5f810a1](https://https//github.com/jsxiaosi/utils/commits/5f810a1))
+* fix(window): 🐛 indexDB ([e664201](https://https//github.com/jsxiaosi/utils/commits/e664201))
+* feat(element): ✨ fullScreen ([f569432](https://https//github.com/jsxiaosi/utils/commits/f569432))
+* feat(element): ✨ style ([9d17c30](https://https//github.com/jsxiaosi/utils/commits/9d17c30))
+* feat(utils): ✨ string ([e41df6e](https://https//github.com/jsxiaosi/utils/commits/e41df6e))
+* feat(window): ✨ cookies ([2e5294b](https://https//github.com/jsxiaosi/utils/commits/2e5294b))
+
+
+
+## <small>0.0.15 (2023-07-12)</small>
+
+* feat(window): ✨ indexDB ([e7ef973](https://https//github.com/jsxiaosi/utils/commits/e7ef973))
 * feat(window): ✨ indexDB ([4fcb463](https://https//github.com/jsxiaosi/utils/commits/4fcb463))
 
 
