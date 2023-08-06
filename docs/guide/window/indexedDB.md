@@ -85,7 +85,7 @@ console.log(data);
 
 ### 自定义数据表操作
 
-在创建 IndexedDBHelper 实例时提供 upgradeneeded 方法，来实现自定义的数据表添加和删除操作。使用方式与[indexDB的upgradeneeded方法类似]('https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event')
+在创建 IndexedDBHelper 实例时提供 upgradeneeded 方法，来实现自定义的数据表添加和删除操作。使用方式与[indexDB的upgradeneeded方法类似](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
 
 ```ts
 const dbHelper = new IndexedDBHelper('dbName', 2, {
@@ -181,8 +181,8 @@ dbHelper.getByIndex('myStore', 'nameIndex', 'John').then(data => console.log(dat
 参数 | 说明 | 类型
 ---|---|---
 `storeConfigs` | 数据库表配置数组 | `StoreConfig<T, keyof T>[]`
-`upgradeneeded` | 数据库升级时的回调函数，[与indexDB的upgradeneeded方法类似]('https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event') <br> 参数为数据库对象、旧版本和新版本 | `(db: IDBDatabase, oldVersion: number, newVersion: number / null) => void`
-`blocked` | 数据库被阻止打开时的回调函数，[与indexDB的blocked方法类似]('https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event')，参数为旧版本、新版本和事件对象 | `(oldVersion: number, newVersion: number / null, event: IDBVersionChangeEvent) => void`
+`upgradeneeded` | 数据库升级时的回调函数，[与indexDB的upgradeneeded方法类似](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) <br> 参数为数据库对象、旧版本和新版本 | `(db: IDBDatabase, oldVersion: number, newVersion: number / null) => void`
+`blocked` | 数据库被阻止打开时的回调函数，[与indexDB的blocked方法类似](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)，参数为旧版本、新版本和事件对象 | `(oldVersion: number, newVersion: number / null, event: IDBVersionChangeEvent) => void`
 
 #### `StoreConfig` 数据库存储的配置
 
