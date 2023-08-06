@@ -4,7 +4,7 @@
     "composite": true,
     "jsx": "preserve",
     "lib": ["ESNext", "Dom", "DOM.Iterable"],
-    "types": ["vite/client", "unplugin-vue-macros/macros-global"],
+    "types": ["vite/client"],
     "typeRoots": ["./node_modules", "./typings"],
     "skipLibCheck": true
   },
