@@ -1,11 +1,20 @@
+## <small>0.0.17 (2023-08-06)</small>
+
+* build: 📦️ 升级依赖，整理项目依赖项 ([b12a1b3](https://https//github.com/jsxiaosi/utils/commits/b12a1b3))
+* fix(utils): 🐛 isPromise ([11faaf4](https://https//github.com/jsxiaosi/utils/commits/11faaf4))
+* perf(window): ⚡️ indexDB ([9371e46](https://https//github.com/jsxiaosi/utils/commits/9371e46))
+
+
+
 ## <small>0.0.16 (2023-07-18)</small>
 
-* docs(function,window): 📝 tabCommunicator、indexDB ([5f810a1](https://https//github.com/jsxiaosi/utils/commits/5f810a1))
-* fix(window): 🐛 indexDB ([e664201](https://https//github.com/jsxiaosi/utils/commits/e664201))
+* feat: ✨ v0.0.16 ([f061848](https://https//github.com/jsxiaosi/utils/commits/f061848))
 * feat(element): ✨ fullScreen ([f569432](https://https//github.com/jsxiaosi/utils/commits/f569432))
 * feat(element): ✨ style ([9d17c30](https://https//github.com/jsxiaosi/utils/commits/9d17c30))
 * feat(utils): ✨ string ([e41df6e](https://https//github.com/jsxiaosi/utils/commits/e41df6e))
 * feat(window): ✨ cookies ([2e5294b](https://https//github.com/jsxiaosi/utils/commits/2e5294b))
+* docs(function,window): 📝 tabCommunicator、indexDB ([5f810a1](https://https//github.com/jsxiaosi/utils/commits/5f810a1))
+* fix(window): 🐛 indexDB ([e664201](https://https//github.com/jsxiaosi/utils/commits/e664201))
 
 
 
