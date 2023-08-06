@@ -37,7 +37,6 @@ export const buildNodeModules = async () => {
       exports: module === 'cjs' ? 'named' : undefined,
       preserveModules: true,
       preserveModulesRoot: pkgRoot,
-      sourcemap: true,
       entryFileNames: `[name].${config.ext}`,
     };
   });

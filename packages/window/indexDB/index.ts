@@ -11,29 +11,47 @@ interface StoreConfig<T extends Record<string, any>, U extends keyof T> {
   indexConfigs?: IndexConfig[];
 }
 
+interface IndexedDBHelperOptions<T extends Record<string, any>> {
+  storeConfigs?: StoreConfig<T, keyof T>[];
+  upgradeneeded?: (db: IDBDatabase, oldVersion: number, newVersion: number | null) => void;
+  blocked?: (oldVersion: number, newVersion: number | null, event: IDBVersionChangeEvent) => void;
+}
+
 export class IndexedDBHelper<T extends Record<string, any>> {
   dbName: string;
   version: number;
   dbPromise: Promise<IDBDatabase>;
+  dbRequest: IDBOpenDBRequest;
 
-  constructor(dbName: string, version: number, storeConfigs: StoreConfig<T, keyof T>[]) {
+  constructor(dbName: string, version: number, options: IndexedDBHelperOptions<T>) {
+    const { storeConfigs, blocked, upgradeneeded } = options;
     this.dbName = dbName;
     this.version = version;
+    this.dbRequest = indexedDB.open(this.dbName, this.version);
+
     this.dbPromise = new Promise((resolve, reject) => {
-      const request = indexedDB.open(this.dbName, this.version);
-      request.onerror = () => reject('Error opening database');
+      const request = this.dbRequest;
+
+      request.onerror = (event: Event) => reject((event.target as IDBOpenDBRequest).error);
       request.onsuccess = () => resolve(request.result);
-      request.onupgradeneeded = () => {
+      request.onblocked = (event) => blocked && blocked(event.oldVersion, event.newVersion, event);
+      request.onupgradeneeded = (event) => {
         const db = request.result;
-        storeConfigs.forEach(({ storeName, keyPath, autoIncrement, indexConfigs }) => {
-          if (!db.objectStoreNames.contains(storeName)) {
-            const objectStore = db.createObjectStore(storeName, { keyPath, autoIncrement });
-            indexConfigs?.forEach(({ indexName, keyPath, options }) => {
-              objectStore.createIndex(indexName, keyPath, options);
-            });
-          }
-        });
-        // resolve(db);
+
+        if (upgradeneeded) {
+          upgradeneeded(db, event.oldVersion, event.newVersion);
+        }
+
+        if (storeConfigs) {
+          storeConfigs.forEach(({ storeName, keyPath, autoIncrement, indexConfigs }) => {
+            if (!db.objectStoreNames.contains(storeName)) {
+              const objectStore = db.createObjectStore(storeName, { keyPath, autoIncrement });
+              indexConfigs?.forEach(({ indexName, keyPath, options }) => {
+                objectStore.createIndex(indexName, keyPath, options);
+              });
+            }
+          });
+        }
       };
     });
   }

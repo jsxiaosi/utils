@@ -6,32 +6,35 @@ describe('IndexedDBHelper', () => {
   let dbHelper: IndexedDBHelper<any>;
 
   beforeAll(() => {
-    dbHelper = new IndexedDBHelper('testDb', 1, [
-      {
-        storeName: 'testStore',
-        keyPath: 'id',
-        autoIncrement: true,
-        indexConfigs: [
-          {
-            indexName: 'nameIndex',
-            keyPath: 'name',
-            options: { unique: false },
-          },
-        ],
-      },
-      {
-        storeName: 'deleteTestStore',
-        keyPath: 'id',
-        autoIncrement: true,
-        indexConfigs: [
-          {
-            indexName: 'nameIndex',
-            keyPath: 'name',
-            options: { unique: false },
-          },
-        ],
-      },
-    ]);
+    dbHelper = new IndexedDBHelper('testDb', 1, {
+      storeConfigs: [
+        {
+          storeName: 'testStore',
+          keyPath: 'id',
+          autoIncrement: true,
+          indexConfigs: [
+            {
+              indexName: 'nameIndex',
+              keyPath: 'name',
+              options: { unique: false },
+            },
+          ],
+        },
+        {
+          storeName: 'deleteTestStore',
+          keyPath: 'id',
+          autoIncrement: true,
+          indexConfigs: [
+            {
+              indexName: 'nameIndex',
+              keyPath: 'name',
+              options: { unique: false },
+            },
+          ],
+        },
+      ],
+      upgradeneeded: () => {},
+    });
   });
 
   test('should add data', async () => {
