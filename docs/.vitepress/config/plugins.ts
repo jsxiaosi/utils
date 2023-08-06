@@ -40,10 +40,7 @@ export const mdPlugin = (md: markdownit) => {
           // 查找示例文件
           try {
             // 如果查找不到文件抛出异常
-            source = fs.readFileSync(
-              path.resolve(projRoot, 'example', `${sourceFile}.vue`),
-              'utf-8',
-            );
+            source = fs.readFileSync(path.resolve(projRoot, 'example', `${sourceFile}.vue`), 'utf-8');
           } catch (error) {
             console.error(red((error as Error).message));
             throw new Error(`example目录不存在: ${sourceFile} 目录或者文件`);

@@ -68,7 +68,7 @@ export function isNumber(val: unknown): val is number {
 
 // 是否为promise类型
 export function isPromise<T = any>(val: unknown): val is Promise<T> {
-  return is(val, 'Promise') || ((isObject(val) || isFunction(val)) && isFunction(val.then) && isFunction(val.catch));
+  return is(val, 'Promise') || (isObject(val) && isFunction(val.then) && isFunction(val.catch));
 }
 
 // 是否string类型

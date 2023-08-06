@@ -41,9 +41,7 @@ export const highlight = (str: string, lang: string) => {
       loadLanguages([lang]);
     } catch {
       // eslint-disable-next-line no-console
-      consola.warn(
-        chalk.yellow(`[vitepress] Syntax highlight for language "${lang}" is not supported.`),
-      );
+      consola.warn(chalk.yellow(`[vitepress] Syntax highlight for language "${lang}" is not supported.`));
     }
   }
   if (prism.languages[lang]) {
