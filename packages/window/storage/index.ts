@@ -1,4 +1,5 @@
 import CryptoJS from 'crypto-js';
+import { isFunction } from '../../utils/is';
 import type { StorageConfig, StorageType, StorageValue } from './types';
 
 // 类型 window.localStorage,window.sessionStorage,
@@ -6,8 +7,8 @@ const defConfig: StorageConfig = {
   prefix: 'xiaosiAdmin', // 名称前缀 建议：项目名 + 项目版本
   expire: 0, //过期时间 单位：秒
   isEncrypt: false, // 默认加密 为了调试方便, 开发过程中可以不加密
-  secret_key: '3333e6e143439161',
-  secret_iv: 'e3bbe7e3ba84431a',
+  secretKey: '3333e6e143439161',
+  secretIv: 'e3bbe7e3ba84431a',
 };
 
 class Storage {
@@ -24,9 +25,9 @@ class Storage {
    */
   private decrypt(data: string): string {
     // 十六位十六进制数作为密钥
-    const SECRET_KEY = CryptoJS.enc.Utf8.parse(this.config.secret_key);
+    const SECRET_KEY = CryptoJS.enc.Utf8.parse(this.config.secretKey);
     // 十六位十六进制数作为密钥偏移量
-    const SECRET_IV = CryptoJS.enc.Utf8.parse(this.config.secret_iv);
+    const SECRET_IV = CryptoJS.enc.Utf8.parse(this.config.secretIv);
     const encryptedHexStr = CryptoJS.enc.Hex.parse(data);
     const str = CryptoJS.enc.Base64.stringify(encryptedHexStr);
     const decrypt = CryptoJS.AES.decrypt(str, SECRET_KEY, {
@@ -45,9 +46,9 @@ class Storage {
    */
   private encrypt(data: string): string {
     // 十六位十六进制数作为密钥
-    const SECRET_KEY = CryptoJS.enc.Utf8.parse(this.config.secret_key);
+    const SECRET_KEY = CryptoJS.enc.Utf8.parse(this.config.secretKey);
     // 十六位十六进制数作为密钥偏移量
-    const SECRET_IV = CryptoJS.enc.Utf8.parse(this.config.secret_iv);
+    const SECRET_IV = CryptoJS.enc.Utf8.parse(this.config.secretIv);
     const dataHex = CryptoJS.enc.Utf8.parse(data);
     const encrypted = CryptoJS.AES.encrypt(dataHex, SECRET_KEY, {
       iv: SECRET_IV,
@@ -172,8 +173,12 @@ class Storage {
 
   // 名称前自动添加前缀
   public autoAddPrefix(key: string): string {
-    const prefix = this.config.prefix ? this.config.prefix + '_' : '';
-    return prefix + key;
+    if (isFunction(this.config.prefix)) {
+      return this.config.prefix(key);
+    } else {
+      const prefix = this.config.prefix ? this.config.prefix + '_' : '';
+      return prefix + key;
+    }
   }
 
   // 移除已添加的前缀

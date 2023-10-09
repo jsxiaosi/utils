@@ -90,4 +90,12 @@ describe('storage', () => {
     storage.clearStorage();
     expect(storage.getStorageLength()).toEqual(0);
   });
+
+  it('should apply custom prefix function', () => {
+    storage.setStorageConfig({ prefix: (key) => `${key}-prefix`, isEncrypt: true });
+
+    const value = { name: 'test' };
+    storage.setStorage(Name, value, 2000); // expire in 1s
+    expect(storage.getStorageForIndex(0)).toEqual(`${Name}-prefix`);
+  });
 });
