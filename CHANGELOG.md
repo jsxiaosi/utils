@@ -1,5 +1,12 @@
+## <small>0.0.18 (2023-11-20)</small>
+
+* feat(window): ✨ storage ([2ce2b12](https://https//github.com/jsxiaosi/utils/commits/2ce2b12))
+
+
+
 ## <small>0.0.17 (2023-08-06)</small>
 
+* feat: ✨ v0.0.17 ([c367160](https://https//github.com/jsxiaosi/utils/commits/c367160))
 * build: 📦️ 升级依赖，整理项目依赖项 ([b12a1b3](https://https//github.com/jsxiaosi/utils/commits/b12a1b3))
 * fix(utils): 🐛 isPromise ([11faaf4](https://https//github.com/jsxiaosi/utils/commits/11faaf4))
 * perf(window): ⚡️ indexDB ([9371e46](https://https//github.com/jsxiaosi/utils/commits/9371e46))
