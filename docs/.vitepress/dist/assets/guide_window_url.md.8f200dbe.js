@@ -42,15 +42,15 @@ function B(o, n = 'unnamed') {
         })
         .join('&');
 }
-function P(o, n, p = 'unnamed') {
+function j(o, n, p = 'unnamed') {
   const a = B(n, p),
     s = o.includes('?') ? '&' : '?';
   return `${o}${s}${a}`;
 }
-function j(o) {
-  let n = o;
-  f(o) && (n = o.split('?')[1]);
-  const p = new URLSearchParams(n),
+function P(o) {
+  const n = o;
+  if (!f(o)) return {};
+  const p = new URLSearchParams(new URL(n).search),
     a = {},
     s = [];
   for (const [t, l] of p.entries()) {
@@ -94,7 +94,7 @@ const x = y({
                   onClick:
                     s[0] ||
                     (s[0] = (l) =>
-                      (p.value = r(P)('https://github.com/jsxiaosi?existingKey=existingValue', n, 'unnamed'))),
+                      (p.value = r(j)('https://github.com/jsxiaosi?existingKey=existingValue', n, 'unnamed'))),
                 },
                 { default: C(() => [k('追加参数 ')]), _: 1 },
               ),
@@ -234,7 +234,7 @@ const x = y({
                   onClick:
                     a[0] ||
                     (a[0] = (t) =>
-                      (n.value = r(j)('https://github.com/jsxiaosi?name=John&age=30&tags[]=a&tags[]=b&tags[]=c'))),
+                      (n.value = r(P)('https://github.com/jsxiaosi?name=John&age=30&tags[]=a&tags[]=b&tags[]=c'))),
                 },
                 { default: C(() => [k(' 解析Url参数 ')]), _: 1 },
               ),
@@ -246,8 +246,8 @@ const x = y({
       };
     },
   }),
-  V = Object.freeze(Object.defineProperty({ __proto__: null, default: N }, Symbol.toStringTag, { value: 'Module' })),
-  R = e(
+  R = Object.freeze(Object.defineProperty({ __proto__: null, default: N }, Symbol.toStringTag, { value: 'Module' })),
+  V = e(
     'h1',
     { id: 'url', tabindex: '-1' },
     [k('url '), e('a', { class: 'header-anchor', href: '#url', 'aria-label': 'Permalink to "url"' }, '​')],
@@ -305,7 +305,7 @@ const x = y({
     5,
   ),
   a2 = JSON.parse(
-    '{"title":"url","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"guide/window/url.md","filePath":"guide/window/url.md","lastUpdated":1681743537000}',
+    '{"title":"url","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"guide/window/url.md","filePath":"guide/window/url.md","lastUpdated":1716018311000}',
   ),
   Y = { name: 'guide/window/url.md' },
   s2 = Object.assign(Y, {
@@ -315,7 +315,7 @@ const x = y({
           '../../example/url/objectToUrlParams.vue': U,
           '../../example/url/objectToUrlParams_array.vue': O,
           '../../example/url/objectToUrlParams_arrayFormat.vue': J,
-          '../../example/url/urlParamsToObject.vue': V,
+          '../../example/url/urlParamsToObject.vue': R,
         }),
         p = '../../example/url/*.vue';
       return (a, s) => {
@@ -323,7 +323,7 @@ const x = y({
         return (
           F(),
           i('div', null, [
-            R,
+            V,
             K,
             M,
             c(
@@ -404,8 +404,7 @@ const x = y({
                 pathName: 'url/urlParamsToObject',
                 'raw-source':
                   "%3Cscript%20setup%20lang%3D%22ts%22%3E%0A%20%20import%20%7B%20urlParamsToObject%20%7D%20from%20'%40jsxiaosi%2Futils'%3B%0A%20%20import%20%7B%20ref%20%7D%20from%20'vue'%3B%0A%0A%20%20const%20urlParams%20%3D%20ref%3Cany%3E()%3B%0A%3C%2Fscript%3E%0A%0A%3Ctemplate%3E%0A%20%20%3Cdiv%3Ehttps%3A%2F%2Fgithub.com%2Fjsxiaosi%3Fname%3DJohn%26age%3D30%26tags%5B%5D%3Da%26tags%5B%5D%3Db%26tags%5B%5D%3Dc%3C%2Fdiv%3E%0A%20%20%3CElButton%0A%20%20%20%20style%3D%22margin%3A%2012px%200%22%0A%20%20%20%20%40click%3D%22urlParams%20%3D%20urlParamsToObject('https%3A%2F%2Fgithub.com%2Fjsxiaosi%3Fname%3DJohn%26age%3D30%26tags%5B%5D%3Da%26tags%5B%5D%3Db%26tags%5B%5D%3Dc')%22%0A%20%20%3E%0A%20%20%20%20%E8%A7%A3%E6%9E%90Url%E5%8F%82%E6%95%B0%0A%20%20%3C%2FElButton%3E%0A%20%20%3Cdiv%3E%7B%7B%20urlParams%20%7D%7D%3C%2Fdiv%3E%0A%3C%2Ftemplate%3E%0A",
-                description:
-                  '%3Cp%3E%E5%9C%A8%E7%8E%B0%E6%9C%89%E7%9A%84url%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%8F%82%E6%95%B0%E6%88%96%E8%80%85%E8%BF%BD%E5%8A%A0%E5%8F%82%E6%95%B0%3C%2Fp%3E%0A',
+                description: '%3Cp%3Eurl%E5%8F%82%E6%95%B0%E8%BD%AC%E6%8D%A2Object%3C%2Fp%3E%0A',
               },
               { default: C(() => [Q]), _: 1 },
               8,
