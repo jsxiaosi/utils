@@ -3,9 +3,9 @@ export type StorageValue<T> = T | null | undefined;
 export type StorageType = 'localStorage' | 'sessionStorage';
 
 export interface StorageConfig {
-  prefix: string;
+  prefix: string | ((key: string) => string);
   expire: number;
   isEncrypt: boolean;
-  secret_key: string;
-  secret_iv: string;
+  secretKey: string;
+  secretIv: string;
 }

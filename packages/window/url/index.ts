@@ -42,11 +42,11 @@ export function appendUrlParams(
 }
 
 export function urlParamsToObject(queryString: string): Record<string, any> {
-  let urlParams = queryString;
-  if (isUrl(queryString)) {
-    urlParams = queryString.split('?')[1];
+  const urlParams = queryString;
+  if (!isUrl(queryString)) {
+    return {};
   }
-  const searchParams = new URLSearchParams(urlParams);
+  const searchParams = new URLSearchParams(new URL(urlParams).search);
   const paramsObject: Record<string, any> = {};
   const unnamedArray: any[] = [];
 

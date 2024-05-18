@@ -19,7 +19,13 @@ import { _storage } from '@jsxiaosi/utils'
 ::: details 示例代码
 
 ``` js
-_storage.setStorageConfig(StorageConfig)
+_storage.setStorageConfig({
+  prefix: 'prefix',
+  // prefix: (key) => `prefix-${key}`,  自定义前缀格式
+  expire: 3000, // 50分钟
+  secretKey: true,
+  secretIv: true
+})
 ```
 
 :::
@@ -28,11 +34,11 @@ _storage.setStorageConfig(StorageConfig)
 
 参数 | 说明 | 类型 | 默认值 | 备注
 ---------|----------|---------|---------|---------
-prefix | 存储前缀 | string | |
-expire | 存储时效 | number | 0 | 为0不设置超时时间
+prefix | 存储前缀 | `string / ((key: string) => string)` | |
+expire | 存储时效 | number | 0 | `秒`单位，为0不设置超时时间
 isEncrypt | 是否开启加密 | boolean | false |
-secret_key | 加密密钥 | string | | isEncrypt为true生效
-secret_iv | 加密秘钥偏移量 | string | | isEncrypt为true生效
+secretKey | 加密密钥 | string | | isEncrypt为true生效
+secretIv | 加密秘钥偏移量 | string | | isEncrypt为true生效
 
 ## isSupportStorage
 

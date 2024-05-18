@@ -16,8 +16,8 @@ describe('storage', () => {
       prefix: KEY,
       expire: 0,
       isEncrypt: true,
-      secret_key: '3333e6e143439161',
-      secret_iv: 'e3bbe7e3ba84431a',
+      secretKey: '3333e6e143439161',
+      secretIv: 'e3bbe7e3ba84431a',
     });
   });
 
@@ -89,5 +89,13 @@ describe('storage', () => {
   test('clear storage', () => {
     storage.clearStorage();
     expect(storage.getStorageLength()).toEqual(0);
+  });
+
+  it('should apply custom prefix function', () => {
+    storage.setStorageConfig({ prefix: (key) => `${key}-prefix`, isEncrypt: true });
+
+    const value = { name: 'test' };
+    storage.setStorage(Name, value, 2000); // expire in 1s
+    expect(storage.getStorageForIndex(0)).toEqual(`${Name}-prefix`);
   });
 });
