@@ -1,5 +1,7 @@
-## <small>0.0.18 (2023-11-20)</small>
+## <small>0.0.19 (2024-05-18)</small>
 
+* fix: 🐛 package ([954dc45](https://https//github.com/jsxiaosi/utils/commits/954dc45))
+* fix(window): 🐛 url ([d8af5d3](https://https//github.com/jsxiaosi/utils/commits/d8af5d3))
 * feat(window): ✨ storage ([2ce2b12](https://https//github.com/jsxiaosi/utils/commits/2ce2b12))
 
 
