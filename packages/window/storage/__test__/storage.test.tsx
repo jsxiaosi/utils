@@ -16,8 +16,8 @@ describe('storage', () => {
       prefix: KEY,
       expire: 0,
       isEncrypt: true,
-      secret_key: '3333e6e143439161',
-      secret_iv: 'e3bbe7e3ba84431a',
+      secretKey: '3333e6e143439161',
+      secretIv: 'e3bbe7e3ba84431a',
     });
   });
 

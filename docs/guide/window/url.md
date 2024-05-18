@@ -108,7 +108,7 @@ unnamed | 生成无键名的参数
 
 ## urlParamsToObject
 
-:::demo 在现有的url中添加参数或者追加参数
+:::demo url参数转换Object
 
 url/urlParamsToObject
 
